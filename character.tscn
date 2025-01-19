@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://yl8edsf2vjry"]
+[gd_scene load_steps=5 format=3 uid="uid://yl8edsf2vjry"]
 
 [ext_resource type="Script" path="res://character.gd" id="1_v7l8u"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5k8hl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f5kkg"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tvile"]
+radius = 2.0
 
 [node name="character" type="CharacterBody3D"]
 script = ExtResource("1_v7l8u")
@@ -17,3 +20,11 @@ transform = Transform3D(0.735423, 0.304209, -0.605483, 0, 0.89356, 0.448945, 0.6
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_f5kkg")
+
+[node name="interactable_area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="interactable_area"]
+shape = SubResource("CylinderShape3D_tvile")
+
+[connection signal="body_entered" from="interactable_area" to="." method="item_area_entered"]
+[connection signal="body_exited" from="interactable_area" to="." method="item_area_exit"]

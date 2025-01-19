@@ -4,12 +4,23 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+#Item area mówi czy jakiś item jest w area iterakcji
+var item_area = false
+
+var the_pickable_item
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
+	# Interact/take items
+	if Input.is_action_just_pressed("interact"):
+		if item_area:
+			if the_pickable_item.is_in_group("pickable") and the_pickable_item.can_take:
+				the_pickable_item.taken()
+		
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -26,3 +37,10 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func item_area_entered(body: Node3D) -> void:
+	the_pickable_item = body
+	item_area = true
+
+func item_area_exit(_body: Node3D) -> void:
+	item_area = false

@@ -1,12 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=8 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://character.tscn" id="1_h1qin"]
+[ext_resource type="Script" path="res://example_item.gd" id="2_fvn5p"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
 size = Vector2(20, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w71c0"]
 size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjji1"]
+albedo_color = Color(0.297965, 1, 0.903801, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_odqi5"]
+material = SubResource("StandardMaterial3D_gjji1")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ftox"]
 
 [node name="world" type="Node3D"]
 
@@ -24,3 +33,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 14, 16)
+
+[node name="example_item" type="StaticBody3D" parent="." groups=["pickable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97822, 1.0718, 3.56972)
+script = ExtResource("2_fvn5p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="example_item"]
+mesh = SubResource("BoxMesh_odqi5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="example_item"]
+shape = SubResource("BoxShape3D_3ftox")
