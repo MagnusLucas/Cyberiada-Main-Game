@@ -37,6 +37,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	#Camera smoothing based on a yt tutorialsssssss
+	$Camera_control.position = lerp($Camera_control.position, position, 0.08)
+	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
+	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
+	
 
 func item_area_entered(body: Node3D) -> void:
 	the_pickable_item = body
@@ -44,3 +49,5 @@ func item_area_entered(body: Node3D) -> void:
 
 func item_area_exit(_body: Node3D) -> void:
 	item_area = false
+	
+	
