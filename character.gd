@@ -9,6 +9,8 @@ var item_area = false
 
 var the_pickable_item
 
+
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -41,6 +43,8 @@ func _physics_process(delta: float) -> void:
 	$Camera_control.position = lerp($Camera_control.position, position, 0.08)
 	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
 	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
+	
+	#testowa animacja żeby działała w otworzeniu
 	
 
 func item_area_entered(body: Node3D) -> void:
