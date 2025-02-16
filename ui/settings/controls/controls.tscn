@@ -1,0 +1,201 @@
+[gd_scene load_steps=5 format=3 uid="uid://l835l2hbw4bk"]
+
+[ext_resource type="Texture2D" uid="uid://dfu8gjxf02h2s" path="res://ui/shared/TEMPORARY_background.png" id="1_ge02s"]
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_2qr2q"]
+[ext_resource type="Script" path="res://ui/settings/controls/navigation.gd" id="3_v4nbl"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_jhesj"]
+allow_unpress = true
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ge02s")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.75
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 150
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu/HBoxContainer/MarginContainer"]
+layout_mode = 2
+color = Color(0.733333, 0.733333, 0.733333, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.75
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_2qr2q")
+text = "Sterowanie"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2qr2q")
+text = "↑"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+toggle_mode = true
+button_group = SubResource("ButtonGroup_jhesj")
+text = "W"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2qr2q")
+text = "↓"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+toggle_mode = true
+button_group = SubResource("ButtonGroup_jhesj")
+text = "S"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2qr2q")
+text = "←"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+toggle_mode = true
+button_group = SubResource("ButtonGroup_jhesj")
+text = "A"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2qr2q")
+text = "→"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+toggle_mode = true
+button_group = SubResource("ButtonGroup_jhesj")
+text = "D"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_2qr2q")
+theme_override_font_sizes/font_size = 18
+text = "interakcja"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "E"
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+size_flags_stretch_ratio = 0.35
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="navigation" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+script = ExtResource("3_v4nbl")
+
+[node name="Back" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cofnij"
+
+[node name="Save" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Zapisz"
+
+[node name="Control" type="Control" parent="MainMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Back" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_back_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Save" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_save_pressed"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=14 format=3 uid="uid://bhnwh8opyot71"]
 
+[ext_resource type="Script" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://character.tscn" id="1_h1qin"]
 [ext_resource type="Script" path="res://example_item.gd" id="2_fvn5p"]
 [ext_resource type="PackedScene" uid="uid://c477sjfeg8ra" path="res://3d_models/test animation.glb" id="3_bciu7"]
@@ -30,6 +31,7 @@ radius = 0.139847
 height = 1.29286
 
 [node name="world" type="Node3D"]
+script = ExtResource("1_e7hdk")
 
 [node name="ground" type="StaticBody3D" parent="."]
 

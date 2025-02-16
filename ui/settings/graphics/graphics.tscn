@@ -1,11 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://5lye3gw740o7"]
+[gd_scene load_steps=4 format=3 uid="uid://c8k1rk37xnoaf"]
 
-[ext_resource type="Texture2D" uid="uid://dfu8gjxf02h2s" path="res://ui/shared/TEMPORARY_background.png" id="1_oe6bl"]
-[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_atamn"]
-[ext_resource type="Theme" uid="uid://l4fn7cedqo3m" path="res://ui/shared/graphics/themes/default_button.tres" id="3_ikdoe"]
-[ext_resource type="Script" path="res://ui/saved_games/navigation.gd" id="4_b0h44"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_b6wpg"]
+[ext_resource type="Texture2D" uid="uid://dfu8gjxf02h2s" path="res://ui/shared/TEMPORARY_background.png" id="1_hipiw"]
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_ogkoh"]
+[ext_resource type="Script" path="res://ui/settings/graphics/navigation.gd" id="3_uva3g"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_oe6bl")
+texture = ExtResource("1_hipiw")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
@@ -70,51 +67,27 @@ theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 1
-theme = ExtResource("2_atamn")
-text = "Zapisane gry"
+size_flags_vertical = 0
+theme = ExtResource("2_ogkoh")
+text = "Grafika"
 
-[node name="SavedGames" type="VBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 10
+size_flags_vertical = 2
 
-[node name="Button" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames"]
+[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("3_ikdoe")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_b6wpg")
-text = "Zapis 1"
+theme = ExtResource("2_ogkoh")
+theme_override_font_sizes/font_size = 18
+text = "Pełen ekran"
 
-[node name="Button2" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames"]
+[node name="CheckBox" type="CheckBox" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("3_ikdoe")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_b6wpg")
-text = "Zapis 1"
-
-[node name="Button3" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames"]
-layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("3_ikdoe")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_b6wpg")
-text = "Zapis 1"
-
-[node name="Button4" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames"]
-layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("3_ikdoe")
-toggle_mode = true
-button_group = SubResource("ButtonGroup_b6wpg")
-text = "Zapis 1"
+alignment = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 10
 size_flags_stretch_ratio = 0.35
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
@@ -125,21 +98,21 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
-script = ExtResource("4_b0h44")
+script = ExtResource("3_uva3g")
 
 [node name="Back" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Cofnij"
 
-[node name="Play" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
+[node name="Save" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Graj"
+text = "Zapisz"
 
 [node name="Control" type="Control" parent="MainMenu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Back" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_back_pressed"]
-[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Play" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_play_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Save" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_save_pressed"]
