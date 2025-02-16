@@ -69,4 +69,5 @@ text = "Wyjdź do menu"
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/SettingsBase/Back" to="MarginContainer/MarginContainer/SettingsBase" method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/SettingsBase/Save" to="MarginContainer/MarginContainer/SettingsBase" method="_on_save_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/SettingsBase/Settings" to="MarginContainer/MarginContainer/SettingsBase" method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/SettingsBase/Menu" to="MarginContainer/MarginContainer/SettingsBase" method="_on_menu_pressed"]

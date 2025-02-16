@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3hjvx42uuvgd"]
+
+[ext_resource type="Script" path="res://ui/settings/settings/navigation.gd" id="1_iaicr"]
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_udxak"]
+
+[node name="navigation" type="VBoxContainer"]
+script = ExtResource("1_iaicr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("2_udxak")
+text = "USTAWIENIA"
+
+[node name="controls" type="Button" parent="."]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Sterowanie"
+
+[node name="graphics" type="Button" parent="."]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Grafika"
+
+[node name="sound" type="Button" parent="."]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Dźwięk"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.35
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="navigation" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Play" type="Control" parent="MarginContainer/navigation"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Back" type="Button" parent="MarginContainer/navigation"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cofnij"
+
+[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="graphics" to="." method="_on_graphics_pressed"]
+[connection signal="pressed" from="sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="MarginContainer/navigation/Back" to="." method="_on_back_pressed"]

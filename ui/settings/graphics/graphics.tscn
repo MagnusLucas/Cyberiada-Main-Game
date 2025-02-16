@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8k1rk37xnoaf"]
+[gd_scene load_steps=3 format=3 uid="uid://c8k1rk37xnoaf"]
 
 [ext_resource type="Texture2D" uid="uid://dfu8gjxf02h2s" path="res://ui/shared/TEMPORARY_background.png" id="1_hipiw"]
-[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_ogkoh"]
-[ext_resource type="Script" path="res://ui/settings/graphics/navigation.gd" id="3_uva3g"]
+[ext_resource type="PackedScene" uid="uid://b4swq2bscm4n4" path="res://ui/settings/graphics/graphics_base.tscn" id="2_hu3hf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -52,67 +51,9 @@ theme_override_constants/margin_bottom = 150
 layout_mode = 2
 color = Color(0.733333, 0.733333, 0.733333, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MarginContainer"]
+[node name="MarginContainer" parent="MainMenu/HBoxContainer/MarginContainer" instance=ExtResource("2_hu3hf")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.75
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 10
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-theme = ExtResource("2_ogkoh")
-text = "Grafika"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-
-[node name="Label" type="Label" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_ogkoh")
-theme_override_font_sizes/font_size = 18
-text = "Pełen ekran"
-
-[node name="CheckBox" type="CheckBox" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-alignment = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 10
-size_flags_stretch_ratio = 0.35
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="navigation" type="HBoxContainer" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 20
-script = ExtResource("3_uva3g")
-
-[node name="Back" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Cofnij"
-
-[node name="Save" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Zapisz"
 
 [node name="Control" type="Control" parent="MainMenu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Back" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_back_pressed"]
-[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Save" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_save_pressed"]
