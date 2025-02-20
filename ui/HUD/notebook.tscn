@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://dibafas5mtxem"]
+
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_6offo"]
+[ext_resource type="Script" path="res://ui/HUD/notebook.gd" id="1_mi3cd"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mdajw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l6rjd"]
+
+[node name="notebook" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mi3cd")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 350
+theme_override_constants/margin_bottom = 100
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.733333, 0.733333, 0.733333, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="SettingsBase" type="VBoxContainer" parent="MarginContainer/MarginContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer2/MarginContainer/SettingsBase"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource("1_6offo")
+text = "NOTATNIK"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer2/MarginContainer/SettingsBase"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.92
+texture = SubResource("PlaceholderTexture2D_mdajw")
+
+[node name="Label2" type="Label" parent="MarginContainer/MarginContainer2/MarginContainer/SettingsBase/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.3
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id nibh pharetra, hendrerit nunc vel, ultrices urna. Mauris nec lorem libero. Proin et ultricies diam. Duis tellus magna, molestie eu purus sed, porta placerat leo. Duis iaculis quam vitae ornare auctor. "
+autowrap_mode = 3
+clip_text = true
+
+[node name="close" type="Button" parent="MarginContainer/MarginContainer2"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
+text = "X"
+icon = SubResource("PlaceholderTexture2D_l6rjd")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/MarginContainer2/close" to="." method="_on_close_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=15 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://character.tscn" id="1_h1qin"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c477sjfeg8ra" path="res://3d_models/test animation.glb" id="3_bciu7"]
 [ext_resource type="Animation" uid="uid://ip7dnqv0haeq" path="res://3d_models/animations/dance.res" id="4_05eti"]
 [ext_resource type="Script" path="res://3d_models/test_animation.gd" id="4_ig50s"]
+[ext_resource type="PackedScene" uid="uid://bpq8x6bwcrcy1" path="res://ui/HUD/hud.tscn" id="7_oirif"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
 size = Vector2(20, 20)
@@ -190,5 +191,7 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="test animation/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.732311, 0)
 shape = SubResource("CapsuleShape3D_d0w2p")
+
+[node name="HUD" parent="." instance=ExtResource("7_oirif")]
 
 [editable path="test animation"]
