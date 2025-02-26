@@ -22,17 +22,18 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
 		var item_tab = []
-		#sprawdza czy w tej tabeli coś jest
-		print($interactable_area.get_overlapping_bodies())
+		
+		#print($interactable_area.get_overlapping_bodies())
 		for i in $interactable_area.get_overlapping_bodies():
 			if i.is_in_group("pickable"):
 				item_tab.append([i,position.distance_to(i.position)])
 		item_tab.sort_custom(sort_by_index)
-		print(item_tab)
-		#items_nears = sorted($interactable_area.get_overlapping_bodies(), key=$charcter.position.distance_to(item.position))
+		#print(item_tab)
+		#sprawdza czy w tej tabeli coś jest bo jak nie to sie wykrzacza
 		if len(item_tab) >0:
 			the_pickable_item = item_tab[0][0]
-			print(the_pickable_item)
+			#print(the_pickable_item)
+			#nie pamiętam już czym było can take ale było w poprzedniej wersji so
 			if the_pickable_item.can_take:
 					the_pickable_item.taken()
 		
