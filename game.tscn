@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=15 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://character.tscn" id="1_h1qin"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c477sjfeg8ra" path="res://3d_models/test animation.glb" id="3_bciu7"]
 [ext_resource type="Animation" uid="uid://ip7dnqv0haeq" path="res://3d_models/animations/dance.res" id="4_05eti"]
 [ext_resource type="Script" path="res://3d_models/test_animation.gd" id="4_ig50s"]
+[ext_resource type="PackedScene" uid="uid://b6jgovienj4ac" path="res://in_level_ui.tscn" id="7_fe32s"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
 size = Vector2(20, 20)
@@ -32,6 +33,8 @@ height = 1.29286
 
 [node name="world" type="Node3D"]
 script = ExtResource("1_e7hdk")
+
+[node name="InLevelUi" parent="." instance=ExtResource("7_fe32s")]
 
 [node name="ground" type="StaticBody3D" parent="."]
 

@@ -5,5 +5,8 @@ var can_take = true
 
 func taken():
 	can_take = false
-	print('example_item')
+	if len($"../character".inv) <=5:
+		$"../character".inv.append(get_name())
+	#print(name)
 	queue_free()
+	get_node("../InLevelUi").update_inv($"../character".inv)

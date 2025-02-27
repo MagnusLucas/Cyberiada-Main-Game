@@ -16,6 +16,7 @@ var kamz = position.z
 func sort_by_index(a, b):
 			return a[1] < b[1]
 
+var inv = []
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
