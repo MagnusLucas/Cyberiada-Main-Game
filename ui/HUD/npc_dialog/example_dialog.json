@@ -1,0 +1,33 @@
+{
+	"0": {
+		"answers": {
+			"0": {
+				"next_id": 1,
+				"text": "hello"
+			},
+			"1": {
+				"next_id": 2,
+				"text": "fuck u"
+			}
+		},
+		"text": "hello"
+	},
+	"1": {
+		"answers": {
+			"0": {
+				"next_id": -1,
+				"text": "ok, bye..."
+			}
+		},
+		"text": "bye bye"
+	},
+	"2": {
+		"answers": {
+			"0": {
+				"next_id": -1,
+				"text": "..."
+			}
+		},
+		"text": "well fuck u too!"
+	}
+}
