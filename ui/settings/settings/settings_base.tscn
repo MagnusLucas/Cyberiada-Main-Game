@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3hjvx42uuvgd"]
 
-[ext_resource type="Script" path="res://ui/settings/settings/navigation.gd" id="1_iaicr"]
+[ext_resource type="Script" uid="uid://c4pbej6nd6s5j" path="res://ui/settings/settings/navigation.gd" id="1_iaicr"]
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_udxak"]
 
 [node name="navigation" type="VBoxContainer"]

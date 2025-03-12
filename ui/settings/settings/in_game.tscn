@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyxf2ha27n3pi"]
 
-[ext_resource type="Script" path="res://ui/settings/settings/navigation_ig.gd" id="1_yfua1"]
+[ext_resource type="Script" uid="uid://cosnfoa1kyhhn" path="res://ui/settings/settings/navigation_ig.gd" id="1_yfua1"]
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_12b1y"]
 
 [node name="Control" type="Control"]

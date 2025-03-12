@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://qli2jd2u7npw"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_1n77n"]
-[ext_resource type="Script" path="res://ui/settings/controls/navigation.gd" id="2_r6uhj"]
+[ext_resource type="Script" uid="uid://dfmuafndj8o2n" path="res://ui/settings/controls/navigation.gd" id="2_r6uhj"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_jhesj"]
 allow_unpress = true

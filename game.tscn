@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bhnwh8opyot71"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_e7hdk"]
+[ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://player/character.tscn" id="1_h1qin"]
-[ext_resource type="Script" path="res://world/items/example_item.gd" id="2_fvn5p"]
+[ext_resource type="Script" uid="uid://dmxlj6nqmtjv8" path="res://world/items/example_item.gd" id="2_fvn5p"]
 [ext_resource type="PackedScene" uid="uid://c477sjfeg8ra" path="res://3d_models/test animation.glb" id="3_bciu7"]
 [ext_resource type="Animation" uid="uid://ip7dnqv0haeq" path="res://3d_models/animations/dance.res" id="4_05eti"]
-[ext_resource type="Script" path="res://3d_models/test_animation.gd" id="4_ig50s"]
+[ext_resource type="Script" uid="uid://cuknkb7aclvae" path="res://3d_models/test_animation.gd" id="4_ig50s"]
 [ext_resource type="PackedScene" uid="uid://b6jgovienj4ac" path="res://ui/HUD/in_level_ui.tscn" id="7_fe32s"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
@@ -24,7 +24,7 @@ material = SubResource("StandardMaterial3D_gjji1")
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vpur8"]
 _data = {
-"testdance": ExtResource("4_05eti")
+&"testdance": ExtResource("4_05eti")
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d0w2p"]
@@ -185,7 +185,7 @@ bones/63/rotation = Quaternion(0.302724, 0.0278529, -0.00749898, 0.952642)
 
 [node name="AnimationPlayer" parent="test animation" index="1"]
 libraries = {
-"": SubResource("AnimationLibrary_vpur8")
+&"": SubResource("AnimationLibrary_vpur8")
 }
 
 [node name="StaticBody3D" type="StaticBody3D" parent="test animation"]

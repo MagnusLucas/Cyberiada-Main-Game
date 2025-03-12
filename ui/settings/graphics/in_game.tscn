@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyblww8c00nci"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_hvspu"]
-[ext_resource type="Script" path="res://ui/settings/graphics/navigation_ig.gd" id="2_x30cx"]
+[ext_resource type="Script" uid="uid://bnbx4e7w1prg8" path="res://ui/settings/graphics/navigation_ig.gd" id="2_x30cx"]
 
 [node name="Control" type="Control"]
 process_mode = 2

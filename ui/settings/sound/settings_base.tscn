@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bln7uier0j2b7"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_r25r4"]
-[ext_resource type="Script" path="res://ui/settings/sound/navigation.gd" id="2_xmspx"]
+[ext_resource type="Script" uid="uid://bwps0j3vkyc3h" path="res://ui/settings/sound/navigation.gd" id="2_xmspx"]
 
 [node name="SettingsBase" type="VBoxContainer"]
 theme_override_constants/separation = 10

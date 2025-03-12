@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4swq2bscm4n4"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_nuthj"]
-[ext_resource type="Script" path="res://ui/settings/graphics/navigation.gd" id="2_ei7s1"]
+[ext_resource type="Script" uid="uid://nomki5y07er0" path="res://ui/settings/graphics/navigation.gd" id="2_ei7s1"]
 
 [node name="MarginContainer" type="MarginContainer"]
 size_flags_horizontal = 3

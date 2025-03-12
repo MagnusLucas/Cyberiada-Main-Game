@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dibafas5mtxem"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_6offo"]
-[ext_resource type="Script" path="res://ui/HUD/notebook.gd" id="1_mi3cd"]
+[ext_resource type="Script" uid="uid://1gr5sxlvbrxx" path="res://ui/HUD/notebook.gd" id="1_mi3cd"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mdajw"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dd2cxepivnk4k"]
 
-[ext_resource type="Script" path="res://ui/HUD/npc_dialog/npc_dialog.gd" id="1_ybdnl"]
+[ext_resource type="Script" uid="uid://bng8cqeisgd0g" path="res://ui/HUD/npc_dialog/npc_dialog.gd" id="1_ybdnl"]
 
 [node name="npcDialog" type="MarginContainer"]
 anchors_preset = 15

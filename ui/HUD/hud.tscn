@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpq8x6bwcrcy1"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_hfu3w"]
-[ext_resource type="Script" path="res://ui/HUD/hud.gd" id="1_iii7f"]
-[ext_resource type="Script" path="res://ui/HUD/message.gd" id="3_s1los"]
+[ext_resource type="Script" uid="uid://cxpb346vukhpy" path="res://ui/HUD/hud.gd" id="1_iii7f"]
+[ext_resource type="Script" uid="uid://cifbmyldyrcdv" path="res://ui/HUD/message.gd" id="3_s1los"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kls76"]
 

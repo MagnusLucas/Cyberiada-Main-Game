@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dfu8gjxf02h2s" path="res://ui/shared/TEMPORARY_background.png" id="1_oe6bl"]
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_atamn"]
 [ext_resource type="Theme" uid="uid://l4fn7cedqo3m" path="res://ui/shared/graphics/themes/default_button.tres" id="3_ikdoe"]
-[ext_resource type="Script" path="res://ui/saved_games/navigation.gd" id="4_b0h44"]
+[ext_resource type="Script" uid="uid://cw3chcpwavqhf" path="res://ui/saved_games/navigation.gd" id="4_b0h44"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_b6wpg"]
 
