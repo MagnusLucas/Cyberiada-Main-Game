@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bhnwh8opyot71"]
 
-[ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game.gd" id="1_e7hdk"]
+[ext_resource type="Script" uid="uid://cra3jm77wqchx" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://player/character.tscn" id="1_h1qin"]
 [ext_resource type="Script" uid="uid://dmxlj6nqmtjv8" path="res://world/items/example_item.gd" id="2_fvn5p"]
 [ext_resource type="PackedScene" uid="uid://c477sjfeg8ra" path="res://3d_models/test animation.glb" id="3_bciu7"]
 [ext_resource type="Animation" uid="uid://ip7dnqv0haeq" path="res://3d_models/animations/dance.res" id="4_05eti"]
-[ext_resource type="Script" uid="uid://cuknkb7aclvae" path="res://3d_models/test_animation.gd" id="4_ig50s"]
+[ext_resource type="Script" uid="uid://bkt2qhkbexrom" path="res://3d_models/test_animation.gd" id="4_ig50s"]
 [ext_resource type="PackedScene" uid="uid://b6jgovienj4ac" path="res://ui/HUD/in_level_ui.tscn" id="7_fe32s"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
