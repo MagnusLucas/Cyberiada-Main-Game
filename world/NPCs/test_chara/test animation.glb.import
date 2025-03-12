@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c477sjfeg8ra"
-path="res://.godot/imported/test animation.glb-070f1fab9113e6d653c443a8ddf4f87a.scn"
+path="res://.godot/imported/test animation.glb-05059461ed5bbcb4d7b9d0d48e1aca6f.scn"
 
 [deps]
 
-source_file="res://3d_models/test animation.glb"
-dest_files=["res://.godot/imported/test animation.glb-070f1fab9113e6d653c443a8ddf4f87a.scn"]
+source_file="res://world/NPCs/test_chara/test animation.glb"
+dest_files=["res://.godot/imported/test animation.glb-05059461ed5bbcb4d7b9d0d48e1aca6f.scn"]
 
 [params]
 
@@ -36,7 +36,7 @@ _subresources={
 "animations": {
 "Armature|mixamo_com|Layer0": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": true,
+"save_to_file/keep_custom_tracks": "",
 "save_to_file/path": "res://3d_models/animations/dance.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,

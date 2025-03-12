@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	pass
 
 func update_inv(inventory):
@@ -15,5 +15,5 @@ func update_inv(inventory):
 	
 	for i in range(len(inventory)):
 		print(inventory[int(i)])
-		get_node('PanelContainer/MarginContainer/Container/TextureRect'+str(i+1)).texture =load("res://world/items/2d/"+inventory[int(i)]+".png")
+		get_node('PanelContainer/MarginContainer/Container/TextureRect'+str(i+1)).texture =load("res://items/2d/"+inventory[int(i)]+".png")
 		

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc3iwqsl7b03u"]
+[gd_scene load_steps=2 format=3 uid="uid://b8lcl6fckdbl0"]
 
-[ext_resource type="Script" path="res://ui/HUD/in_level_ui.gd" id="1_2c1bb"]
+[ext_resource type="Script" path="res://in_level_ui.gd" id="1_2c1bb"]
 
 [node name="InLevelUi" type="Control"]
 layout_mode = 3
