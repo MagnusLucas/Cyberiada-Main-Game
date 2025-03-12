@@ -24,12 +24,3 @@ fit_content = true
 [node name="answers" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="FirstAnswer" type="RichTextLabel" parent="VBoxContainer/answers"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Example answer"
-fit_content = true
-
-[connection signal="gui_input" from="VBoxContainer/answers/FirstAnswer" to="." method="_on_answer_gui_input"]
