@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2nw30xxslme8"]
-
-[ext_resource type="Script" uid="uid://dmxlj6nqmtjv8" path="res://world/items/example_item.gd" id="1_sfe4x"]
+[gd_scene load_steps=4 format=3 uid="uid://b2nw30xxslme8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjji1"]
 albedo_color = Color(0.297965, 1, 0.903801, 1)
@@ -11,7 +9,6 @@ material = SubResource("StandardMaterial3D_gjji1")
 [sub_resource type="BoxShape3D" id="BoxShape3D_3ftox"]
 
 [node name="example_item" type="StaticBody3D" groups=["pickable"]]
-script = ExtResource("1_sfe4x")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_odqi5")

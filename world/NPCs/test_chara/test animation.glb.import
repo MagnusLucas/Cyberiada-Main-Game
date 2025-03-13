@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c477sjfeg8ra"
-path="res://.godot/imported/test animation.glb-05059461ed5bbcb4d7b9d0d48e1aca6f.scn"
+valid=false
 
 [deps]
 
 source_file="res://world/NPCs/test_chara/test animation.glb"
-dest_files=["res://.godot/imported/test animation.glb-05059461ed5bbcb4d7b9d0d48e1aca6f.scn"]
 
 [params]
 

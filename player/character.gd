@@ -30,7 +30,9 @@ func _physics_process(delta: float) -> void:
 		
 		#print($interactable_area.get_overlapping_bodies())
 		for i in $interactable_area.get_overlapping_bodies():
+			print(i)
 			if i.is_in_group("pickable"):
+				print('yep')
 				item_tab.append([i,position.distance_to(i.position)])
 		item_tab.sort_custom(sort_by_index)
 		#print(item_tab)
@@ -40,7 +42,7 @@ func _physics_process(delta: float) -> void:
 			#print(the_pickable_item)
 			#nie pamiętam już czym było can take ale było w poprzedniej wersji so
 			if the_pickable_item.can_take:
-					the_pickable_item.taken()
+				the_pickable_item.taken()
 		
 	do_kam_1 = position.z 
 	# Handle jump.
