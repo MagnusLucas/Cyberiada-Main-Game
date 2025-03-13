@@ -9,4 +9,4 @@ func taken():
 		$"../character".inv.append(get_name())
 	#print(name)
 	queue_free()
-	get_node("../HUD/InLevelUi").update_inv($"../character".inv)
+	get_node("../InLevelUi").update_inv($"../character".inv)
