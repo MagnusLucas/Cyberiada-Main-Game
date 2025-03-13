@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwpoytvok2cyw"]
+
+[ext_resource type="Script" uid="uid://udts6wdaq3xm" path="res://world/NPCs/dialog_maker/dialog_maker.gd" id="1_8x78i"]
+[ext_resource type="PackedScene" uid="uid://bxwa2phe6lg84" path="res://world/NPCs/dialog_maker/npc_statement.tscn" id="2_felkp"]
+[ext_resource type="PackedScene" uid="uid://f7apjse8641t" path="res://world/NPCs/dialog_maker/player_answer.tscn" id="3_qb7iy"]
+
+[node name="DialogMaker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+show_grid = false
+snapping_enabled = false
+minimap_enabled = false
+show_menu = false
+script = ExtResource("1_8x78i")
+
+[node name="Label" type="Label" parent="GraphEdit"]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 23.0
+text = "RMB to add a node"
+
+[node name="NPC" parent="GraphEdit" instance=ExtResource("2_felkp")]
+visible = false
+layout_mode = 0
+
+[node name="Player" parent="GraphEdit" instance=ExtResource("3_qb7iy")]
+visible = false
+layout_mode = 0
+
+[connection signal="gui_input" from="GraphEdit" to="GraphEdit" method="_on_gui_input"]
