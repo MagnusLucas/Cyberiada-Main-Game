@@ -6,35 +6,10 @@ var answers : Dictionary
 
 func _ready() -> void:
 	if convo_data.is_empty():
-		var file = FileAccess.open("res://ui/HUD/npc_dialog/example_dialog.json", FileAccess.READ)
+		var file = FileAccess.open("res://ui/HUD/npc_dialog/example_dialog1.json", FileAccess.READ)
 		var json_string = file.get_as_text()
 		convo_data = JSON.parse_string(json_string)
 		next(current_state)
-	#var dict : Dictionary
-	#dict[0] = {}
-	#dict[0]["text"] = "hello"
-	#dict[0]["answers"] = {}
-	#dict[0]["answers"][0] = {}
-	#dict[0]["answers"][0]["text"] = "hello"
-	#dict[0]["answers"][0]["next_id"] = 1
-	#dict[0]["answers"][1] = {}
-	#dict[0]["answers"][1]["text"] = "fuck u"
-	#dict[0]["answers"][1]["next_id"] = 2
-	#dict[1] = {}
-	#dict[1]["text"] = "bye bye"
-	#dict[1]["answers"] = {}
-	#dict[1]["answers"][0] = {}
-	#dict[1]["answers"][0]["text"] = "ok, bye..."
-	#dict[1]["answers"][0]["next_id"] = -1
-	#dict[2] = {}
-	#dict[2]["text"] = "well fuck u too!"
-	#dict[2]["answers"] = {}
-	#dict[2]["answers"][0] = {}
-	#dict[2]["answers"][0]["text"] = "..."
-	#dict[2]["answers"][0]["next_id"] = -1
-	#initialize(dict)
-	#var file = FileAccess.open("res://ui/HUD/npc_dialog/example_dialog.json", FileAccess.WRITE)
-	#file.store_string(JSON.stringify(dict, "\t"))
 
 # it should modify the convo data to be correct according to owned items
 func initialize(all_convo_data : Dictionary):#, owned_items : Array[Item]):
@@ -55,7 +30,12 @@ func next(id : String):
 	for key in answers:
 		var answer = RichTextLabel.new()
 		answer.text = answers[key]["text"]
-		answer.connect("gui_input", _on_answer_gui_input.bind(answers[key]["next_id"]))
+		var possible_answer_reactions : Array = answers[key]["next_id"]
+		var number_of_possibilities = possible_answer_reactions.size()
+		if number_of_possibilities > 0:
+			answer.connect("gui_input", _on_answer_gui_input.bind(answers[key]["next_id"][randi() % number_of_possibilities]))
+		else:
+			answer.connect("gui_input", _on_answer_gui_input.bind(-1))
 		answer.fit_content = true
 		$VBoxContainer/answers.add_child(answer)
 

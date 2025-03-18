@@ -20,5 +20,4 @@ slot/0/draw_stylebox = true
 
 [node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 2
-size_flags_vertical = 3
 placeholder_text = "example text"
