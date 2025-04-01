@@ -1,15 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://b440rwhlg20vk"]
+[gd_scene load_steps=5 format=3 uid="uid://bjst7o2njgaw"]
 
 [ext_resource type="Script" uid="uid://b1kj1dkex2v6" path="res://world/objects/passage.gd" id="1_tln4w"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tln4w"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ol6he"]
 size = Vector3(1, 1.5, 0.2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7fr5r"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngig5"]
 albedo_color = Color(0.408745, 0.0275917, 4.57242e-07, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ol6he"]
-material = SubResource("StandardMaterial3D_7fr5r")
+[sub_resource type="BoxMesh" id="BoxMesh_l30xe"]
+material = SubResource("StandardMaterial3D_ngig5")
 size = Vector3(1, 1.5, 0.2)
 
 [node name="Passage" type="StaticBody3D" groups=["pickable"]]
@@ -17,10 +17,10 @@ script = ExtResource("1_tln4w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
-shape = SubResource("BoxShape3D_tln4w")
+shape = SubResource("BoxShape3D_ol6he")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
-mesh = SubResource("BoxMesh_ol6he")
+mesh = SubResource("BoxMesh_l30xe")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

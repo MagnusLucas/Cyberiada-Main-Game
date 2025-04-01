@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bhnwh8opyot71"]
 
-[ext_resource type="Script" uid="uid://cra3jm77wqchx" path="res://game.gd" id="1_e7hdk"]
+[ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://d31lk7cftx5hb" path="res://world/places/test_level.tscn" id="2_e2o6t"]
 
 [node name="world" type="Node3D"]
