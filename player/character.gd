@@ -60,7 +60,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+	#print('hee hee ' ,JUMP_VELOCITY, ' hee? ',SPEED, ' ', velocity)
+	if velocity.y >0:
+		$Detektyw/AnimationPlayer.play("Tpose")
+	elif velocity.x !=0 or velocity.z != 0:
+		#print('brrrrda')
+		$Detektyw/AnimationPlayer.play("Walking")
+	else:
+		$Detektyw/AnimationPlayer.play("Standing")
+	
 	move_and_slide()
 	
 	#to wszystko wyłapuje jak daleko ruszałaby się kamera gdyby ruszała się z kamerą
