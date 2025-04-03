@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6acom4i4xqko"]
 
-[ext_resource type="Texture2D" uid="uid://dfu8gjxf02h2s" path="res://ui/shared/TEMPORARY_background.png" id="1_gbr3r"]
+[ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://ui/shared/graphics/background.png" id="1_mgjql"]
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="2_t7fsm"]
 
 [node name="Control" type="Control"]
@@ -18,8 +18,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_gbr3r")
-stretch_mode = 1
+texture = ExtResource("1_mgjql")
+expand_mode = 3
 metadata/_edit_lock_ = true
 
 [node name="MainMenu" type="Control" parent="."]

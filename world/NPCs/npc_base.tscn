@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvdqujiy0oilp"]
+
+[ext_resource type="Texture2D" uid="uid://srlxskokh6h5" path="res://grafiki od Kateryny/all game characters/babcia1.png" id="1_fiju2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dp5yl"]
+height = 3.01807
+radius = 1.09619
+
+[sub_resource type="QuadMesh" id="QuadMesh_ie3bn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai565"]
+albedo_texture = ExtResource("1_fiju2")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[node name="NPC" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.509033, 0)
+shape = SubResource("CylinderShape3D_dp5yl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.82162, 0, 0, 0, 1, 0, 0.518811, 0)
+mesh = SubResource("QuadMesh_ie3bn")
+surface_material_override/0 = SubResource("StandardMaterial3D_ai565")
