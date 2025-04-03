@@ -69,7 +69,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		$Detektyw/AnimationPlayer.play("Standing")
 	
-	move_and_slide()
+	if is_inside_tree():
+		move_and_slide()
 	
 	#to wszystko wyłapuje jak daleko ruszałaby się kamera gdyby ruszała się z kamerą
 	do_kam_2 = position.z
