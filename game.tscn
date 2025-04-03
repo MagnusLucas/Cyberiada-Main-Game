@@ -1,9 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=9 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://d31lk7cftx5hb" path="res://world/places/test_level.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bvdqujiy0oilp" path="res://world/NPCs/npc_base.tscn" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://dcunl4pq5eql3" path="res://world/NPCs/npc_base.gd" id="4_fc0e3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dp5yl"]
+height = 3.01807
+radius = 1.09619
+
+[sub_resource type="QuadMesh" id="QuadMesh_ie3bn"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dp5yl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai565"]
+transparency = 1
+albedo_texture = SubResource("PlaceholderTexture2D_dp5yl")
+billboard_mode = 1
+billboard_keep_scale = true
 
 [node name="world" type="Node3D"]
 script = ExtResource("1_e7hdk")
 
 [node name="test_level" parent="." instance=ExtResource("2_e2o6t")]
+
+[node name="NPC" parent="." instance=ExtResource("3_feb5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.36335, 0.891999, -2.89117)
+
+[node name="NPC2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65166, 0.891999, 1.54116)
+script = ExtResource("4_fc0e3")
+folder_path = "res://world/NPCs/NPC-folders/dorota/"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.509033, 0)
+shape = SubResource("CylinderShape3D_dp5yl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NPC2"]
+transform = Transform3D(1, 0, 0, 0, 2.82162, 0, 0, 0, 1, 0, 0.518811, 0)
+mesh = SubResource("QuadMesh_ie3bn")
+surface_material_override/0 = SubResource("StandardMaterial3D_ai565")

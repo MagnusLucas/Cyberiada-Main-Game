@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://srlxskokh6h5"
-path.s3tc="res://.godot/imported/babcia1.png-ea63fcfd846a209c138c24e73bed96bb.s3tc.ctex"
+path.s3tc="res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://grafiki od Kateryny/all game characters/babcia1.png"
-dest_files=["res://.godot/imported/babcia1.png-ea63fcfd846a209c138c24e73bed96bb.s3tc.ctex"]
+source_file="res://world/NPCs/NPC-folders/babcia/texture.png"
+dest_files=["res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.s3tc.ctex"]
 
 [params]
 
