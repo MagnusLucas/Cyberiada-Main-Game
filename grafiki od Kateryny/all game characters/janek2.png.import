@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlrf6g6cfbpum"
-path="res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.ctex"
+uid="uid://c04wcvuxqsviv"
+path="res://.godot/imported/janek2.png-ac83afc915f2c726737e58d3f4dd4d0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/NPCs/NPC-folders/babcia/texture.png"
-dest_files=["res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.ctex"]
+source_file="res://grafiki od Kateryny/all game characters/janek2.png"
+dest_files=["res://.godot/imported/janek2.png-ac83afc915f2c726737e58d3f4dd4d0d.ctex"]
 
 [params]
 

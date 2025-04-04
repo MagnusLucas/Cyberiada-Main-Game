@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlrf6g6cfbpum"
-path="res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.ctex"
+uid="uid://dykm87j3egl52"
+path="res://.godot/imported/settings1.png-1358a0a212d87746e5ec4a1b3570ea12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/NPCs/NPC-folders/babcia/texture.png"
-dest_files=["res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.ctex"]
+source_file="res://ZEmess/settings1.png"
+dest_files=["res://.godot/imported/settings1.png-1358a0a212d87746e5ec4a1b3570ea12.ctex"]
 
 [params]
 

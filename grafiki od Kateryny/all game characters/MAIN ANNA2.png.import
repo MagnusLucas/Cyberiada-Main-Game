@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlrf6g6cfbpum"
-path="res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.ctex"
+uid="uid://boqv0yql0sa42"
+path="res://.godot/imported/MAIN ANNA2.png-9180921de8dca47aece29b81265be86d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/NPCs/NPC-folders/babcia/texture.png"
-dest_files=["res://.godot/imported/texture.png-ea2488e852ceee496016cc0ce06fb654.ctex"]
+source_file="res://grafiki od Kateryny/all game characters/MAIN ANNA2.png"
+dest_files=["res://.godot/imported/MAIN ANNA2.png-9180921de8dca47aece29b81265be86d.ctex"]
 
 [params]
 
