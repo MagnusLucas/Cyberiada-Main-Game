@@ -3,13 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cfua7w2f82ydd"
-path="res://.godot/imported/Detektyw.gltf-176001b48548d2f68f5f9d2b85fc0505.scn"
+uid="uid://dslk0tl43xkq"
+valid=false
 
 [deps]
 
-source_file="res://3d_models/Detektyw.gltf"
-dest_files=["res://.godot/imported/Detektyw.gltf-176001b48548d2f68f5f9d2b85fc0505.scn"]
+source_file="res://Detektyw.gltf"
 
 [params]
 
