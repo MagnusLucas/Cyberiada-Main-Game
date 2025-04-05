@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d31lk7cftx5hb"]
+[gd_scene load_steps=13 format=3 uid="uid://d31lk7cftx5hb"]
 
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://player/character.tscn" id="1_g154u"]
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://world/places/test_level.gd" id="1_hkp2u"]
@@ -20,6 +20,13 @@ height = 1.29286
 [sub_resource type="TextMesh" id="TextMesh_6hysj"]
 text = "pokój jedenekarynka"
 font_size = 127
+
+[sub_resource type="BoxMesh" id="BoxMesh_g154u"]
+size = Vector3(20, 8, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hkp2u"]
+data = PackedVector3Array(-10, 4, 10, 10, 4, 10, -10, -4, 10, 10, 4, 10, 10, -4, 10, -10, -4, 10, 10, 4, -10, -10, 4, -10, 10, -4, -10, -10, 4, -10, -10, -4, -10, 10, -4, -10, 10, 4, 10, 10, 4, -10, 10, -4, 10, 10, 4, -10, 10, -4, -10, 10, -4, 10, -10, 4, -10, -10, 4, 10, -10, -4, -10, -10, 4, 10, -10, -4, 10, -10, -4, -10, 10, 4, 10, -10, 4, 10, 10, 4, -10, -10, 4, 10, -10, 4, -10, 10, 4, -10, -10, -4, 10, 10, -4, 10, -10, -4, -10, 10, -4, 10, 10, -4, -10, -10, -4, -10)
+backface_collision = true
 
 [node name="test_level" type="Node3D"]
 script = ExtResource("1_hkp2u")
@@ -64,3 +71,12 @@ mesh = SubResource("TextMesh_6hysj")
 [node name="Passage2" parent="." instance=ExtResource("6_g154u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93109, 0, -1.61081)
 next_scene = "uid://mpb26cq31vqs"
+
+[node name="blokada" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="blokada"]
+visible = false
+mesh = SubResource("BoxMesh_g154u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="blokada"]
+shape = SubResource("ConcavePolygonShape3D_hkp2u")
