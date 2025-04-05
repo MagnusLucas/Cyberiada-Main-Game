@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qtro4f2chgdc"
-path="res://.godot/imported/skurwiel2.png-b711261cd4ddf9bffea145d05bda42a3.ctex"
+uid="uid://cm42ff8qbtxs3"
+path="res://.godot/imported/texture.png-7976bf7ce71084b846f8aeec08091b03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafiki od Kateryny/all game characters/skurwiel2.png"
-dest_files=["res://.godot/imported/skurwiel2.png-b711261cd4ddf9bffea145d05bda42a3.ctex"]
+source_file="res://world/NPCs/NPC-folders/marynarz/texture.png"
+dest_files=["res://.godot/imported/texture.png-7976bf7ce71084b846f8aeec08091b03.ctex"]
 
 [params]
 

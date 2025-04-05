@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b36epmy7eqqqv"
-path="res://.godot/imported/sklepowa2.png-942b5d3e5e2ffbaec070de7a6fbf8fc8.ctex"
+uid="uid://qtro4f2chgdc"
+path="res://.godot/imported/texture.png-3672a1988f5afa96ca4d940dc01fd9aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafiki od Kateryny/all game characters/sklepowa2.png"
-dest_files=["res://.godot/imported/sklepowa2.png-942b5d3e5e2ffbaec070de7a6fbf8fc8.ctex"]
+source_file="res://world/NPCs/NPC-folders/sierzant/texture.png"
+dest_files=["res://.godot/imported/texture.png-3672a1988f5afa96ca4d940dc01fd9aa.ctex"]
 
 [params]
 

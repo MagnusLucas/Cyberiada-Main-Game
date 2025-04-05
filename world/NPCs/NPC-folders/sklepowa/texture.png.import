@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c04wcvuxqsviv"
-path="res://.godot/imported/janek2.png-ac83afc915f2c726737e58d3f4dd4d0d.ctex"
+uid="uid://b36epmy7eqqqv"
+path="res://.godot/imported/texture.png-8931fe68188115e80fdd4abd7df484be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafiki od Kateryny/all game characters/janek2.png"
-dest_files=["res://.godot/imported/janek2.png-ac83afc915f2c726737e58d3f4dd4d0d.ctex"]
+source_file="res://world/NPCs/NPC-folders/sklepowa/texture.png"
+dest_files=["res://.godot/imported/texture.png-8931fe68188115e80fdd4abd7df484be.ctex"]
 
 [params]
 
