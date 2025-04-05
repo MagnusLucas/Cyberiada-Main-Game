@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bxwa2phe6lg84"]
 
 [node name="NPC" type="GraphNode"]
-offset_left = 86.0
-offset_top = 119.0
-offset_right = 260.0
-offset_bottom = 211.0
+offset_left = 109.0
+offset_top = 121.0
+offset_right = 283.0
+offset_bottom = 213.0
 mouse_filter = 1
 position_offset = Vector2(86, 119)
 title = "NPC"
