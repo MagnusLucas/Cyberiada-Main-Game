@@ -5,24 +5,60 @@
 				"next_id": [
 					1
 				],
-				"text": "\\o"
+				"text": "O co chodzi?"
 			},
 			"1": {
-				"next_id": [],
-				"text": "..."
+				"next_id": [
+					2
+				],
+				"text": "Panie władzo, tutaj ludzie śpią."
+			},
+			"2": {
+				"next_id": [
+					3
+				],
+				"text": "Gdybym ja Panu wyszedł tak z gębą z rana…"
 			}
 		},
-		"text": "o/"
+		"text": "Milicja otwierać! Sierżant Ambroży Szymański. Musimy panu zadać parę pytań."
 	},
 	"1": {
 		"answers": {
-			"2": {
+			"3": {
 				"next_id": [
-					0
+					4
 				],
-				"text": "don shoot pls"
+				"text": "..."
 			}
 		},
-		"text": ";--;=-"
+		"text": "O ten tramwaj co nie chodzi! Ja tu zadaje pytania!"
+	},
+	"2": {
+		"answers": {
+			"3": {
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
+		},
+		"text": "Jest 12 w południe. Nikt już nie śpi, oprócz Pana."
+	},
+	"3": {
+		"answers": {
+			"3": {
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
+		},
+		"text": "Lepiej, żeby Pan do nikogo nie podchodził z taką gębą."
+	},
+	"4": {
+		"answers": {
+
+		},
+		"text": "A teraz do rzeczy. Czy widzieliście lub słyszeliście coś podejrzanego wczoraj w nocy?"
 	}
 }
