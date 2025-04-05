@@ -55,7 +55,12 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("go_left", "go_right", "go_up", "go_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+	if direction != Vector3(0,0,0):
+		print(direction)
+		#detektyw kręci się ale nie smooth
+		# $Detektyw.rotation = Vector3(0 , Vector2(direction[2],direction[0]).angle() , 0)
+		#detektyw kręci się kinda smooth
+		$Detektyw.rotation = Vector3(0 , lerp_angle($Detektyw.rotation[1],Vector2(direction[2],direction[0]).angle(),0.2) , 0)
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -63,13 +68,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	#print('hee hee ' ,JUMP_VELOCITY, ' hee? ',SPEED, ' ', velocity)
-	if velocity.y >0:
+	if not is_on_floor():
+		#warunek do pierwszej pozycji skoku
+		#if velocity.y >0:
 		$Detektyw/AnimationPlayer.play("Tpose")
 	elif velocity.x !=0 or velocity.z != 0:
 		#print('brrrrda')
 		$Detektyw/AnimationPlayer.play("Walking")
 	else:
 		$Detektyw/AnimationPlayer.play("Standing")
+			
 	
 	if is_inside_tree():
 		move_and_slide()
