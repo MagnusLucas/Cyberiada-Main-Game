@@ -17,7 +17,7 @@ func sort_by_index(a, b):
 			return a[1] < b[1]
 
 var inv = []
-
+# psy dobre
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
