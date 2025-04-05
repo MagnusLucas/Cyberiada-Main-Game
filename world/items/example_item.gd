@@ -7,6 +7,11 @@ func taken():
 	can_take = false
 	if len($"../character".inv) <=5:
 		$"../character".inv.append(get_name())
+	visible = false
+	$AudioStreamPlayer.play()
+	get_node("../HUD/InLevelUi").update_inv($"../character".inv)
+	await $AudioStreamPlayer.finished
 	#print(name)
 	queue_free()
-	get_node("../HUD/InLevelUi").update_inv($"../character".inv)
+	
+	

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b440rwhlg20vk"]
+[gd_scene load_steps=6 format=3 uid="uid://b440rwhlg20vk"]
 
 [ext_resource type="Script" uid="uid://b1kj1dkex2v6" path="res://world/objects/passage.gd" id="1_tln4w"]
+[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://audio/kartka_1.wav" id="2_ol6he"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tln4w"]
 size = Vector3(1, 1.5, 0.2)
@@ -23,4 +24,5 @@ shape = SubResource("BoxShape3D_tln4w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 mesh = SubResource("BoxMesh_ol6he")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ol6he")

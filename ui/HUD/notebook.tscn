@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dibafas5mtxem"]
+[gd_scene load_steps=6 format=3 uid="uid://dibafas5mtxem"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_6offo"]
-[ext_resource type="Script" uid="uid://bi35l8ayynure" path="res://ui/HUD/notebook.gd" id="1_mi3cd"]
+[ext_resource type="Script" uid="uid://1gr5sxlvbrxx" path="res://ui/HUD/notebook.gd" id="1_mi3cd"]
+[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://audio/kartka_1.wav" id="3_miyd5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mdajw"]
 
@@ -92,5 +93,8 @@ icon = SubResource("PlaceholderTexture2D_l6rjd")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_miyd5")
 
 [connection signal="pressed" from="MarginContainer/MarginContainer2/close" to="." method="_on_close_pressed"]

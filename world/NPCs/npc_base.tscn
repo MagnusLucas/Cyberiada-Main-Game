@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvdqujiy0oilp"]
+[gd_scene load_steps=7 format=3 uid="uid://bvdqujiy0oilp"]
 
 [ext_resource type="Script" uid="uid://dcunl4pq5eql3" path="res://world/NPCs/npc_base.gd" id="1_fiju2"]
+[ext_resource type="AudioStream" uid="uid://c0m4n56boy0ax" path="res://audio/podnoszenie-przedmiotu-kubek2.mp3" id="2_ie3bn"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dp5yl"]
 height = 3.01807
@@ -28,3 +29,6 @@ shape = SubResource("CylinderShape3D_dp5yl")
 transform = Transform3D(1, 0, 0, 0, 2.82162, 0, 0, 0, 1, 0, 0.518811, 0)
 mesh = SubResource("QuadMesh_ie3bn")
 surface_material_override/0 = SubResource("StandardMaterial3D_ai565")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ie3bn")

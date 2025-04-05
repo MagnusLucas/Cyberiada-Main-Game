@@ -17,7 +17,14 @@ func sort_by_index(a, b):
 			return a[1] < b[1]
 
 var inv = []
-# psy dobre
+#dźwięk
+var audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
+var sound_timer : Timer
+func _ready() -> void:
+	sound_timer = Timer.new()
+	sound_timer.autostart = true
+	sound_timer.set_one_shot(true)
+	add_child(sound_timer)
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -49,6 +56,7 @@ func _physics_process(delta: float) -> void:
 	do_kam_1 = position.z 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		$AudioStreamPlayer.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -56,7 +64,7 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("go_left", "go_right", "go_up", "go_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction != Vector3(0,0,0):
-		print(direction)
+		#print(direction)
 		#detektyw kręci się ale nie smooth
 		# $Detektyw.rotation = Vector3(0 , Vector2(direction[2],direction[0]).angle() , 0)
 		#detektyw kręci się kinda smooth
@@ -73,11 +81,23 @@ func _physics_process(delta: float) -> void:
 		#if velocity.y >0:
 		$Detektyw/AnimationPlayer.play("Tpose")
 	elif velocity.x !=0 or velocity.z != 0:
-		#print('brrrrda')
 		$Detektyw/AnimationPlayer.play("Walking")
+		#dźwięk contuwued
+		print($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
+		if $AudioStreamPlayer.playing == false and sound_timer.time_left == 0:
+			audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
+			print('disadgjhvbxzx')
+			$AudioStreamPlayer.stream = load(audio_path)
+			print(audio_path)
+			sound_timer.start(randf_range(0.5,0.5)) 
+			$AudioStreamPlayer.play()
+		
 	else:
 		$Detektyw/AnimationPlayer.play("Standing")
 			
+	
+		
+		
 	
 	if is_inside_tree():
 		move_and_slide()
