@@ -3,26 +3,84 @@
 		"answers": {
 			"0": {
 				"next_id": [
-					1
+					2
 				],
-				"text": "\\o"
+				"text": "Znam takich, co się cieszą."
 			},
 			"1": {
-				"next_id": [],
-				"text": "..."
+				"next_id": [
+					1
+				],
+				"text": "Znałeś ją?"
+			},
+			"2": {
+				"next_id": [
+					3
+				],
+				"text": "Jeśli przez sprawę masz na myśli morderstwo…"
 			}
 		},
-		"text": "o/"
+		"text": "Straszna sprawa z tą Dorotą, nie?"
 	},
 	"1": {
 		"answers": {
-			"2": {
+			"6": {
 				"next_id": [
-					0
+					4
 				],
-				"text": "don shoot pls"
+				"text": "Kim jesteś?"
 			}
 		},
-		"text": ";--;=-"
+		"text": "A znałem, znałem. Była moją stałą klientką."
+	},
+	"2": {
+		"answers": {
+			"6": {
+				"next_id": [
+					4
+				],
+				"text": "Kim jesteś?"
+			}
+		},
+		"text": "Niech zgadnę — pewnie ta Stefańska spod szóstki, hę? Ona zawsze mąci."
+	},
+	"3": {
+		"answers": {
+			"6": {
+				"next_id": [
+					4
+				],
+				"text": "Kim jesteś?"
+			}
+		},
+		"text": "Poważnie myśli Pan, że to było morderstwo? Dobre mi żarty."
+	},
+	"4": {
+		"answers": {
+			"9": {
+				"next_id": [
+					5
+				],
+				"text": "Nie wiem."
+			}
+		},
+		"text": "Starski Juliusz. Ale lokalni nazywają mnie Marynarzem. Brzmi bardziej enigmatycznie. I robi lepszą reklamę, jeśli wiesz, o co chodzi."
+	},
+	"5": {
+		"answers": {
+			"10": {
+				"next_id": [
+					6
+				],
+				"text": "Nie."
+			}
+		},
+		"text": "Nieważne. Jakbyś potrzebował czegoś… Nietypowego, zaglądnij do mnie. A nóż widelec będę coś miał. Ach i jeszcze jedno - widziałeś może moją czapkę?"
+	},
+	"6": {
+		"answers": {
+
+		},
+		"text": "Te przeklęte dzieciaki… Cóż, jeśli jakimś cudem się na nią natkniesz, to proszę, oddaj mi ją. Odwdzięczę się sowicie. Arrivederci!"
 	}
 }
