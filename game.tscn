@@ -19,7 +19,13 @@ albedo_texture = SubResource("PlaceholderTexture2D_dp5yl")
 billboard_mode = 1
 billboard_keep_scale = true
 
-[node name="world" type="Node3D"]
+[node name="world" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_e7hdk")
 
 [node name="test_level" parent="." instance=ExtResource("2_e2o6t")]

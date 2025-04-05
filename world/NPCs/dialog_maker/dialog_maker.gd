@@ -84,8 +84,8 @@ func _to_dict() -> Dictionary:
 
 func _on_save_pressed() -> void:
 	var saving_dialog = FileDialog.new()
-	saving_dialog.current_dir = "res://ui/HUD/npc_dialog/"
-	saving_dialog.current_file = "example_dialog.json"
+	saving_dialog.current_dir = "res://world/NPCs/NPC-folders/"
+	saving_dialog.current_file = "dialog.json"
 	add_child(saving_dialog)
 	saving_dialog.show()
 	saving_dialog.connect("file_selected", _on_save_confirmed)
