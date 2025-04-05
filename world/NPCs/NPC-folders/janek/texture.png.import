@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm42ff8qbtxs3"
-path="res://.godot/imported/marynarz2.png-1f18966974da80d2defec70735cfb66a.ctex"
+uid="uid://c04wcvuxqsviv"
+path="res://.godot/imported/texture.png-032a533753c8cb01aa9d5581771e61dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafiki od Kateryny/all game characters/marynarz2.png"
-dest_files=["res://.godot/imported/marynarz2.png-1f18966974da80d2defec70735cfb66a.ctex"]
+source_file="res://world/NPCs/NPC-folders/janek/texture.png"
+dest_files=["res://.godot/imported/texture.png-032a533753c8cb01aa9d5581771e61dc.ctex"]
 
 [params]
 
