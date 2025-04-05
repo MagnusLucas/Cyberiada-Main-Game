@@ -1,4 +1,4 @@
-extends Node3D
+extends Control
 
 var pause = preload("res://ui/settings/in_game/pause.tscn")
 

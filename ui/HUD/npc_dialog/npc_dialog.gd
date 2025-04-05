@@ -6,14 +6,20 @@ var answers : Dictionary
 
 func _ready() -> void:
 	if convo_data.is_empty():
-		var file = FileAccess.open("res://ui/HUD/npc_dialog/example_dialog1.json", FileAccess.READ)
-		var json_string = file.get_as_text()
-		convo_data = JSON.parse_string(json_string)
+		get_data_from_file("res://ui/HUD/npc_dialog/example_dialog.json")
 		next(current_state)
 
+func get_data_from_file(filepath : String) -> bool:
+	var file = FileAccess.open(filepath, FileAccess.READ)
+	var json_string = file.get_as_text()
+	if !JSON.parse_string(json_string):
+		print("ERROR! The file with this characters conversation info is broken or non existent")
+		return false
+	convo_data = JSON.parse_string(json_string)
+	return true
+
 # it should modify the convo data to be correct according to owned items
-func initialize(all_convo_data : Dictionary):#, owned_items : Array[Item]):
-	convo_data = all_convo_data
+func initialize():#, owned_items : Array[Item]):
 	next(current_state)
 
 func next(id : String):

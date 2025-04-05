@@ -2,7 +2,9 @@ extends Area3D
 
 @export var folder_path : String
 const texture : String = "texture.png"
-const dialog : String = "dialog.json"
+const dialog_data : String = "dialog.json"
+
+var dialog_scene = preload("res://ui/HUD/npc_dialog/npc_dialog.tscn")
 
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 
@@ -19,4 +21,9 @@ func initialize(folder_path_a : String):
 	
 
 func start_dialog():
-	pass
+	var dialog = dialog_scene.instantiate()
+	dialog.get_data_from_file(folder_path + dialog_data)
+	dialog.initialize()
+	add_sibling(dialog)
+	get_parent().move_child(dialog, 0)
+	
