@@ -1,28 +1,8 @@
 {
 	"0": {
 		"answers": {
-			"0": {
-				"next_id": [
-					1
-				],
-				"text": "\\o"
-			},
-			"1": {
-				"next_id": [],
-				"text": "..."
-			}
+
 		},
-		"text": "o/"
-	},
-	"1": {
-		"answers": {
-			"2": {
-				"next_id": [
-					0
-				],
-				"text": "don shoot pls"
-			}
-		},
-		"text": ";--;=-"
+		"text": "Odpierdol się"
 	}
 }
