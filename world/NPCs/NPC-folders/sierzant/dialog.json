@@ -5,24 +5,116 @@
 				"next_id": [
 					1
 				],
-				"text": "\\o"
+				"text": "O co chodzi?"
 			},
 			"1": {
-				"next_id": [],
-				"text": "..."
+				"next_id": [
+					2
+				],
+				"text": "Panie władzo, tutaj ludzie śpią."
+			},
+			"2": {
+				"next_id": [
+					3
+				],
+				"text": "Gdybym ja Panu wyszedł tak z gębą z rana…"
 			}
 		},
-		"text": "o/"
+		"text": "Milicja otwierać! Sierżant Ambroży Szymański. Musimy panu zadać parę pytań."
 	},
 	"1": {
 		"answers": {
-			"2": {
+			"3": {
 				"next_id": [
-					0
+					4
 				],
-				"text": "don shoot pls"
+				"text": "..."
 			}
 		},
-		"text": ";--;=-"
+		"text": "O ten tramwaj co nie chodzi! Ja tu zadaje pytania!"
+	},
+	"2": {
+		"answers": {
+			"3": {
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
+		},
+		"text": "Jest 12 w południe. Nikt już nie śpi, oprócz Pana."
+	},
+	"3": {
+		"answers": {
+			"3": {
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
+		},
+		"text": "Lepiej, żeby Pan do nikogo nie podchodził z taką gębą."
+	},
+	"4": {
+		"answers": {
+			"4": {
+				"next_id": [
+					5
+				],
+				"text": "Wie Pan tu się codziennie różne dziwy dzieją…"
+			},
+			"5": {
+				"next_id": [
+					6
+				],
+				"text": "Zdzisiek się chował w budzie za laskiem, żeby chlać, aby się żona nie dowiedziała."
+			},
+			"6": {
+				"next_id": [
+					7
+				],
+				"text": "Panie władzo, czy ja Panu wyglądam, jak osoba, która by wiedziała co się wokół mnie dzieje?"
+			}
+		},
+		"text": "A teraz do rzeczy. Czy widzieliście lub słyszeliście coś podejrzanego wczoraj w nocy?"
+	},
+	"5": {
+		"answers": {
+			"7": {
+				"next_id": [
+					8
+				],
+				"text": "Przychodzisz do mojego domu, obrażasz mnie…"
+			}
+		},
+		"text": "Niech mi Pan tu nie cwaniakuje. Utarte frazesy pseudointelektualistów mnie nie interesują."
+	},
+	"6": {
+		"answers": {
+			"7": {
+				"next_id": [
+					8
+				],
+				"text": "Przychodzisz do mojego domu, obrażasz mnie…"
+			}
+		},
+		"text": "Żona już wie, bo go zgarnęliśmy. Zdzisiek prędko do lasku nie wróci. Ale jeśli Pana znów przyłapiemy, szwendającego się po mieście to będzie następny."
+	},
+	"7": {
+		"answers": {
+			"7": {
+				"next_id": [
+					8
+				],
+				"text": "Przychodzisz do mojego domu, obrażasz mnie…"
+			}
+		},
+		"text": "Nie, wyglądacie, jak pijaczyna, którą przedwczoraj zgarnęliśmy sprzed Parku Oliwskiego."
+	},
+	"8": {
+		"answers": {
+
+		},
+		"text": "Ja nie mam czasu na wasze wybryki. Ani czasu, ani ochoty. Krawczyk! Chodź zajmij się tym degeneratem."
 	}
 }
