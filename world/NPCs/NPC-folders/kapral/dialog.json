@@ -5,24 +5,37 @@
 				"next_id": [
 					1
 				],
-				"text": "\\o"
-			},
-			"1": {
-				"next_id": [],
-				"text": "..."
+				"text": "Michał Kamieński."
 			}
 		},
-		"text": "o/"
+		"text": "Kto rano wstaje temu Pan Bóg daje… a kto długo lega, to go odbiega. Pana godność…?"
 	},
 	"1": {
 		"answers": {
-			"2": {
+			"1": {
 				"next_id": [
-					0
+					2
 				],
-				"text": "don shoot pls"
+				"text": "Utuliłem się do snu ze słodką butelką Krakuskiej."
 			}
 		},
-		"text": ";--;=-"
+		"text": "Dobrze, powtórzę pytanie kolegi. Czy był pan może świadkiem czegoś podejrzanego poprzedniej nocy?"
+	},
+	"2": {
+		"answers": {
+			"2": {
+				"next_id": [
+					3
+				],
+				"text": "Nie."
+			}
+		},
+		"text": "Czyli nic Pan nie widział?"
+	},
+	"3": {
+		"answers": {
+
+		},
+		"text": "Dobrze, rozumiem. Nie będę dłużej zawracać Panu głowy. Kłaniam się."
 	}
 }
