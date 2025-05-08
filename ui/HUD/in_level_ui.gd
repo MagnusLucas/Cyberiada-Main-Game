@@ -11,9 +11,9 @@ func _process(_delta: float) -> void:
 	pass
 
 func update_inv(inventory):
-	print('updateinv')
+	print_debug('updateinv')
 	
 	for i in range(len(inventory)):
-		print(inventory[int(i)])
+		print_debug(inventory[int(i)])
 		get_node('PanelContainer/MarginContainer/Container/TextureRect'+str(i+1)).texture =load("res://world/items/2d/"+inventory[int(i)]+".png")
 		

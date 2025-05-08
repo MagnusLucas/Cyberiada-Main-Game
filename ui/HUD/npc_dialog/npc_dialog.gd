@@ -13,7 +13,7 @@ func get_data_from_file(filepath : String) -> bool:
 	var file = FileAccess.open(filepath, FileAccess.READ)
 	var json_string = file.get_as_text()
 	if !JSON.parse_string(json_string):
-		print("ERROR! The file with this characters conversation info is broken or non existent")
+		print_debug("ERROR! The file with this characters conversation info is broken or non existent")
 		return false
 	convo_data = JSON.parse_string(json_string)
 	return true
@@ -25,7 +25,7 @@ func initialize():#, owned_items : Array[Item]):
 func next(id : String):
 	current_state = id
 	if !convo_data.has(current_state):
-		print("convo finished")
+		print_debug("convo finished")
 		queue_free()
 		return
 	$VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]
