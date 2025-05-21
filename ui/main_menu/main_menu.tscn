@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://ui/shared/graphics/background.png" id="1_i5wg5"]
 [ext_resource type="Script" uid="uid://b51l1gk7h1o66" path="res://ui/main_menu/navigation.gd" id="2_f7xsy"]
 [ext_resource type="Theme" uid="uid://l4fn7cedqo3m" path="res://ui/shared/graphics/themes/default_button.tres" id="3_y3g0o"]
-[ext_resource type="Texture2D" uid="uid://2tp8vro3n2j0" path="res://ui/graphics/button1-main1.png" id="4_3c04x"]
+[ext_resource type="Texture2D" uid="uid://c4c1iyo6lwqra" path="res://ui/shared/graphics/buttons/main_background.png" id="4_3c04x"]
 [ext_resource type="AudioStream" uid="uid://c8yt31akqtt0j" path="res://audio/lethal_company_mine_sfx.wav" id="5_3c04x"]
 
 [node name="Control" type="Control"]
@@ -70,18 +70,30 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_y3g0o")
 text = "Wczytaj grę"
+icon = ExtResource("4_3c04x")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Settings" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MenuButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_y3g0o")
 text = "Ustawienia"
+icon = ExtResource("4_3c04x")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Quit" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MenuButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_y3g0o")
 text = "Wyjdź"
+icon = ExtResource("4_3c04x")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Control" type="Control" parent="MainMenu/HBoxContainer"]
 layout_mode = 2
