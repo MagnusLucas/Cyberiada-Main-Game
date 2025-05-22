@@ -11,7 +11,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func update_inv(inventory):
-	print('updateinv')
+	#print('updateinv')
 	
 	for i in range(len(inventory)):
 		print(inventory[int(i)])

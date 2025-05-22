@@ -10,7 +10,7 @@ func taken():
 		character.inv.append(get_name())
 	visible = false
 	$AudioStreamPlayer.play()
-	get_node("../HUD/InLevelUi").update_inv(character.inv)
+	get_node("../../character/HUD/InLevelUi").update_inv(character.inv)
 	await $AudioStreamPlayer.finished
 	#print(name)
 	queue_free()

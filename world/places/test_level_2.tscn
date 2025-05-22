@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwyaext20uchn"]
+[gd_scene load_steps=11 format=3 uid="uid://bwyaext20uchn"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://world/places/test_level.gd" id="1_14ghm"]
-[ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://player/character.tscn" id="2_lxbid"]
 [ext_resource type="PackedScene" uid="uid://b2nw30xxslme8" path="res://world/items/example_item.tscn" id="3_g5sn1"]
 [ext_resource type="PackedScene" uid="uid://bpq8x6bwcrcy1" path="res://ui/HUD/hud.tscn" id="5_4dffc"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://world/objects/passage.tscn" id="5_14ghm"]
@@ -38,9 +37,6 @@ mesh = SubResource("PlaneMesh_wo7lo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_w71c0")
-
-[node name="character" parent="." instance=ExtResource("2_lxbid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 14, 16)
