@@ -34,7 +34,8 @@ func next(id : String):
 	for child in $VBoxContainer/answers.get_children():
 		child.queue_free()
 	for key in answers:
-		var answer = RichTextLabel.new()
+		var answer : RichTextLabel = RichTextLabel.new()
+		answer.theme = load("res://ui/shared/graphics/themes/default_rtl.tres")
 		answer.text = answers[key]["text"]
 		var possible_answer_reactions : Array = answers[key]["next_id"]
 		var number_of_possibilities = possible_answer_reactions.size()
