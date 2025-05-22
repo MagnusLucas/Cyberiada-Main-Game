@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 			npc_tab[0][0].start_dialog()
 		
 		var item_tab = []
-		#print($interactable_area.get_overlapping_bodies())
+		print($interactable_area.get_overlapping_bodies())
 		for i in $interactable_area.get_overlapping_bodies(): #these are the items, obviously.
 			if i.is_in_group("pickable"):
 				item_tab.append([i,position.distance_to(i.position)])
