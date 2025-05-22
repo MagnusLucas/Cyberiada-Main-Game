@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -83,12 +82,12 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x !=0 or velocity.z != 0:
 		$Detektyw/AnimationPlayer.play("Walking")
 		#dźwięk contuwued
-		#print_debug($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
+		#print($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
 		if $AudioStreamPlayer.playing == false and sound_timer.time_left == 0:
 			audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
-			print_debug('disadgjhvbxzx')
+			#print('disadgjhvbxzx')
 			$AudioStreamPlayer.stream = load(audio_path)
-			print_debug(audio_path)
+			#print(audio_path)
 			sound_timer.start(randf_range(0.5,0.5)) 
 			$AudioStreamPlayer.play()
 		

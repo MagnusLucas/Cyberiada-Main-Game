@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://yl8edsf2vjry"]
+[gd_scene load_steps=8 format=3 uid="uid://yl8edsf2vjry"]
 
 [ext_resource type="Script" uid="uid://myij85pvlke1" path="res://player/character.gd" id="1_v7l8u"]
 [ext_resource type="PackedScene" uid="uid://bxudyj4c76m41" path="res://3d_models/Detektyw.gltf" id="2_1t06j"]
 [ext_resource type="AudioStream" uid="uid://bs8stj7a5q18f" path="res://audio/boing.wav" id="3_xx22o"]
+[ext_resource type="PackedScene" uid="uid://bpq8x6bwcrcy1" path="res://ui/HUD/hud.tscn" id="4_74pxd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5k8hl"]
 
@@ -106,5 +107,7 @@ bones/158/rotation = Quaternion(-0.705204, 0.705204, -0.0518445, -0.0518431)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_xx22o")
 volume_db = -15.0
+
+[node name="HUD" parent="." instance=ExtResource("4_74pxd")]
 
 [editable path="Detektyw"]
