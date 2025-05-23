@@ -71,31 +71,8 @@ func _physics_process(delta: float) -> void:
 	
 	# Interact/take items
 	if Input.is_action_just_pressed("interact"):
-<<<<<<< HEAD
 		try_to_interact(_get_closest_item(), _get_closest_npc())
 	
-=======
-		#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
-		var npc_tab = []
-		for i in $interactable_area.get_overlapping_areas(): #these are the human bodies (NPCs)
-			npc_tab.append([i,position.distance_to(i.position)])
-		npc_tab.sort_custom(sort_by_index)
-		if npc_tab.size() > 0:
-			npc_tab[0][0].start_dialog()
-		
-		var item_tab = []
-		print($interactable_area.get_overlapping_bodies())
-		for i in $interactable_area.get_overlapping_bodies(): #these are the items, obviously.
-			if i.is_in_group("pickable"):
-				item_tab.append([i,position.distance_to(i.position)])
-		item_tab.sort_custom(sort_by_index)
-		#sprawdza czy w tej tabeli coś jest bo jak nie to sie wykrzacza
-		if len(item_tab) >0:
-			the_pickable_item = item_tab[0][0]
-			#nie pamiętam już czym było can take ale było w poprzedniej wersji so
-			if the_pickable_item.can_take:
-				the_pickable_item.taken()
->>>>>>> 621a73f347c7908801ce4a628703bd28dbafdf3a
 		
 	do_kam_1 = position.z 
 	# Handle jump.
