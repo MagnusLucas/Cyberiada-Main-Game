@@ -5,24 +5,18 @@
 				"next_id": [
 					1
 				],
-				"text": "\\o"
-			},
-			"1": {
-				"next_id": [],
-				"text": "..."
+				"text": "Dej szlugi"
 			}
 		},
-		"text": "o/"
+		"text": "W czym mogę pomóc?"
 	},
 	"1": {
 		"answers": {
-			"2": {
-				"next_id": [
-					0
-				],
-				"text": "don shoot pls"
+			"1": {
+				"next_id": [],
+				"text": "B)"
 			}
 		},
-		"text": ";--;=-"
+		"text": "Jak waćpan se życzy"
 	}
 }
