@@ -31,4 +31,9 @@ func taken():
 	var nexter = load(next_scene)
 	await $AudioStreamPlayer.finished
 	#print(self.next_scene)
-	get_tree().change_scene_to_packed(nexter)
+	#poprawiona zmiana poziomu
+	var scene_node = get_parent()
+	print(scene_node)
+	scene_node.queue_free()
+	var roott = get_tree().get_root().get_node('world')
+	roott.add_child(nexter.instantiate())

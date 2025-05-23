@@ -1,9 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=34 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://d31lk7cftx5hb" path="res://world/places/test_level.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://bvdqujiy0oilp" path="res://world/NPCs/npc_base.tscn" id="3_feb5d"]
 [ext_resource type="Script" uid="uid://dcunl4pq5eql3" path="res://world/NPCs/npc_base.gd" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://player/character.tscn" id="5_7jktm"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fc0e3"]
 height = 3.01807
@@ -214,3 +215,5 @@ shape = SubResource("CylinderShape3D_vef74")
 transform = Transform3D(1, 0, 0, 0, 2.82162, 0, 0, 0, 1, 0, 0.518811, 0)
 mesh = SubResource("QuadMesh_hve3p")
 surface_material_override/0 = SubResource("StandardMaterial3D_iotsf")
+
+[node name="character" parent="." instance=ExtResource("5_7jktm")]

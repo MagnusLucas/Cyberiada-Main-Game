@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -72,8 +71,31 @@ func _physics_process(delta: float) -> void:
 	
 	# Interact/take items
 	if Input.is_action_just_pressed("interact"):
+<<<<<<< HEAD
 		try_to_interact(_get_closest_item(), _get_closest_npc())
 	
+=======
+		#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
+		var npc_tab = []
+		for i in $interactable_area.get_overlapping_areas(): #these are the human bodies (NPCs)
+			npc_tab.append([i,position.distance_to(i.position)])
+		npc_tab.sort_custom(sort_by_index)
+		if npc_tab.size() > 0:
+			npc_tab[0][0].start_dialog()
+		
+		var item_tab = []
+		print($interactable_area.get_overlapping_bodies())
+		for i in $interactable_area.get_overlapping_bodies(): #these are the items, obviously.
+			if i.is_in_group("pickable"):
+				item_tab.append([i,position.distance_to(i.position)])
+		item_tab.sort_custom(sort_by_index)
+		#sprawdza czy w tej tabeli coś jest bo jak nie to sie wykrzacza
+		if len(item_tab) >0:
+			the_pickable_item = item_tab[0][0]
+			#nie pamiętam już czym było can take ale było w poprzedniej wersji so
+			if the_pickable_item.can_take:
+				the_pickable_item.taken()
+>>>>>>> 621a73f347c7908801ce4a628703bd28dbafdf3a
 		
 	do_kam_1 = position.z 
 	# Handle jump.
@@ -105,12 +127,12 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x !=0 or velocity.z != 0:
 		$Detektyw/AnimationPlayer.play("Walking")
 		#dźwięk contuwued
-		#print_debug($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
+		#print($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
 		if $AudioStreamPlayer.playing == false and sound_timer.time_left == 0:
 			audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
-			print_debug('disadgjhvbxzx')
+			#print('disadgjhvbxzx')
 			$AudioStreamPlayer.stream = load(audio_path)
-			print_debug(audio_path)
+			#print(audio_path)
 			sound_timer.start(randf_range(0.5,0.5)) 
 			$AudioStreamPlayer.play()
 		
