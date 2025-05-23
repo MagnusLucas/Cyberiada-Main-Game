@@ -74,6 +74,7 @@ func _physics_process(delta: float) -> void:
 		try_to_interact(_get_closest_item(), _get_closest_npc())
 	
 		
+		
 	do_kam_1 = position.z 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -128,11 +129,12 @@ func _physics_process(delta: float) -> void:
 	do_kam_diff = do_kam_1 - do_kam_2 
 	#mnożnik żeby ogarnąć jak mały ma być efekt kamery ruchem do przodu i do tyłu 
 	kamz = kamz - (do_kam_diff * 0.25)
-	$Camera_control.position.z = lerp($Camera_control.position.z, kamz, 0.08)
+	$Camera_control.position.z = lerp($Camera_control.position.z, kamz + 6, 0.08)
 	#Camera smoothing based on a yt tutorialsssssss/
 	$Camera_control.position.x = lerp($Camera_control.position.x, position.x, 0.08)
 	$Camera_control.position.y = lerp($Camera_control.position.y, position.y, 0.08)
 	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
 	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
-	
+	#ni«ej print do kamery, plz dont delete till fixed
+	#print(kamz, $Camera_control.position.z)
 	#testowa animacja żeby działała w otworzeniu

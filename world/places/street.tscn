@@ -1,10 +1,8 @@
-[gd_scene load_steps=277 format=3 uid="uid://d4uohc6ywne2"]
+[gd_scene load_steps=274 format=3 uid="uid://d4uohc6ywne2"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://world/places/test_level.gd" id="1_op38q"]
 [ext_resource type="PackedScene" uid="uid://rxgavgumbpjf" path="res://3d_models/levels2wariant/blok1-left.glb" id="2_8dqh3"]
-[ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://player/character.tscn" id="2_wv8e2"]
 [ext_resource type="PackedScene" uid="uid://b2nw30xxslme8" path="res://world/items/example_item.tscn" id="3_8dqh3"]
-[ext_resource type="PackedScene" uid="uid://bpq8x6bwcrcy1" path="res://ui/HUD/hud.tscn" id="4_jjuto"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://world/objects/passage.tscn" id="5_rgqxd"]
 [ext_resource type="PackedScene" uid="uid://dstgfqku0v8q2" path="res://3d_models/levels2wariant/blok2-midle.glb" id="7_udsp4"]
 [ext_resource type="PackedScene" uid="uid://bhcouuwdmt14m" path="res://3d_models/levels2wariant/blok3-right.glb" id="8_6ulgc"]
@@ -12,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://bwgbvehcmu1p5" path="res://3d_models/levels2wariant/ground-back-light.glb" id="10_uy74x"]
 [ext_resource type="PackedScene" uid="uid://ddbt3u2vxm4hv" path="res://3d_models/levels2wariant/objekts1-boxs.glb" id="11_uy74x"]
 [ext_resource type="PackedScene" uid="uid://dux6fxe3a4acn" path="res://3d_models/levels2wariant/objekts1-road-sign1.glb" id="12_xs62a"]
-[ext_resource type="PackedScene" uid="uid://ck4wckns42cml" path="res://3d_models/ulica/Tree1.glb" id="13_5840p"]
-[ext_resource type="PackedScene" uid="uid://dyyk6viil7btw" path="res://3d_models/objekts1-hydrant1.glb" id="14_77smr"]
-[ext_resource type="PackedScene" uid="uid://48eagdqsvlp3" path="res://3d_models/objekts1-kosz.glb" id="15_30ws0"]
-[ext_resource type="PackedScene" uid="uid://c0mko4o6pll7" path="res://3d_models/objekts1-lawka.glb" id="16_w4jl2"]
+[ext_resource type="PackedScene" uid="uid://dhng0iy6v5c8m" path="res://3d_models/ulica/Tree1.glb" id="13_5840p"]
+[ext_resource type="PackedScene" uid="uid://xe8qke76j3nw" path="res://3d_models/objekts1-hydrant1.glb" id="14_77smr"]
+[ext_resource type="PackedScene" uid="uid://bfh4oyf675v4f" path="res://3d_models/objekts1-kosz.glb" id="15_30ws0"]
+[ext_resource type="PackedScene" uid="uid://cljjx1h61y8jr" path="res://3d_models/objekts1-lawka.glb" id="16_w4jl2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
 size = Vector2(20, 20)
@@ -26,10 +24,6 @@ size = Vector3(20, 1, 20)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d0w2p"]
 radius = 0.139847
 height = 1.29286
-
-[sub_resource type="TextMesh" id="TextMesh_6hysj"]
-text = "pokój jedenekarynka"
-font_size = 127
 
 [sub_resource type="BoxMesh" id="BoxMesh_g154u"]
 size = Vector3(20, 8, 20)
@@ -814,9 +808,6 @@ mesh = SubResource("PlaneMesh_wo7lo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_w71c0")
 
-[node name="character" parent="." instance=ExtResource("2_wv8e2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.970905, 0.239466, 0, -0.239466, 0.970905, 0, 14, 16)
 
@@ -829,18 +820,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97822, 1.0718, 3.56972)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.732311, 0)
 shape = SubResource("CapsuleShape3D_d0w2p")
 
-[node name="HUD" parent="." instance=ExtResource("4_jjuto")]
-
 [node name="text pokoj" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.59149, -0.506041, -6.16194)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="text pokoj"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.328148, 2.67782, 2.90561)
-mesh = SubResource("TextMesh_6hysj")
-
-[node name="Passage2" parent="." instance=ExtResource("5_rgqxd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93109, 0, -1.61081)
-next_scene = "uid://mpb26cq31vqs"
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211916, 2.20446, -1.80272)
 
 [node name="blokada" type="StaticBody3D" parent="."]
 transform = Transform3D(6.03393, 0, 0, 0, 1.69055, 0, 0, 0, 1, 25.3476, 6.68475, -5.52955)
@@ -853,8 +837,9 @@ mesh = SubResource("BoxMesh_g154u")
 shape = SubResource("ConcavePolygonShape3D_hkp2u")
 
 [node name="Passage" parent="." instance=ExtResource("5_rgqxd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35107, 0.62121, -4.53426)
-next_scene = "uid://bwyaext20uchn"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.78808, -0.795538, -5.80272)
+next_scene = "uid://dsy8pq7ndjoy7"
+item_name = "example_item"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0, -0.00755494, -48.1077, -48.1077, 0, 0, 0, 48.1077, -0.00755494, -2.54394, 3.80984, -6.08172)
@@ -1290,6 +1275,9 @@ shape = SubResource("ConcavePolygonShape3D_oii6r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blok1-left/Cube_079/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_mcwwa")
 
+[node name="Plane_018" parent="blok1-left" index="86"]
+transform = Transform3D(0, 1, 4.36557e-11, -1, 0, 0, 0, -4.36557e-11, 1, 0.161692, 0.284279, 1.01223)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="blok1-left/Plane_018" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blok1-left/Plane_018/StaticBody3D"]
@@ -1306,7 +1294,7 @@ shape = SubResource("ConcavePolygonShape3D_mwt1b")
 shape = SubResource("ConcavePolygonShape3D_gcw41")
 
 [node name="blok2-midle" parent="." instance=ExtResource("7_udsp4")]
-transform = Transform3D(-0.607045, 0, -48.1042, 0, 48.108, 0, 48.1042, 0, -0.607045, 55.16, -10.2243, -13.532)
+transform = Transform3D(-0.607045, 0, -48.1042, 0, 48.108, 0, 48.1042, 0, -0.607045, 54.8967, -10.2001, -13.532)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blok2-midle/Plane_001" index="0"]
 
@@ -1338,10 +1326,16 @@ shape = SubResource("ConcavePolygonShape3D_sdey5")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blok2-midle/Plane_015/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_wlry8")
 
+[node name="Plane_016" parent="blok2-midle" index="6"]
+transform = Transform3D(0, 1, 9.31323e-10, -1, 0, 0, 0, -9.31323e-10, 1, 0.163642, 0.284853, 0.73954)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="blok2-midle/Plane_016" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blok2-midle/Plane_016/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_pj5bu")
+
+[node name="Plane_063" parent="blok2-midle" index="7"]
+transform = Transform3D(0, 1, 9.31323e-10, -1, 0, 0, 0, -9.31323e-10, 1, 0.161692, 0.284279, 0.616091)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blok2-midle/Plane_063" index="0"]
 
@@ -1487,6 +1481,9 @@ shape = SubResource("ConcavePolygonShape3D_6amka")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blok2-midle/Cylinder_024/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_lgkls")
+
+[node name="Plane_077" parent="blok2-midle" index="36"]
+transform = Transform3D(0, 1, 9.31323e-10, -1, 0, 0, 0, -9.31323e-10, 1, 0.161692, 0.284279, 0.435945)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blok2-midle/Plane_077" index="0"]
 
@@ -1635,6 +1632,9 @@ shape = SubResource("ConcavePolygonShape3D_g58ya")
 
 [node name="blok3-right" parent="." instance=ExtResource("8_6ulgc")]
 transform = Transform3D(-2.10287e-06, 0, -48.108, 0, 48.108, 0, 48.108, 0, -2.10287e-06, 55.166, -10.2243, -13.6956)
+
+[node name="Plane_026" parent="blok3-right" index="0"]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 0.161692, 0.284279, 0.0470917)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="blok3-right/Plane_026" index="0"]
 
