@@ -135,5 +135,6 @@ func _physics_process(delta: float) -> void:
 	$Camera_control.position.y = lerp($Camera_control.position.y, position.y, 0.08)
 	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
 	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
-	print(kamz, $Camera_control.position.z)
+	#ni«ej print do kamery, plz dont delete till fixed
+	#print(kamz, $Camera_control.position.z)
 	#testowa animacja żeby działała w otworzeniu

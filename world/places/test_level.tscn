@@ -58,7 +58,7 @@ mesh = SubResource("TextMesh_6hysj")
 
 [node name="Passage2" parent="." instance=ExtResource("6_g154u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93109, 0, -1.61081)
-next_scene = "uid://mpb26cq31vqs"
+next_scene = "uid://d4uohc6ywne2"
 
 [node name="blokada" type="StaticBody3D" parent="."]
 
