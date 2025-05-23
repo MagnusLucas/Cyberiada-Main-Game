@@ -15,7 +15,7 @@ var kamz = position.z
 func sort_by_index(a, b):
 			return a[1] < b[1]
 
-var inv = []
+var inv : Array[String] = []
 #dźwięk
 var audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
 var sound_timer : Timer
