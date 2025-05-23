@@ -31,7 +31,7 @@ shape = SubResource("CylinderShape3D_tvile")
 top_level = true
 
 [node name="Camera_pos" type="Node3D" parent="Camera_control"]
-transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 1.701, 5.944)
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 1.701, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Camera_control/Camera_pos"]
 transform = Transform3D(1, 0, 0, 0, 0.893371, 0.449319, 0, -0.449319, 0.893371, 0, 0, 0)

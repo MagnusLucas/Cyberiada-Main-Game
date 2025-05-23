@@ -71,3 +71,6 @@ mesh = SubResource("BoxMesh_14ghm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blokada"]
 shape = SubResource("ConcavePolygonShape3D_lxbid")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8002, 0, 6.94293)

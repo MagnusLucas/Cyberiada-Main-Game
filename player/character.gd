@@ -24,6 +24,9 @@ func _ready() -> void:
 	sound_timer.autostart = true
 	sound_timer.set_one_shot(true)
 	add_child(sound_timer)
+	#do ustawienia basic z kamery, «eby dało sie normalnie umieszczac postac (a nie zawsze na z = 0)
+func closest_interaction(tab1, tab2):
+	position.distance_to(i.position)
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -51,6 +54,7 @@ func _physics_process(delta: float) -> void:
 			#nie pamiętam już czym było can take ale było w poprzedniej wersji so
 			if the_pickable_item.can_take:
 				the_pickable_item.taken()
+		
 		
 	do_kam_1 = position.z 
 	# Handle jump.
@@ -106,11 +110,11 @@ func _physics_process(delta: float) -> void:
 	do_kam_diff = do_kam_1 - do_kam_2 
 	#mnożnik żeby ogarnąć jak mały ma być efekt kamery ruchem do przodu i do tyłu 
 	kamz = kamz - (do_kam_diff * 0.25)
-	$Camera_control.position.z = lerp($Camera_control.position.z, kamz, 0.08)
+	$Camera_control.position.z = lerp($Camera_control.position.z, kamz + 6, 0.08)
 	#Camera smoothing based on a yt tutorialsssssss/
 	$Camera_control.position.x = lerp($Camera_control.position.x, position.x, 0.08)
 	$Camera_control.position.y = lerp($Camera_control.position.y, position.y, 0.08)
 	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
 	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
-	
+	print(kamz, $Camera_control.position.z)
 	#testowa animacja żeby działała w otworzeniu
