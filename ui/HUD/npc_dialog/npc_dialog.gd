@@ -7,7 +7,7 @@ var answers : Dictionary
 func _ready() -> void:
 	if convo_data.is_empty():
 		get_data_from_file("res://ui/HUD/npc_dialog/example_dialog.json")
-		next(current_state)
+		initialize()
 
 func get_data_from_file(filepath : String) -> bool:
 	var file = FileAccess.open(filepath, FileAccess.READ)
@@ -20,12 +20,18 @@ func get_data_from_file(filepath : String) -> bool:
 
 # it should modify the convo data to be correct according to owned items
 func initialize():#, owned_items : Array[Item]):
+	var owned_items : Array[String] = get_node("../character").inv
 	next(current_state)
+	for state in convo_data:
+		for answer_key in convo_data[state]["answers"]:
+			var answer : Dictionary = convo_data[state]["answers"][answer_key]
+			if answer.has("item"):
+				if !owned_items.has(answer["item"]):
+					convo_data[state]["answers"].erase(answer_key)
 
 func next(id : String):
 	current_state = id
 	if !convo_data.has(current_state):
-		print_debug("convo finished")
 		queue_free()
 		return
 	$VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]

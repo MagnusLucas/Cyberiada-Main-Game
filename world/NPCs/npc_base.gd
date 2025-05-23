@@ -21,11 +21,10 @@ func initialize(folder_path_a : String):
 	
 
 func start_dialog():
-	#wyhashtagowane bo nigzie nie działa
-	#$AudioStreamPlayer.play()
+	$AudioStreamPlayer.play()
 	var dialog = dialog_scene.instantiate()
 	dialog.get_data_from_file(folder_path + dialog_data)
-	dialog.initialize()
 	add_sibling(dialog)
+	dialog.initialize()
 	get_parent().move_child(dialog, 0)
 	
