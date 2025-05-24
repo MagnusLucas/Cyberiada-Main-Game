@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game.gd" id="1_e7hdk"]
-[ext_resource type="PackedScene" uid="uid://d31lk7cftx5hb" path="res://world/places/test_level.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://d4uohc6ywne2" path="res://world/places/street.tscn" id="2_ryrav"]
 [ext_resource type="PackedScene" uid="uid://bvdqujiy0oilp" path="res://world/NPCs/npc_base.tscn" id="3_feb5d"]
 [ext_resource type="Script" uid="uid://dcunl4pq5eql3" path="res://world/NPCs/npc_base.gd" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://player/character.tscn" id="5_7jktm"]
@@ -114,7 +114,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e7hdk")
 
-[node name="test_level" parent="." instance=ExtResource("2_e2o6t")]
+[node name="test_level" parent="." instance=ExtResource("2_ryrav")]
 
 [node name="NPC" parent="." instance=ExtResource("3_feb5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.36335, 0.891999, -2.89117)
