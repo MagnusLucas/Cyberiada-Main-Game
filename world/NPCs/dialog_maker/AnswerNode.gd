@@ -21,5 +21,6 @@ func to_dict(next_possibilities : Array[int]) -> Dictionary:
 	dict = {}
 	dict["next_id"] = next_possibilities
 	dict["text"] = $text.text
+	dict["item"] = $required_item.text
 	return dict
 	

@@ -21,4 +21,5 @@ func to_dict(possible_answers : Dictionary) -> Dictionary:
 	var dict : Dictionary = {}
 	dict["answers"] = possible_answers
 	dict["text"] = $text.text
+	dict["item"] = $given_item.text
 	return dict

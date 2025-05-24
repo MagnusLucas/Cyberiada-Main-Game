@@ -25,12 +25,12 @@ slot/1/right_icon = null
 slot/1/draw_stylebox = true
 script = ExtResource("1_b1bwu")
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="text" type="TextEdit" parent="."]
 layout_mode = 2
 placeholder_text = "example text"
 scroll_fit_content_height = true
 scroll_fit_content_width = true
 
-[node name="required_item" type="LineEdit" parent="."]
+[node name="given_item" type="LineEdit" parent="."]
 layout_mode = 2
 placeholder_text = "giving item"
