@@ -61,14 +61,14 @@ func _on_connection_request(from_node, from_port, to_node, to_port):
 func _on_disconnection_request(from_node, from_port, to_node, to_port):
 	disconnect_node(from_node, from_port, to_node, to_port)
 
-func _on_connection_to_empty(from_node: StringName, from_port: int, release_position: Vector2) -> void:
+func _on_connection_to_empty(from_node: StringName, from_port: int, _release_position: Vector2) -> void:
 	var instance
 	if get_node(NodePath(from_node)) is AnswerNode:
 		instance = NpcTextMode.new_custom()
 	else:
 		instance = AnswerNode.new_custom()
 	add_child(instance, true)
-	instance.position_offset = release_position
+	instance.position_offset = get_local_mouse_position() + scroll_offset/zoom
 	connect_node(from_node, from_port, instance.name, 0)
 
 

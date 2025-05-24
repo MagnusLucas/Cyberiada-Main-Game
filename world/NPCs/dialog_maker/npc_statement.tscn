@@ -3,12 +3,7 @@
 [ext_resource type="Script" uid="uid://biydx8ldtbjoi" path="res://world/NPCs/dialog_maker/NpcTextNode.gd" id="1_b1bwu"]
 
 [node name="NpcTextNode" type="GraphNode"]
-offset_left = 109.0
-offset_top = 121.0
-offset_right = 283.0
-offset_bottom = 213.0
 mouse_filter = 1
-position_offset = Vector2(86, 119)
 title = "NPC"
 slot/0/left_enabled = true
 slot/0/left_type = 1
