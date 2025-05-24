@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd2cxepivnk4k"]
 
 [ext_resource type="Script" uid="uid://bng8cqeisgd0g" path="res://ui/HUD/npc_dialog/npc_dialog.gd" id="1_ybdnl"]
-[ext_resource type="Theme" uid="uid://c2drvcobw8mmb" path="res://ui/shared/graphics/themes/default_rtl.tres" id="2_kvtet"]
+[ext_resource type="Theme" uid="uid://db3ceyuaremoq" path="res://ui/shared/graphics/themes/default_rtl.tres" id="2_kvtet"]
 
 [node name="npcDialog" type="MarginContainer"]
 anchors_preset = 15

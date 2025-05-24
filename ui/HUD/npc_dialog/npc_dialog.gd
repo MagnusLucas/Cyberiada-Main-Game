@@ -21,13 +21,18 @@ func get_data_from_file(filepath : String) -> bool:
 # it should modify the convo data to be correct according to owned items
 func initialize():#, owned_items : Array[Item]):
 	var owned_items : Array[String] = get_node("../character").inv
-	next(current_state)
 	for state in convo_data:
 		for answer_key in convo_data[state]["answers"]:
 			var answer : Dictionary = convo_data[state]["answers"][answer_key]
-			if answer.has("item"):
+			if answer.has("item") and answer["item"] != "":
 				if !owned_items.has(answer["item"]):
 					convo_data[state]["answers"].erase(answer_key)
+	next(current_state)
+
+func receive_item(item_name : String):
+	var character = get_node("../character")
+	character.inv.append(item_name)
+	get_node("../character/HUD/InLevelUi").update_inv(character.inv)
 
 func next(id : String):
 	current_state = id
@@ -35,6 +40,8 @@ func next(id : String):
 		queue_free()
 		return
 	$VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]
+	if convo_data[current_state].has("item") and convo_data[current_state]["item"] != "":
+		receive_item(convo_data[current_state]["item"])
 	answers = convo_data[current_state]["answers"]
 	
 	for child in $VBoxContainer/answers.get_children():
