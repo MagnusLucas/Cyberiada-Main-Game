@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csqewtuofi3bw"
-path="res://.godot/imported/key.png-fff58096ec4ece6a7906e6f9cf561f7e.ctex"
+path="res://.godot/imported/kluczyk.png-db00a589bda795c8b6bcdb3a4f9b0e0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/items/2d/key.png"
-dest_files=["res://.godot/imported/key.png-fff58096ec4ece6a7906e6f9cf561f7e.ctex"]
+source_file="res://world/items/2d/kluczyk.png"
+dest_files=["res://.godot/imported/kluczyk.png-db00a589bda795c8b6bcdb3a4f9b0e0a.ctex"]
 
 [params]
 

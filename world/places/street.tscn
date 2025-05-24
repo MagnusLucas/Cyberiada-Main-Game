@@ -811,8 +811,8 @@ shape = SubResource("BoxShape3D_w71c0")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.970905, 0.239466, 0, -0.239466, 0.970905, 0, 14, 16)
 
-[node name="example_item" parent="." instance=ExtResource("3_8dqh3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.97822, 1.0718, 3.56972)
+[node name="czapka" parent="." instance=ExtResource("3_8dqh3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7946, 0.751426, 1.53163)
 
 [node name="test animation#StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -839,7 +839,7 @@ shape = SubResource("ConcavePolygonShape3D_hkp2u")
 [node name="Passage" parent="." instance=ExtResource("5_rgqxd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.78808, -0.795538, -5.80272)
 next_scene = "uid://dsy8pq7ndjoy7"
-item_name = "example_item"
+item_name = "kluczyk"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0, -0.00755494, -48.1077, -48.1077, 0, 0, 0, 48.1077, -0.00755494, -2.54394, 3.80984, -6.08172)
