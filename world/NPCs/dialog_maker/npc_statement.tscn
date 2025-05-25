@@ -1,23 +1,36 @@
-[gd_scene format=3 uid="uid://bxwa2phe6lg84"]
+[gd_scene load_steps=2 format=3 uid="uid://bxwa2phe6lg84"]
 
-[node name="NPC" type="GraphNode"]
-offset_left = 109.0
-offset_top = 121.0
-offset_right = 283.0
-offset_bottom = 213.0
+[ext_resource type="Script" uid="uid://biydx8ldtbjoi" path="res://world/NPCs/dialog_maker/NpcTextNode.gd" id="1_b1bwu"]
+
+[node name="NpcTextNode" type="GraphNode"]
 mouse_filter = 1
-position_offset = Vector2(86, 119)
 title = "NPC"
-slot/0/left_enabled = false
-slot/0/left_type = 0
+slot/0/left_enabled = true
+slot/0/left_type = 1
 slot/0/left_color = Color(1, 1, 1, 1)
 slot/0/left_icon = null
-slot/0/right_enabled = false
+slot/0/right_enabled = true
 slot/0/right_type = 0
 slot/0/right_color = Color(1, 1, 1, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("1_b1bwu")
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="text" type="TextEdit" parent="."]
 layout_mode = 2
 placeholder_text = "example text"
+scroll_fit_content_height = true
+scroll_fit_content_width = true
+
+[node name="given_item" type="LineEdit" parent="."]
+layout_mode = 2
+placeholder_text = "giving item"

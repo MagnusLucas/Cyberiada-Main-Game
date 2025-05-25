@@ -4,10 +4,9 @@
 [ext_resource type="Script" uid="uid://cxpb346vukhpy" path="res://ui/HUD/hud.gd" id="1_iii7f"]
 [ext_resource type="Script" uid="uid://nhdad2f6b83i" path="res://ui/HUD/message.gd" id="3_s1los"]
 [ext_resource type="PackedScene" uid="uid://b6jgovienj4ac" path="res://ui/HUD/in_level_ui.tscn" id="4_4mj14"]
+[ext_resource type="Texture2D" uid="uid://cmlmsctibocbg" path="res://ZEmess/book.png" id="4_ih2lb"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kls76"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5y8va"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3i3sn"]
 
@@ -29,13 +28,6 @@ custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-texture = SubResource("PlaceholderTexture2D_kls76")
-
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 8
@@ -43,12 +35,14 @@ size_flags_vertical = 8
 theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="HBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("1_hfu3w")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "2/3"
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -60,13 +54,13 @@ custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
-text = "N"
-icon = SubResource("PlaceholderTexture2D_5y8va")
+icon = ExtResource("4_ih2lb")
 flat = true
 icon_alignment = 1
 expand_icon = true
 
 [node name="message" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 script = ExtResource("3_s1los")

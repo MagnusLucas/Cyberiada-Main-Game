@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -16,7 +15,7 @@ var kamz = position.z
 func sort_by_index(a, b):
 			return a[1] < b[1]
 
-var inv = []
+var inv : Array[String] = []
 #dźwięk
 var audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
 var sound_timer : Timer
@@ -25,6 +24,46 @@ func _ready() -> void:
 	sound_timer.autostart = true
 	sound_timer.set_one_shot(true)
 	add_child(sound_timer)
+	
+func _get_closest_npc() -> Area3D:
+	#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
+	var npc_tab = []
+	for i in $interactable_area.get_overlapping_areas(): #these are the human bodies (NPCs)
+		npc_tab.append([i,position.distance_to(i.position)])
+	npc_tab.sort_custom(sort_by_index)
+	if npc_tab.size() > 0:
+		return npc_tab[0][0]
+	return null
+
+func _get_closest_item() -> StaticBody3D:
+	var item_tab = []
+	#print($interactable_area.get_overlapping_bodies())
+	for i in $interactable_area.get_overlapping_bodies(): #these are the items, obviously.
+		if i.is_in_group("pickable"):
+			item_tab.append([i,position.distance_to(i.position)])
+	item_tab.sort_custom(sort_by_index)
+	#sprawdza czy w tej tabeli coś jest bo jak nie to sie wykrzacza
+	if len(item_tab) >0:
+		return item_tab[0][0]
+	return null
+	
+func try_to_interact(item : StaticBody3D, npc : Area3D) -> void:
+	if !item and !npc:
+		return
+	elif item and !npc:
+		#nie pamiętam już czym było can take ale było w poprzedniej wersji so
+		if item.can_take:
+			item.taken()
+	elif npc and !item:
+		npc.start_dialog()
+	elif npc.position.distance_to(position) < item.position.distance_to(position):
+		npc.start_dialog()
+	else:
+		#nie pamiętam już czym było can take ale było w poprzedniej wersji so
+		if item.can_take:
+			item.taken()
+		
+		
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -32,26 +71,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Interact/take items
 	if Input.is_action_just_pressed("interact"):
-		#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
-		var npc_tab = []
-		for i in $interactable_area.get_overlapping_areas(): #these are the human bodies (NPCs)
-			npc_tab.append([i,position.distance_to(i.position)])
-		npc_tab.sort_custom(sort_by_index)
-		if npc_tab.size() > 0:
-			npc_tab[0][0].start_dialog()
+		try_to_interact(_get_closest_item(), _get_closest_npc())
+	
 		
-		var item_tab = []
-		#print($interactable_area.get_overlapping_bodies())
-		for i in $interactable_area.get_overlapping_bodies(): #these are the items, obviously.
-			if i.is_in_group("pickable"):
-				item_tab.append([i,position.distance_to(i.position)])
-		item_tab.sort_custom(sort_by_index)
-		#sprawdza czy w tej tabeli coś jest bo jak nie to sie wykrzacza
-		if len(item_tab) >0:
-			the_pickable_item = item_tab[0][0]
-			#nie pamiętam już czym było can take ale było w poprzedniej wersji so
-			if the_pickable_item.can_take:
-				the_pickable_item.taken()
 		
 	do_kam_1 = position.z 
 	# Handle jump.
@@ -83,12 +105,12 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x !=0 or velocity.z != 0:
 		$Detektyw/AnimationPlayer.play("Walking")
 		#dźwięk contuwued
-		#print_debug($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
+		#print($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
 		if $AudioStreamPlayer.playing == false and sound_timer.time_left == 0:
 			audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
-			print_debug('disadgjhvbxzx')
+			#print('disadgjhvbxzx')
 			$AudioStreamPlayer.stream = load(audio_path)
-			print_debug(audio_path)
+			#print(audio_path)
 			sound_timer.start(randf_range(0.5,0.5)) 
 			$AudioStreamPlayer.play()
 		
@@ -107,11 +129,12 @@ func _physics_process(delta: float) -> void:
 	do_kam_diff = do_kam_1 - do_kam_2 
 	#mnożnik żeby ogarnąć jak mały ma być efekt kamery ruchem do przodu i do tyłu 
 	kamz = kamz - (do_kam_diff * 0.25)
-	$Camera_control.position.z = lerp($Camera_control.position.z, kamz, 0.08)
+	$Camera_control.position.z = lerp($Camera_control.position.z, kamz + 6, 0.08)
 	#Camera smoothing based on a yt tutorialsssssss/
 	$Camera_control.position.x = lerp($Camera_control.position.x, position.x, 0.08)
 	$Camera_control.position.y = lerp($Camera_control.position.y, position.y, 0.08)
 	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
 	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
-	
+	#ni«ej print do kamery, plz dont delete till fixed
+	#print(kamz, $Camera_control.position.z)
 	#testowa animacja żeby działała w otworzeniu

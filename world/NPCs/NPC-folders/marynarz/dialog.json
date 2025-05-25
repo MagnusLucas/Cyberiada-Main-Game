@@ -73,14 +73,34 @@
 					6
 				],
 				"text": "Nie."
+			},
+			"11": {
+				"next_id": [
+					7
+				],
+				"text": "Tak.",
+				"item": "czapka"
 			}
 		},
 		"text": "Nieważne. Jakbyś potrzebował czegoś… Nietypowego, zaglądnij do mnie. A nóż widelec będę coś miał. Ach i jeszcze jedno - widziałeś może moją czapkę?"
 	},
 	"6": {
 		"answers": {
-
+			"12": {
+				"next_id": [],
+				"text": "..."
+			},
 		},
 		"text": "Te przeklęte dzieciaki… Cóż, jeśli jakimś cudem się na nią natkniesz, to proszę, oddaj mi ją. Odwdzięczę się sowicie. Arrivederci!"
+	},
+	"7": {
+		"answers": {
+			"6": {
+				"next_id": [],
+				"text": "Dzieki"
+			}
+		},
+		"text": "Dzieki za czapke, trzymaj, mam tu kartke, ktorej nie potrzebuje",
+		"item": "kartka_cukier"
 	}
 }

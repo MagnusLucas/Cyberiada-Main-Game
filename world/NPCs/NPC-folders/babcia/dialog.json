@@ -90,8 +90,28 @@
 	},
 	"7": {
 		"answers": {
-
+			"7": {
+				"next_id": [
+					8
+				],
+				"text": "Smacznego cukru",
+				"item": "cukier"
+			},
+			"8": {
+				"next_id": [],
+				"text": "No to elo",
+			}
 		},
 		"text": "A ja nic za darmo nie daję. Wróć z tym czego potrzebuję to porozmawiamy."
+	},
+	"8": {
+		"answers": {
+			"9": {
+				"next_id": [],
+				"text": "Dzieki"
+			}
+		},
+		"text": "Tylko oddaj zaraz",
+		"item": "kluczyk"
 	}
 }
