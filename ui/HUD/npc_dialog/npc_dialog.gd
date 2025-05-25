@@ -31,6 +31,8 @@ func initialize():#, owned_items : Array[Item]):
 
 func receive_item(item_name : String):
 	var character = get_node("../character")
+	if item_name in character.inv:
+		return
 	character.inv.append(item_name)
 	get_node("../character/HUD/InLevelUi").update_inv(character.inv)
 
