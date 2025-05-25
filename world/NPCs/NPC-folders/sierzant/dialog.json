@@ -113,7 +113,10 @@
 	},
 	"8": {
 		"answers": {
-
+			"8": {
+				"next_id": [],
+				"text": "*Ucieknij*"
+			}
 		},
 		"text": "Ja nie mam czasu na wasze wybryki. Ani czasu, ani ochoty. Krawczyk! Chodź zajmij się tym degeneratem."
 	}

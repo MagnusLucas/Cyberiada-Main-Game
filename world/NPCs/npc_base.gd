@@ -21,10 +21,12 @@ func initialize(folder_path_a : String):
 	
 
 func start_dialog():
+	if get_node_or_null("../npcDialog"):
+		return
 	$AudioStreamPlayer.play()
 	var dialog = dialog_scene.instantiate()
 	dialog.get_data_from_file(folder_path + dialog_data)
-	add_sibling(dialog)
+	add_sibling(dialog, true)
 	dialog.initialize()
 	get_parent().move_child(dialog, 0)
 	
