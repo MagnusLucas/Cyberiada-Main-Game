@@ -10,7 +10,17 @@ static func new_custom() -> NpcTextMode:
 	var npc_text : NpcTextMode = npc_text_scene.instantiate()
 	npc_text.personal_id = id
 	id += 1
-	npc_text.title = "NPC : " + str(id)
+	npc_text.title = "NPC : " + str(npc_text.personal_id)
+	return npc_text
+
+static func from_dict(npc_id : int, dict : Dictionary) -> NpcTextMode:
+	var npc_text : NpcTextMode = npc_text_scene.instantiate()
+	npc_text.personal_id = npc_id
+	id += 1
+	npc_text.title = "NPC : " + str(npc_text.personal_id)
+	npc_text.get_node("text").text = dict["text"]
+	if dict.has("item"):
+		npc_text.get_node("given_item").text = dict["item"]
 	return npc_text
 
 func _ready() -> void:

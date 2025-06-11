@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://biydx8ldtbjoi" path="res://world/NPCs/dialog_maker/NpcTextNode.gd" id="1_b1bwu"]
 
 [node name="NpcTextNode" type="GraphNode"]
+custom_minimum_size = Vector2(150, 130)
 mouse_filter = 1
 title = "NPC"
 slot/0/left_enabled = true
@@ -29,7 +30,6 @@ script = ExtResource("1_b1bwu")
 layout_mode = 2
 placeholder_text = "example text"
 scroll_fit_content_height = true
-scroll_fit_content_width = true
 
 [node name="given_item" type="LineEdit" parent="."]
 layout_mode = 2

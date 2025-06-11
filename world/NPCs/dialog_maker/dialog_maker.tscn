@@ -40,7 +40,17 @@ grow_vertical = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 15
 
-[node name="Save" type="Button" parent="GraphEdit/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GraphEdit/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Load" type="Button" parent="GraphEdit/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Load"
+
+[node name="Save" type="Button" parent="GraphEdit/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -52,4 +62,5 @@ text = "Save"
 [connection signal="gui_input" from="GraphEdit" to="GraphEdit" method="_on_gui_input"]
 [connection signal="node_deselected" from="GraphEdit" to="GraphEdit" method="_on_node_deselected"]
 [connection signal="node_selected" from="GraphEdit" to="GraphEdit" method="_on_node_selected"]
-[connection signal="pressed" from="GraphEdit/MarginContainer/Save" to="GraphEdit" method="_on_save_pressed"]
+[connection signal="pressed" from="GraphEdit/MarginContainer/HBoxContainer/Load" to="GraphEdit" method="_on_load_pressed"]
+[connection signal="pressed" from="GraphEdit/MarginContainer/HBoxContainer/Save" to="GraphEdit" method="_on_save_pressed"]

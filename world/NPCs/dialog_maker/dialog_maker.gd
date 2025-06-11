@@ -5,7 +5,6 @@ var add_menu = preload("res://world/NPCs/dialog_maker/add_menu.tscn")
 var player_nodes : Dictionary = {} 
 var npc_nodes : Dictionary = {} 
 
-
 var selected_nodes = {}
 
 func _ready() -> void:
@@ -39,15 +38,6 @@ func _on_gui_input(event: InputEvent) -> void:
 		menu.position = menu_position
 		add_child(menu, true)
 	
-	#if clicked(event, MOUSE_BUTTON_LEFT):
-		#for node in selected_nodes:
-			#if node is AnswerNode:
-				#print(node.to_dict(get_connections_from_node(node)))
-			#else:
-				#var answers : Array[Dictionary]= []
-				#for id in get_connections_from_node(node):
-					#answers.append(player_nodes[id].to_dict(get_connections_from_node(player_nodes[id])))
-				#print(node.to_dict(answers))
 	
 	if event is InputEventKey and event.pressed == true and event.keycode == KEY_DELETE:
 		for node in selected_nodes:
@@ -81,6 +71,38 @@ func _to_dict() -> Dictionary:
 			answers[id] = player_nodes[id].to_dict(get_connections_from_node(player_nodes[id]))
 		dict[node.personal_id] = node.to_dict(answers)
 	return dict
+
+func _from_dict(dict : Dictionary) -> void:
+	for id in dict:
+		var npc_node = NpcTextMode.from_dict(int(id), dict[id])
+		npc_nodes[id] = npc_node
+		add_child(npc_node, true)
+		var node_size : Vector2 = npc_node.size
+		npc_node.position_offset = node_size + Vector2(node_size.x, 0) * int(id) * 2.5
+		# TODO: add answers and connections
+		#var answers : Dictionary = {}
+		#for id in get_connections_from_node(node):
+			#answers[id] = player_nodes[id].to_dict(get_connections_from_node(player_nodes[id]))
+		#dict[node.personal_id] = node.to_dict(answers)
+
+func _on_load_pressed() -> void:
+	var loading_dialog = FileDialog.new()
+	loading_dialog.current_dir = "res://world/NPCs/NPC-folders/"
+	loading_dialog.current_file = "dialog.json"
+	loading_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
+	add_child(loading_dialog)
+	loading_dialog.show()
+	loading_dialog.connect("file_selected", _on_load_confirmed)
+
+func _on_load_confirmed(path : String) -> void:
+	var file = FileAccess.open(path, FileAccess.READ)
+	var json_string = file.get_as_text()
+	if !JSON.parse_string(json_string):
+		print_debug("ERROR! The file with this characters conversation info is broken or non existent")
+		return
+	var convo_data = JSON.parse_string(json_string)
+	file.close()
+	_from_dict(convo_data)
 
 func _on_save_pressed() -> void:
 	var saving_dialog = FileDialog.new()
