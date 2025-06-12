@@ -2,7 +2,7 @@ extends StaticBody3D
 #can_take - checks if item is still on the ground (and not alr picked up)
 var can_take = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-@onready var character = $"../../character"
+@onready var character = $"../../act_1/character"
 
 func taken():
 	can_take = false
@@ -10,7 +10,7 @@ func taken():
 		character.inv.append(get_name())
 	visible = false
 	$AudioStreamPlayer.play()
-	get_node("../../character/HUD/InLevelUi").update_inv(character.inv)
+	get_node("../../act_1/character/HUD/InLevelUi").update_inv(character.inv)
 	await $AudioStreamPlayer.finished
 	#print(name)
 	queue_free()

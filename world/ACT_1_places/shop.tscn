@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy0kfigx138gf"]
+
+[ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://world/ACT_1_places/test_level.gd" id="1_icsrx"]
+[ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://world/objects/passage.tscn" id="3_aryeu"]
+[ext_resource type="PackedScene" uid="uid://c8jnrblmcl016" path="res://3d_models/sklep+ miszkanie Miki/sklep.glb" id="3_icsrx"]
+
+[node name="test_level2" type="Node3D"]
+script = ExtResource("1_icsrx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 14, 16)
+
+[node name="Passage2" parent="." instance=ExtResource("3_aryeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93109, 0, -1.61081)
+next_scene = "uid://d4uohc6ywne2"
+
+[node name="Passage" parent="." instance=ExtResource("3_aryeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35107, 0.62121, -4.53426)
+next_scene = "uid://bwyaext20uchn"
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="MarkerCamera3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88708, 7.49237)
+
+[node name="sklep" parent="." instance=ExtResource("3_icsrx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.03411, 0, 6.19477)
