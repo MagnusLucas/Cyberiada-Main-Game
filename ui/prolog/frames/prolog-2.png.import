@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caa0y8xig2wf6"
-path="res://.godot/imported/prolog-8.png-0e5107c4c3aa66345fd4b056c42ca1e4.ctex"
+uid="uid://dfjpen0gm2rnx"
+path="res://.godot/imported/prolog-2.png-4cad6a93a0149de4ec77b79669678ef3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafiki od Kateryny/prolog pictures/prolog-8.png"
-dest_files=["res://.godot/imported/prolog-8.png-0e5107c4c3aa66345fd4b056c42ca1e4.ctex"]
+source_file="res://ui/prolog/frames/prolog-2.png"
+dest_files=["res://.godot/imported/prolog-2.png-4cad6a93a0149de4ec77b79669678ef3.ctex"]
 
 [params]
 

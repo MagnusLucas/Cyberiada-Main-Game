@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://do3lgcvg5kk5p"]
+
+[ext_resource type="Script" uid="uid://dr3l47ok0ns00" path="res://ui/prolog/prolog.gd" id="1_web1h"]
+[ext_resource type="Texture2D" uid="uid://bs32psad3incn" path="res://ui/prolog/frames/prolog-1.png" id="2_vaj5k"]
+[ext_resource type="Texture2D" uid="uid://dfjpen0gm2rnx" path="res://ui/prolog/frames/prolog-2.png" id="3_vaj5k"]
+
+[node name="Prolog" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_web1h")
+
+[node name="FadeOut" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_vaj5k")
+expand_mode = 1
+
+[node name="FadeIn" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+texture = ExtResource("3_vaj5k")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+max_polyphony = 2
+bus = &"SFX"

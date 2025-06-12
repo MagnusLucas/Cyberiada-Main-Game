@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu6pixf4yoeng"
-path="res://.godot/imported/prolog-7.png-be8b17c94ba0d1a97d13b9c212c8162c.ctex"
+path="res://.godot/imported/prolog-7.png-a56a2b625ddd3f1f5e35e674cc824e5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grafiki od Kateryny/prolog pictures/prolog-7.png"
-dest_files=["res://.godot/imported/prolog-7.png-be8b17c94ba0d1a97d13b9c212c8162c.ctex"]
+source_file="res://ui/prolog/frames/prolog-7.png"
+dest_files=["res://.godot/imported/prolog-7.png-a56a2b625ddd3f1f5e35e674cc824e5a.ctex"]
 
 [params]
 
