@@ -26,4 +26,4 @@ func _on_new_game_pressed() -> void:
 	$"../../../../AudioStreamPlayer".play()
 	$"../../../../loading_screen".show()
 	await $"../../../../AudioStreamPlayer".finished
-	get_tree().change_scene_to_file("res://game.tscn")
+	get_tree().change_scene_to_file("res://ui/prolog/prolog.tscn")

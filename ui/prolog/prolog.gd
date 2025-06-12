@@ -73,6 +73,7 @@ func _input(event: InputEvent) -> void:
 func _switch_frame():
 	current_frame = str(int(current_frame) + 1)
 	if !frame_data.has(current_frame):
+		get_tree().change_scene_to_file("res://game.tscn")
 		print_debug("prolog_finished")
 		return
 	fade_in.texture = load(frame_data[current_frame]["image"])
