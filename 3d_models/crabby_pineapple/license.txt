@@ -1,0 +1,11 @@
+Model Information:
+* title:	Crabby Pineapple
+* source:	https://sketchfab.com/3d-models/crabby-pineapple-55ac94888eec4e7ba41851e9543fb079
+* author:	Ethan Cragun (https://sketchfab.com/EDIIIC)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Crabby Pineapple" (https://sketchfab.com/3d-models/crabby-pineapple-55ac94888eec4e7ba41851e9543fb079) by Ethan Cragun (https://sketchfab.com/EDIIIC) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
