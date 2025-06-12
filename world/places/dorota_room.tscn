@@ -1,8 +1,9 @@
-[gd_scene load_steps=1290 format=3 uid="uid://dsy8pq7ndjoy7"]
+[gd_scene load_steps=1291 format=3 uid="uid://dsy8pq7ndjoy7"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://world/places/test_level.gd" id="1_1bayx"]
 [ext_resource type="PackedScene" uid="uid://cj4uqwu47ihsf" path="res://3d_models/mieszkanie doroty-1/POKÓJ-DOROTA.glb" id="2_gxk1n"]
 [ext_resource type="Texture2D" uid="uid://cybtawhxxpsya" path="res://3d_models/mieszkanie doroty-1/docklands_01_4k.hdr" id="3_ucbln"]
+[ext_resource type="PackedScene" uid="uid://dpue3ugqte7py" path="res://3d_models/sklep+ miszkanie Miki/miki-miszkanie.glb" id="3_wu4pn"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://world/objects/passage.tscn" id="5_qf1ib"]
 [ext_resource type="PackedScene" uid="uid://bu1xd0fp2kop5" path="res://3d_models/mieszkanie doroty-1/kuchnia-dorota.glb" id="8_8yh1q"]
 
@@ -6244,6 +6245,9 @@ shape = SubResource("ConvexPolygonShape3D_8ibkm")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="POKÓJ-DOROTA/Cylinder/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_gwfay")
 
+[node name="miki-miszkanie" parent="." instance=ExtResource("3_wu4pn")]
+transform = Transform3D(0.524722, 0, 0, 0, 0.524722, 0, 0, 0, 0.524722, -12.3525, 1.50299, 0.257598)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rogqw")
 
@@ -8030,7 +8034,7 @@ shape = SubResource("ConvexPolygonShape3D_82u4y")
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(8.07416e-15, 3.00906e-08, 6.74188, 4.22579, -3.00906e-08, 0, 1.84715e-07, 0.688392, -2.94697e-07, -7.7997, 1.47007, 1.63572)
+transform = Transform3D(8.07416e-15, 3.00906e-08, 6.74188, 4.22579, -3.00906e-08, 0, 1.84715e-07, 0.688392, -2.94697e-07, -21.0057, 1.47007, 1.63572)
 mesh = SubResource("PlaneMesh_8yh1q")
 skeleton = NodePath("../../Passage3")
 
@@ -8040,12 +8044,12 @@ mesh = SubResource("PlaneMesh_8yh1q")
 skeleton = NodePath("../../Passage3")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(8.07416e-15, 3.00906e-08, 15.6366, 4.22579, -3.00906e-08, 0, 1.84715e-07, 0.688392, -6.83499e-07, 4.06167, 8.4942, 1.63572)
+transform = Transform3D(8.07416e-15, 3.00906e-08, 33.6378, 4.22579, -3.00906e-08, 0, 1.84715e-07, 0.688392, -1.47036e-06, 4.06167, 8.4942, 1.63572)
 mesh = SubResource("PlaneMesh_8yh1q")
 skeleton = NodePath("../../Passage3")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(8.07416e-15, 3.00906e-08, 15.6366, 4.22579, -3.00906e-08, 0, 1.84715e-07, 0.688392, -6.83499e-07, 4.062, -2.74128, 1.636)
+transform = Transform3D(8.07416e-15, 3.00906e-08, 35.4885, 4.22579, -3.00906e-08, 0, 1.84715e-07, 0.688392, -1.55125e-06, 4.062, -2.74128, 1.636)
 mesh = SubResource("PlaneMesh_8yh1q")
 skeleton = NodePath("../../Passage3")
 

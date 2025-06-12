@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b82f7m0um6uhy"
-valid=false
+uid="uid://dchly8tpbotre"
+path="res://.godot/imported/lamp2.fbx-07e7e754ed0c928d90e4646741f04076.scn"
 
 [deps]
 
-source_file="res://ModeleJakub/Makaron.gltf"
+source_file="res://3d_models/3d_mieszkanie_Miki/fbx/lamp2.fbx"
+dest_files=["res://.godot/imported/lamp2.fbx-07e7e754ed0c928d90e4646741f04076.scn"]
 
 [params]
 
@@ -27,10 +28,11 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

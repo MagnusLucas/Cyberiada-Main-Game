@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b82f7m0um6uhy"
-valid=false
+uid="uid://dj2l3j50ckxyc"
+path="res://.godot/imported/Bin.fbx-1a419e228c0a00761cb34c725660861c.scn"
 
 [deps]
 
-source_file="res://ModeleJakub/Makaron.gltf"
+source_file="res://3d_models/3d_oskar/fbx/Bin.fbx"
+dest_files=["res://.godot/imported/Bin.fbx-1a419e228c0a00761cb34c725660861c.scn"]
 
 [params]
 
@@ -27,10 +28,11 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
