@@ -79,6 +79,8 @@ func _from_dict(dict : Dictionary) -> void:
 		add_child(npc_node, true)
 		var node_size : Vector2 = npc_node.size
 		npc_node.position_offset = node_size + Vector2(node_size.x, 0) * int(id) * 2.5
+		for answer_id in dict[id]["answers"]:
+			var answer = AnswerNode.from_dict(answer_id, dict[id]["answers"][answer_id])
 		# TODO: add answers and connections
 		#var answers : Dictionary = {}
 		#for id in get_connections_from_node(node):
