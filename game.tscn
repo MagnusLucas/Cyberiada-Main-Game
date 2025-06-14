@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=5 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://d4uohc6ywne2" path="res://world/ACT_1_places/street.tscn" id="2_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dm5d3um25i4wl" path="res://act/act_1.tscn" id="3_feb5d"]
+[ext_resource type="Material" uid="uid://byxirhydumxe4" path="res://shader stuff/material_shader.tres" id="4_fc0e3"]
 
 [node name="world" type="Control"]
 layout_mode = 3
@@ -16,5 +17,11 @@ script = ExtResource("1_e7hdk")
 [node name="test_level" parent="." instance=ExtResource("2_ryrav")]
 
 [node name="act_1" parent="." instance=ExtResource("3_feb5d")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = ExtResource("4_fc0e3")
+layout_mode = 0
+offset_right = 1167.0
+offset_bottom = 658.0
 
 [editable path="act_1"]
