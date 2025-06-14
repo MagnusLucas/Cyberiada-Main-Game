@@ -9,7 +9,9 @@ var answers : Dictionary
 func _ready() -> void:
 	if convo_data.is_empty():
 		get_data_from_file("res://ui/HUD/npc_dialog/example_dialog.json")
+		$VBoxContainer2/VBoxContainer/answers.focus_mode = FOCUS_ALL
 		initialize()
+		
 
 func get_data_from_file(filepath : String) -> bool:
 	var file = FileAccess.open(filepath, FileAccess.READ)
@@ -44,6 +46,7 @@ func receive_item(item_name : String):
 	get_node("../character/HUD/InLevelUi").update_inv(character.inv)
 
 func next(id : String):
+	var answers_node = $VBoxContainer2/VBoxContainer/answers
 	current_state = id
 	if !convo_data.has(current_state):
 		queue_free()
@@ -53,12 +56,13 @@ func next(id : String):
 		receive_item(convo_data[current_state]["item"])
 	answers = convo_data[current_state]["answers"]
 	
-	for child in $VBoxContainer2/VBoxContainer/answers.get_children():
-		child.queue_free()
+	for child in answers_node.get_children():
+		answers_node.remove_child(child)
 	for key in answers:
 		var answer : RichTextLabel = RichTextLabel.new()
 		answer.theme = load("res://ui/shared/graphics/themes/default_rtl.tres")
 		answer.text = answers[key]["text"]
+		answer.focus_mode = Control.FOCUS_ALL
 		var possible_answer_reactions : Array = answers[key]["next_id"]
 		var number_of_possibilities = possible_answer_reactions.size()
 		if number_of_possibilities > 0:
@@ -66,9 +70,27 @@ func next(id : String):
 		else:
 			answer.connect("gui_input", _on_answer_gui_input.bind(-1))
 		answer.fit_content = true
-		$VBoxContainer2/VBoxContainer/answers.add_child(answer)
+		answers_node.add_child(answer)
+	
+	answers_node.focus_next = NodePath(answers_node.get_child(0).name)
+	
+	for index in answers_node.get_child_count() - 2:
+		answers_node.get_child(index + 1).focus_next = NodePath("../" + answers_node.get_child(index + 2).name)
+		answers_node.get_child(index + 1).focus_neighbor_bottom = NodePath("../" + answers_node.get_child(index + 2).name)
+		answers_node.get_child(index - 1).focus_previous = NodePath("../" + answers_node.get_child(index).name)
+		answers_node.get_child(index - 1).focus_neighbor_top = NodePath("../" + answers_node.get_child(index).name)
+	if answers_node.get_child_count() > 1:
+		answers_node.get_child(0).focus_next = NodePath("../" + answers_node.get_child(1).name)
+		answers_node.get_child(0).focus_neighbor_bottom = NodePath("../" + answers_node.get_child(1).name)
+		answers_node.get_child(answers_node.get_child_count() - 1).focus_previous = NodePath("../" + answers_node.get_child(answers_node.get_child_count() - 2).name)
+		answers_node.get_child(answers_node.get_child_count() - 1).focus_neighbor_top = NodePath("../" + answers_node.get_child(answers_node.get_child_count() - 2).name)
+	answers_node.get_child(answers_node.get_child_count() - 1).focus_next = NodePath("../" + answers_node.get_child(0).name)
+	answers_node.get_child(answers_node.get_child_count() - 1).focus_neighbor_bottom = NodePath("../" + answers_node.get_child(0).name)
 
+	answers_node.get_child(0).grab_focus()
 
 func _on_answer_gui_input(event: InputEvent, next_id : int = 0) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true:
+		next(str(next_id))
+	if event.is_action_pressed("ui_accept"):
 		next(str(next_id))
