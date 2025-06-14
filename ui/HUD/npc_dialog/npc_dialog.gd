@@ -3,6 +3,7 @@ extends MarginContainer
 var convo_data : Dictionary
 var current_state : String = "0"
 var answers : Dictionary
+@onready var character_name: Label = $VBoxContainer2/VBoxContainer/CharacterName
 
 func _ready() -> void:
 	if convo_data.is_empty():
@@ -19,8 +20,13 @@ func get_data_from_file(filepath : String) -> bool:
 	return true
 
 # it should modify the convo data to be correct according to owned items
-func initialize():#, owned_items : Array[Item]):
-	var owned_items : Array[String] = get_node("../character").inv
+func initialize():
+	var character = get_node_or_null("../character")
+	if !character:
+		next(current_state)
+		return
+	var owned_items : Array[String] = character.inv
+	
 	for state in convo_data:
 		for answer_key in convo_data[state]["answers"]:
 			var answer : Dictionary = convo_data[state]["answers"][answer_key]
@@ -41,12 +47,12 @@ func next(id : String):
 	if !convo_data.has(current_state):
 		queue_free()
 		return
-	$VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]
+	$VBoxContainer2/VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]
 	if convo_data[current_state].has("item") and convo_data[current_state]["item"] != "":
 		receive_item(convo_data[current_state]["item"])
 	answers = convo_data[current_state]["answers"]
 	
-	for child in $VBoxContainer/answers.get_children():
+	for child in $VBoxContainer2/VBoxContainer/answers.get_children():
 		child.queue_free()
 	for key in answers:
 		var answer : RichTextLabel = RichTextLabel.new()
@@ -59,7 +65,7 @@ func next(id : String):
 		else:
 			answer.connect("gui_input", _on_answer_gui_input.bind(-1))
 		answer.fit_content = true
-		$VBoxContainer/answers.add_child(answer)
+		$VBoxContainer2/VBoxContainer/answers.add_child(answer)
 
 
 func _on_answer_gui_input(event: InputEvent, next_id : int = 0) -> void:

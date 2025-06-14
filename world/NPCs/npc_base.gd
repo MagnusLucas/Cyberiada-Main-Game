@@ -28,5 +28,6 @@ func start_dialog():
 	dialog.get_data_from_file(folder_path + dialog_data)
 	add_sibling(dialog, true)
 	dialog.initialize()
+	dialog.character_name.text = name
 	get_parent().move_child(dialog, 0)
 	
