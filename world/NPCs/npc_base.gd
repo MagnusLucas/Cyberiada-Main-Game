@@ -29,5 +29,6 @@ func start_dialog():
 	add_sibling(dialog, true)
 	dialog.initialize()
 	dialog.character_name.text = name
+	dialog.character_photo.texture = load(folder_path + texture)
 	get_parent().move_child(dialog, 0)
 	

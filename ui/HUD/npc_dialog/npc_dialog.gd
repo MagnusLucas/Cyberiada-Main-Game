@@ -4,6 +4,7 @@ var convo_data : Dictionary
 var current_state : String = "0"
 var answers : Dictionary
 @onready var character_name: Label = $VBoxContainer2/VBoxContainer/CharacterName
+@onready var character_photo: TextureRect = $VBoxContainer2/CharacterPhoto
 
 func _ready() -> void:
 	if convo_data.is_empty():
