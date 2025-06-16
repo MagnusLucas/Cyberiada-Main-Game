@@ -22,7 +22,7 @@ static func from_dict(ans_id : int, dict : Dictionary) -> AnswerNode:
 	if dict.has("item"):
 		if dict["item"] is Dictionary:
 			answer.get_node("required_item").text = dict["item"]["name"]
-			answer.get_node("disappears").button_value = dict["item"]["disappears"]
+			answer.get_node("disappears").button_pressed = dict["item"]["disappears"]
 		else:
 			answer.get_node("required_item").text = dict["item"]
 	if dict.has("next_start"):
@@ -41,5 +41,5 @@ func to_dict(next_possibilities : Array[int]) -> Dictionary:
 	dict["text"] = $text.text
 	dict["item"] = {}
 	dict["item"]["name"] = $required_item.text
-	dict["item"]["disappears"] = $CheckBox.button_pressed
+	dict["item"]["disappears"] = $disappears.button_pressed
 	return dict
