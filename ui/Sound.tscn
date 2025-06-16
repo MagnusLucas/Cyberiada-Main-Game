@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dle5o44hap4c7"]
+
+[ext_resource type="AudioStream" uid="uid://c8yt31akqtt0j" path="res://audio/lethal_company_mine_sfx.wav" id="1_as26r"]
+
+[node name="Sound" type="AudioStreamPlayer"]
+stream = ExtResource("1_as26r")
+bus = &"SFX"

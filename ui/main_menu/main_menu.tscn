@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://k807hv4cekdh"]
+[gd_scene load_steps=5 format=3 uid="uid://k807hv4cekdh"]
 
 [ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://ui/shared/graphics/background.png" id="1_i5wg5"]
 [ext_resource type="Script" uid="uid://b51l1gk7h1o66" path="res://ui/main_menu/navigation.gd" id="2_f7xsy"]
 [ext_resource type="Theme" uid="uid://l4fn7cedqo3m" path="res://ui/shared/graphics/themes/default_button.tres" id="3_y3g0o"]
 [ext_resource type="Texture2D" uid="uid://c4c1iyo6lwqra" path="res://ui/shared/graphics/buttons/main_background.png" id="4_3c04x"]
-[ext_resource type="AudioStream" uid="uid://c8yt31akqtt0j" path="res://audio/lethal_company_mine_sfx.wav" id="5_3c04x"]
-[ext_resource type="Texture2D" uid="uid://diegroxgr7iop" path="res://ZEmess/loading_screen.png" id="6_joh67"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -99,19 +97,6 @@ expand_icon = true
 [node name="Control" type="Control" parent="MainMenu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_3c04x")
-
-[node name="loading_screen" type="TextureRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_joh67")
 
 [connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MenuButtons/NewGame" to="MainMenu/HBoxContainer/MarginContainer/MenuButtons" method="_on_new_game_pressed"]
 [connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MenuButtons/Load" to="MainMenu/HBoxContainer/MarginContainer/MenuButtons" method="_on_load_pressed"]
