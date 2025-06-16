@@ -33,9 +33,14 @@ func initialize():
 	for state in convo_data:
 		for answer_key in convo_data[state]["answers"]:
 			var answer : Dictionary = convo_data[state]["answers"][answer_key]
-			if answer.has("item") and answer["item"] != "":
-				if !owned_items.has(answer["item"]):
-					convo_data[state]["answers"].erase(answer_key)
+			if answer.has("item"):
+				if answer["item"] is String and answer["item"] != "":
+					if !owned_items.has(answer["item"]):
+						convo_data[state]["answers"].erase(answer_key)
+				elif answer["item"]["name"] != "":
+					if !owned_items.has(answer["item"]["name"]):
+						print("erasing ", convo_data[state]["answers"][answer_key])
+						convo_data[state]["answers"].erase(answer_key)
 	next(current_state)
 
 func receive_item(item_name : String):
@@ -65,10 +70,16 @@ func next(id : String):
 		answer.focus_mode = Control.FOCUS_ALL
 		var possible_answer_reactions : Array = answers[key]["next_id"]
 		var number_of_possibilities = possible_answer_reactions.size()
+		var item_to_handle : Dictionary = {}
+		if answers[key].has("item"):
+			if answers[key]["item"] is Dictionary:
+				item_to_handle = answers[key]["item"]
 		if number_of_possibilities > 0:
-			answer.connect("gui_input", _on_answer_gui_input.bind(answers[key]["next_id"][randi() % number_of_possibilities]))
+			answer.connect("gui_input", _on_answer_gui_input.bind(
+				answers[key]["next_id"][randi() % number_of_possibilities],
+				item_to_handle))
 		else:
-			answer.connect("gui_input", _on_answer_gui_input.bind(-1))
+			answer.connect("gui_input", _on_answer_gui_input.bind(-1, item_to_handle))
 		answer.fit_content = true
 		answers_node.add_child(answer)
 	
@@ -89,8 +100,20 @@ func next(id : String):
 
 	answers_node.get_child(0).grab_focus()
 
-func _on_answer_gui_input(event: InputEvent, next_id : int = 0) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true:
-		next(str(next_id))
-	if event.is_action_pressed("ui_accept"):
+func _handle_item(item : Dictionary):
+	if item.has("disappears"):
+		if item["disappears"]:
+			var character = get_node_or_null("../character")
+			if !character:
+				return
+			var owned_items : Array[String] = character.inv
+			if owned_items.has(item["name"]):
+				print(owned_items)
+				owned_items.erase(item["name"])
+				print(owned_items)
+
+func _on_answer_gui_input(event: InputEvent, next_id : int = 0, item_to_handle : Dictionary = {}) -> void:
+	if ((event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true) 
+			or event.is_action_pressed("ui_accept")):
+		_handle_item(item_to_handle)
 		next(str(next_id))

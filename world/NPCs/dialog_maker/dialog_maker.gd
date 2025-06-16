@@ -87,7 +87,7 @@ func _from_dict(dict : Dictionary) -> void:
 				answer.position_offset.y = (npc_node.position_offset.y + 
 						node_size.x * (int(answer_id) - int(dict[id]["answers"].keys()[0])) * 1.5)
 				player_nodes[answer_id] = answer
-				connect_node(npc_node.name, 0, answer.name, 0)
+			connect_node(npc_node.name, 0, player_nodes[answer_id].name, 0)
 	for npc_id in dict:
 		for answer_id in dict[npc_id]["answers"]:
 			var my_name = player_nodes[answer_id].name
