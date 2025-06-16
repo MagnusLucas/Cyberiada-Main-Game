@@ -39,7 +39,6 @@ func initialize():
 						convo_data[state]["answers"].erase(answer_key)
 				elif answer["item"]["name"] != "":
 					if !owned_items.has(answer["item"]["name"]):
-						print("erasing ", convo_data[state]["answers"][answer_key])
 						convo_data[state]["answers"].erase(answer_key)
 	next(current_state)
 
@@ -108,9 +107,8 @@ func _handle_item(item : Dictionary):
 				return
 			var owned_items : Array[String] = character.inv
 			if owned_items.has(item["name"]):
-				print(owned_items)
-				owned_items.erase(item["name"])
-				print(owned_items)
+				character.inv.erase(item["name"])
+				get_node("../character/HUD/InLevelUi").update_inv(character.inv)
 
 func _on_answer_gui_input(event: InputEvent, next_id : int = 0, item_to_handle : Dictionary = {}) -> void:
 	if ((event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true) 
