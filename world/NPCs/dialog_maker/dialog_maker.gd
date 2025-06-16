@@ -78,14 +78,23 @@ func _from_dict(dict : Dictionary) -> void:
 		npc_nodes[id] = npc_node
 		add_child(npc_node, true)
 		var node_size : Vector2 = npc_node.size
-		npc_node.position_offset = node_size + Vector2(node_size.x, 0) * int(id) * 2.5
+		npc_node.position_offset = node_size + Vector2(node_size.x, 0) * int(id) * 3
 		for answer_id in dict[id]["answers"]:
-			var answer = AnswerNode.from_dict(answer_id, dict[id]["answers"][answer_id])
-		# TODO: add answers and connections
-		#var answers : Dictionary = {}
-		#for id in get_connections_from_node(node):
-			#answers[id] = player_nodes[id].to_dict(get_connections_from_node(player_nodes[id]))
-		#dict[node.personal_id] = node.to_dict(answers)
+			if !player_nodes.has(answer_id):
+				var answer = AnswerNode.from_dict(int(answer_id), dict[id]["answers"][answer_id])
+				add_child(answer, true)
+				answer.position_offset.x = npc_node.position_offset.x + node_size.x * 1.5
+				answer.position_offset.y = (npc_node.position_offset.y + 
+						node_size.x * (int(answer_id) - int(dict[id]["answers"].keys()[0])) * 1.5)
+				player_nodes[answer_id] = answer
+				connect_node(npc_node.name, 0, answer.name, 0)
+	for npc_id in dict:
+		for answer_id in dict[npc_id]["answers"]:
+			var my_name = player_nodes[answer_id].name
+			if !dict[npc_id]["answers"][answer_id]["next_id"].is_empty():
+				var next_id = int(dict[npc_id]["answers"][answer_id]["next_id"][0])
+				var next_name = npc_nodes[str(next_id)].name
+				connect_node(my_name, 0, next_name, 0)
 
 func _on_load_pressed() -> void:
 	var loading_dialog = FileDialog.new()

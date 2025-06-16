@@ -21,6 +21,10 @@ static func from_dict(npc_id : int, dict : Dictionary) -> NpcTextMode:
 	npc_text.get_node("text").text = dict["text"]
 	if dict.has("item"):
 		npc_text.get_node("given_item").text = dict["item"]
+	if dict.has("next_start"):
+		npc_text.get_node("next_start_id").text = dict["next_start"]
+	if dict.has("notebook"):
+		npc_text.get_node("notebook_trigger").text = dict["notebook"]
 	return npc_text
 
 func _ready() -> void:
@@ -29,6 +33,10 @@ func _ready() -> void:
 
 func to_dict(possible_answers : Dictionary) -> Dictionary:
 	var dict : Dictionary = {}
+	if $next_start_id.text != "":
+		dict["next_start"] = $next_start_id.text
+	if $notebook_trigger.text != "":
+		dict["notebook"] = $next_start_id.text
 	dict["answers"] = possible_answers
 	dict["text"] = $text.text
 	dict["item"] = $given_item.text

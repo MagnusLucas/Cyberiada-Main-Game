@@ -20,9 +20,13 @@ static func from_dict(ans_id : int, dict : Dictionary) -> AnswerNode:
 	answer.title = "Player : " + str(answer.personal_id)
 	answer.get_node("text").text = dict["text"]
 	if dict.has("item"):
-		answer.get_node("required_item").text = dict["item"]
-		if dict["item"].has("exchanged"):
-			answer.get_node("exchanged").button_value = dict["item"]["exchanged"]
+		if dict["item"] is Dictionary:
+			answer.get_node("required_item").text = dict["item"]["name"]
+			answer.get_node("disappears").button_value = dict["item"]["disappears"]
+		else:
+			answer.get_node("required_item").text = dict["item"]
+	if dict.has("next_start"):
+		answer.get_node("next_start_id").text = dict["next_start"]
 	return answer
 
 func _ready() -> void:
@@ -32,7 +36,10 @@ func to_dict(next_possibilities : Array[int]) -> Dictionary:
 	var dict : Dictionary = {}
 	dict = {}
 	dict["next_id"] = next_possibilities
+	if $next_start_id.text != "":
+		dict["next_start"] = $next_start_id.text
 	dict["text"] = $text.text
-	dict["item"] = $required_item.text
+	dict["item"] = {}
+	dict["item"]["name"] = $required_item.text
 	dict["item"]["disappears"] = $CheckBox.button_pressed
 	return dict
