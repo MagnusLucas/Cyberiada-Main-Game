@@ -53,14 +53,32 @@
 	},
 	"2": {
 		"answers": {
-
+			"3": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
 		},
 		"item": "",
 		"text": "A tam nieładnie. Ja żyję od 70 lat, a ludzie codziennie o mnie coś nieładnego mówią. Nieboszczce różnicy to już nie zrobi."
 	},
 	"3": {
 		"answers": {
-
+			"3": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
 		},
 		"item": "",
 		"text": "Pan to zawsze taki posępny. Trochę słońca, by Panu nie zaszkodziło. Ba, może i by nawet pomogło…"
