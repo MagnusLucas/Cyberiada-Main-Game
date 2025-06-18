@@ -58,7 +58,7 @@ func _on_connection_to_empty(from_node: StringName, from_port: int, _release_pos
 	else:
 		instance = AnswerNode.new_custom()
 	add_child(instance, true)
-	instance.position_offset = get_local_mouse_position() + scroll_offset/zoom
+	instance.position_offset = (get_local_mouse_position() + scroll_offset)/zoom
 	connect_node(from_node, from_port, instance.name, 0)
 
 
