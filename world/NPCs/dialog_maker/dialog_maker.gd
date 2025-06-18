@@ -73,6 +73,10 @@ func _to_dict() -> Dictionary:
 	return dict
 
 func _from_dict(dict : Dictionary) -> void:
+	clear_connections()
+	var children_to_clear = get_children()
+	for child in children_to_clear:
+		child.queue_free()
 	for id in dict:
 		var npc_node = NpcTextMode.from_dict(int(id), dict[id])
 		npc_nodes[id] = npc_node

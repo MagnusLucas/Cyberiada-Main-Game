@@ -16,7 +16,8 @@ static func new_custom() -> AnswerNode:
 static func from_dict(ans_id : int, dict : Dictionary) -> AnswerNode:
 	var answer : AnswerNode = answer_scene.instantiate()
 	answer.personal_id = ans_id
-	id += 1
+	if ans_id >= id:
+		id = ans_id + 1
 	answer.title = "Player : " + str(answer.personal_id)
 	answer.get_node("text").text = dict["text"]
 	if dict.has("item"):
