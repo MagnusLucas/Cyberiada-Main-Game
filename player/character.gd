@@ -19,6 +19,9 @@ var inv : Array[String] = []
 #dźwięk
 var audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
 var sound_timer : Timer
+
+var dialogues_state : Dictionary = {}
+
 func _ready() -> void:
 	sound_timer = Timer.new()
 	sound_timer.autostart = true
@@ -55,9 +58,15 @@ func try_to_interact(item : StaticBody3D, npc : Area3D) -> void:
 		if item.can_take:
 			item.taken()
 	elif npc and !item:
-		npc.start_dialog()
+		if dialogues_state.has(npc.name):
+			npc.start_dialog(dialogues_state[npc.name])
+		else:
+			npc.start_dialog()
 	elif npc.position.distance_to(position) < item.position.distance_to(position):
-		npc.start_dialog()
+		if dialogues_state.has(npc.name):
+			npc.start_dialog(dialogues_state[npc.name])
+		else:
+			npc.start_dialog()
 	else:
 		#nie pamiętam już czym było can take ale było w poprzedniej wersji so
 		if item.can_take:

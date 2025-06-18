@@ -20,7 +20,7 @@ func initialize(folder_path_a : String):
 	material.albedo_texture = load(folder_path + texture)
 	
 
-func start_dialog():
+func start_dialog(from_state : String = "0"):
 	if get_node_or_null("../npcDialog"):
 		return
 	$AudioStreamPlayer.play()
@@ -28,6 +28,7 @@ func start_dialog():
 	dialog.get_data_from_file(folder_path + dialog_data)
 	add_sibling(dialog, true)
 	dialog.initialize()
+	dialog.next(from_state)
 	dialog.character_name.text = name
 	dialog.character_photo.texture = load(folder_path + texture)
 	get_parent().move_child(dialog, 0)

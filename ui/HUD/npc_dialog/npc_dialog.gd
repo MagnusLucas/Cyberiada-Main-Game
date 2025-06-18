@@ -69,16 +69,14 @@ func next(id : String):
 		answer.focus_mode = Control.FOCUS_ALL
 		var possible_answer_reactions : Array = answers[key]["next_id"]
 		var number_of_possibilities = possible_answer_reactions.size()
-		var item_to_handle : Dictionary = {}
-		if answers[key].has("item"):
-			if answers[key]["item"] is Dictionary:
-				item_to_handle = answers[key]["item"]
+		var response_data : Dictionary = {}
+		response_data = answers[key]
 		if number_of_possibilities > 0:
 			answer.connect("gui_input", _on_answer_gui_input.bind(
 				answers[key]["next_id"][randi() % number_of_possibilities],
-				item_to_handle))
+				response_data))
 		else:
-			answer.connect("gui_input", _on_answer_gui_input.bind(-1, item_to_handle))
+			answer.connect("gui_input", _on_answer_gui_input.bind(-1, response_data))
 		answer.fit_content = true
 		answers_node.add_child(answer)
 	
@@ -99,19 +97,27 @@ func next(id : String):
 
 	answers_node.get_child(0).grab_focus()
 
-func _handle_item(item : Dictionary):
-	if item.has("disappears"):
-		if item["disappears"]:
-			var character = get_node_or_null("../character")
-			if !character:
-				return
-			var owned_items : Array[String] = character.inv
-			if owned_items.has(item["name"]):
-				character.inv.erase(item["name"])
-				get_node("../character/HUD/InLevelUi").update_inv(character.inv)
+func _handle_response(response : Dictionary):
+	if response.has("item"):
+		if response["item"] is Dictionary:
+			var item = response["item"]
+			if item.has("disappears"):
+				if item["disappears"]:
+					var character = get_node_or_null("../character")
+					if !character:
+						return
+					var owned_items : Array[String] = character.inv
+					if owned_items.has(item["name"]):
+						character.inv.erase(item["name"])
+						get_node("../character/HUD/InLevelUi").update_inv(character.inv)
+	if response.has("next_start"):
+		var character = get_node_or_null("../character")
+		if !character:
+			return
+		character.dialogues_state[character_name.text] = response["next_start"]
 
-func _on_answer_gui_input(event: InputEvent, next_id : int = 0, item_to_handle : Dictionary = {}) -> void:
+func _on_answer_gui_input(event: InputEvent, next_id : int = 0, response_data : Dictionary = {}) -> void:
 	if ((event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed == true) 
 			or event.is_action_pressed("ui_accept")):
-		_handle_item(item_to_handle)
+		_handle_response(response_data)
 		next(str(next_id))
