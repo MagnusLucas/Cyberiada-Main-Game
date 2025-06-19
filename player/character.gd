@@ -7,10 +7,12 @@ const JUMP_VELOCITY = 4.5
 var the_pickable_item
 var item_area = false
 #zmienne służące do sprawdzania ruchu postaci na osi z żeby dostosowywać się do ruchu
-var do_kam_1 
+var start_kam
+var do_kam_1 = position.z 
 var do_kam_2
 var do_kam_diff
 var kamz = position.z
+var zoom = 0
 #do sortowania itemów
 func sort_by_index(a, b):
 			return a[1] < b[1]
@@ -27,6 +29,7 @@ func _ready() -> void:
 	sound_timer.autostart = true
 	sound_timer.set_one_shot(true)
 	add_child(sound_timer)
+	start_kam = $Camera_control.position.z
 	
 func _get_closest_npc() -> Area3D:
 	#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
@@ -73,6 +76,7 @@ func try_to_interact(item : StaticBody3D, npc : Area3D) -> void:
 			item.taken()
 		
 		
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -82,10 +86,15 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		try_to_interact(_get_closest_item(), _get_closest_npc())
 	
+	#print(MOUSE_BUTTON_RIGHT)
+	#if Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_UP):
+		#print(MOUSE_BUTTON_WHEEL_UP)
+		#print(get_global_mouse_position())
 		
 		
 	do_kam_1 = position.z 
 	# Handle jump.
+		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		$AudioStreamPlayer.play()
 		velocity.y = JUMP_VELOCITY
@@ -138,7 +147,7 @@ func _physics_process(delta: float) -> void:
 	do_kam_diff = do_kam_1 - do_kam_2 
 	#mnożnik żeby ogarnąć jak mały ma być efekt kamery ruchem do przodu i do tyłu 
 	kamz = kamz - (do_kam_diff * 0.25)
-	$Camera_control.position.z = lerp($Camera_control.position.z, kamz + 6, 0.08)
+	$Camera_control.position.z = lerp($Camera_control.position.z, kamz + 6 + zoom, 0.08)
 	#Camera smoothing based on a yt tutorialsssssss/
 	$Camera_control.position.x = lerp($Camera_control.position.x, position.x, 0.08)
 	$Camera_control.position.y = lerp($Camera_control.position.y, position.y, 0.08)
@@ -147,3 +156,23 @@ func _physics_process(delta: float) -> void:
 	#ni«ej print do kamery, plz dont delete till fixed
 	#print(kamz, $Camera_control.position.z)
 	#testowa animacja żeby działała w otworzeniu
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		#pozostałości wyhashtagowane to próba zrobienia tego w sensowniejszy sposób, ale nie działa więc pierdolić XD
+		#its not that importnat anyway
+		var zoom_limit = (self.position.z - start_kam) * (-1)
+		if event.is_pressed():
+			print(zoom_limit, ' ',zoom)
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				var zoom_scale:float = 2.0 ** (-event.factor if event.factor else 1.0)
+				if zoom <= zoom_limit:
+					zoom += zoom_scale
+				
+
+			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+				var zoom_scale:float = 2.0 ** (-event.factor if event.factor else -1.0)
+				#jeżeli zoom jest większy od limitu
+				if zoom >= zoom_limit * (-2):
+					#zmniejsza zooma aka przybliża
+					zoom -= zoom_scale
