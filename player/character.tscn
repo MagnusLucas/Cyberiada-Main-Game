@@ -106,7 +106,7 @@ bones/158/rotation = Quaternion(-0.705204, 0.705204, -0.0518445, -0.0518431)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_xx22o")
-volume_db = -15.0
+bus = &"SFX"
 
 [node name="HUD" parent="." instance=ExtResource("4_74pxd")]
 

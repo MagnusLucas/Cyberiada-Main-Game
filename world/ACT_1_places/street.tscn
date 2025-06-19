@@ -15546,8 +15546,7 @@ shape = SubResource("ConvexPolygonShape3D_g3c8c")
 transform = Transform3D(0.194438, 0, 0, 0, 0.194438, 0, 0, 0, 0.194438, 1.04109, -0.133081, -1.26254)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree2/tree_002" index="1"]
-collision_layer = 0
-collision_mask = 0
+disable_mode = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tree2/tree_002/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_uchcd")
