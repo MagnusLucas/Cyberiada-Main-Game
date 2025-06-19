@@ -90,10 +90,13 @@ func next(id : String):
 	if answers_node.get_child_count() > 1:
 		answers_node.get_child(0).focus_next = NodePath("../" + answers_node.get_child(1).name)
 		answers_node.get_child(0).focus_neighbor_bottom = NodePath("../" + answers_node.get_child(1).name)
-		answers_node.get_child(answers_node.get_child_count() - 1).focus_previous = NodePath("../" + answers_node.get_child(answers_node.get_child_count() - 2).name)
-		answers_node.get_child(answers_node.get_child_count() - 1).focus_neighbor_top = NodePath("../" + answers_node.get_child(answers_node.get_child_count() - 2).name)
+		answers_node.get_child(answers_node.get_child_count() - 1).focus_previous = NodePath(
+			"../" + answers_node.get_child(answers_node.get_child_count() - 2).name)
+		answers_node.get_child(answers_node.get_child_count() - 1).focus_neighbor_top = NodePath(
+			"../" + answers_node.get_child(answers_node.get_child_count() - 2).name)
 	answers_node.get_child(answers_node.get_child_count() - 1).focus_next = NodePath("../" + answers_node.get_child(0).name)
-	answers_node.get_child(answers_node.get_child_count() - 1).focus_neighbor_bottom = NodePath("../" + answers_node.get_child(0).name)
+	answers_node.get_child(answers_node.get_child_count() - 1).focus_neighbor_bottom = NodePath(
+		"../" + answers_node.get_child(0).name)
 
 	answers_node.get_child(0).grab_focus()
 
