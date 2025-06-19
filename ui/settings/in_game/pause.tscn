@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0pq1su1kljn3"]
 
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://ui/shared/graphics/themes/default_label.tres" id="1_3wp04"]
-[ext_resource type="Script" uid="uid://d3hhnuigud3g8" path="res://ui/settings/in_game/navigation.gd" id="1_hoq78"]
+[ext_resource type="Script" uid="uid://cs0mh84uxg4jo" path="res://ui/settings/in_game/navigation.gd" id="1_hoq78"]
 
 [node name="Control" type="Control"]
 process_mode = 2
