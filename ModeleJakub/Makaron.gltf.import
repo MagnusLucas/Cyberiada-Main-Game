@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b82f7m0um6uhy"
-path="res://.godot/imported/Makaron.gltf-21f32a5ad9bfd2b638e61a9bb389cb07.scn"
+valid=false
 
 [deps]
 
 source_file="res://ModeleJakub/Makaron.gltf"
-dest_files=["res://.godot/imported/Makaron.gltf-21f32a5ad9bfd2b638e61a9bb389cb07.scn"]
 
 [params]
 
