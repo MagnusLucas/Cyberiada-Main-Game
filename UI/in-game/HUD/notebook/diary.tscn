@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://lfhd73cmjmhi"]
 
 [ext_resource type="Script" uid="uid://1gr5sxlvbrxx" path="res://UI/in-game/HUD/notebook.gd" id="1_afkbb"]
-[ext_resource type="Texture2D" uid="uid://bh0erlkboubwc" path="res://mess/grafiki od Kateryny/book pages/book- main.png" id="2_d5awp"]
-[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://mess/audio/kartka_1.wav" id="3_pmgj7"]
+[ext_resource type="Texture2D" uid="uid://bh0erlkboubwc" path="res://mess-to-be-cleaned/grafiki od Kateryny/book pages/book- main.png" id="2_d5awp"]
+[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://mess-to-be-cleaned/audio/kartka_1.wav" id="3_pmgj7"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l6rjd"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://be3sqxn2abder"]
 
 [ext_resource type="Script" uid="uid://cs0mh84uxg4jo" path="res://UI/in-game/pause_base.gd" id="1_p4jx7"]
-[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://mess/ui/shared/graphics/themes/default_label.tres" id="2_xq2th"]
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://mess-to-be-cleaned/ui/shared/graphics/themes/default_label.tres" id="2_xq2th"]
 
 [node name="PauseBase" type="VBoxContainer"]
 theme_override_constants/separation = 10

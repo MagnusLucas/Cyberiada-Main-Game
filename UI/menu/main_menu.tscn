@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://k807hv4cekdh"]
 
-[ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://mess/ui/shared/graphics/background.png" id="1_i5wg5"]
+[ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://mess-to-be-cleaned/ui/shared/graphics/background.png" id="1_i5wg5"]
 [ext_resource type="Script" uid="uid://b51l1gk7h1o66" path="res://UI/menu/main_menu.gd" id="2_f7xsy"]
-[ext_resource type="Theme" uid="uid://l4fn7cedqo3m" path="res://mess/ui/shared/graphics/themes/default_button.tres" id="3_y3g0o"]
-[ext_resource type="Texture2D" uid="uid://c4c1iyo6lwqra" path="res://mess/ui/shared/graphics/buttons/main_background.png" id="4_3c04x"]
+[ext_resource type="Theme" uid="uid://l4fn7cedqo3m" path="res://mess-to-be-cleaned/ui/shared/graphics/themes/default_button.tres" id="3_y3g0o"]
+[ext_resource type="Texture2D" uid="uid://c4c1iyo6lwqra" path="res://mess-to-be-cleaned/ui/shared/graphics/buttons/main_background.png" id="4_3c04x"]
 
 [node name="Control2" type="Control"]
 layout_mode = 3

@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3 uid="uid://yl8edsf2vjry"]
+
+[ext_resource type="Script" uid="uid://myij85pvlke1" path="res://mess-to-be-cleaned/player/character.gd" id="1_v7l8u"]
+[ext_resource type="PackedScene" uid="uid://bxudyj4c76m41" path="res://mess-to-be-cleaned/3d_models/Detektyw.gltf" id="2_1t06j"]
+[ext_resource type="AudioStream" uid="uid://bs8stj7a5q18f" path="res://mess-to-be-cleaned/audio/boing.wav" id="3_xx22o"]
+[ext_resource type="PackedScene" uid="uid://bpq8x6bwcrcy1" path="res://UI/in-game/HUD/hud.tscn" id="4_74pxd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5k8hl"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_f5kkg"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tvile"]
+radius = 2.0
+
+[node name="character" type="CharacterBody3D"]
+script = ExtResource("1_v7l8u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_5k8hl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_f5kkg")
+
+[node name="interactable_area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="interactable_area"]
+shape = SubResource("CylinderShape3D_tvile")
+
+[node name="Camera_control" type="Node3D" parent="."]
+top_level = true
+
+[node name="Camera_pos" type="Node3D" parent="Camera_control"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 1.701, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_control/Camera_pos"]
+transform = Transform3D(1, 0, 0, 0, 0.893371, 0.449319, 0, -0.449319, 0.893371, 0, 0, 0)
+current = true
+
+[node name="Camera3D2" type="Camera3D" parent="Camera_control/Camera_pos"]
+transform = Transform3D(1, 0, 0, 0, 0.893371, 0.449319, 0, -0.449319, 0.893371, 0, 0, 0)
+projection = 1
+size = 13.612
+
+[node name="Detektyw" parent="." instance=ExtResource("2_1t06j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -1, 0)
+
+[node name="Skeleton3D" parent="Detektyw/GameRigDetektyw" index="0"]
+bones/0/position = Vector3(0.00167796, 1.05241, -0.0033019)
+bones/0/rotation = Quaternion(-0.0271712, 0.0270192, -0.0098956, 0.999217)
+bones/2/rotation = Quaternion(-0.0350684, 0.00548807, 0.00501955, 0.999357)
+bones/3/rotation = Quaternion(0.201478, 0.00622174, 0.00407476, 0.979465)
+bones/4/rotation = Quaternion(0.575042, -0.0105772, -0.00388012, 0.818047)
+bones/5/rotation = Quaternion(-0.533159, -0.00055318, 0.0406908, 0.845036)
+bones/8/rotation = Quaternion(0.999226, -2.86045e-09, 3.5616e-07, -0.0393279)
+bones/10/rotation = Quaternion(0.917209, -1.0086e-07, -3.98822e-10, -0.398405)
+bones/32/rotation = Quaternion(0.0645932, -0.643321, 0.692141, -0.320791)
+bones/54/rotation = Quaternion(0.655425, -0.533688, -0.272567, -0.459675)
+bones/67/rotation = Quaternion(0.655425, 0.533688, 0.272568, -0.459675)
+bones/71/rotation = Quaternion(0.329605, 0.764041, 0.248167, -0.495999)
+bones/75/rotation = Quaternion(0.0300706, 0.700818, 0.712051, -0.030547)
+bones/77/rotation = Quaternion(-0.495284, 0.761595, -0.057987, -0.413889)
+bones/78/rotation = Quaternion(-0.574645, 0.684094, -0.448416, -0.026856)
+bones/79/rotation = Quaternion(-0.260949, 0.865548, -0.40272, -0.14335)
+bones/90/rotation = Quaternion(0.855901, -0.484875, -0.125246, -0.129007)
+bones/95/rotation = Quaternion(0.855901, 0.484875, 0.125246, -0.129007)
+bones/99/rotation = Quaternion(-0.532631, -0.546037, -0.507574, 0.400645)
+bones/100/rotation = Quaternion(-0.285046, 0.629722, -0.370487, 0.620434)
+bones/101/rotation = Quaternion(0.383839, 0.0273947, -0.138941, 0.912476)
+bones/102/rotation = Quaternion(0.0474123, 0.201542, 0.0922712, 0.973971)
+bones/104/rotation = Quaternion(0.512723, -0.0101678, 0.0184078, 0.858296)
+bones/105/rotation = Quaternion(0.728209, -0.166373, 0.109325, 0.655804)
+bones/107/rotation = Quaternion(-0.0251665, 0.562972, 0.301356, 0.769164)
+bones/108/rotation = Quaternion(0.22972, 0.153595, -0.0509925, 0.959707)
+bones/111/rotation = Quaternion(0.638514, -0.0793865, 0.0405959, 0.764428)
+bones/112/rotation = Quaternion(0.855115, -0.0940786, 0.054499, 0.506911)
+bones/115/rotation = Quaternion(0.647119, -0.147986, -0.0276769, 0.747376)
+bones/116/rotation = Quaternion(0.799603, 0.0233439, -0.037845, 0.59888)
+bones/119/rotation = Quaternion(0.698673, -0.227785, -0.0099238, 0.678138)
+bones/120/rotation = Quaternion(0.743864, 0.0933222, -0.0988276, 0.654363)
+bones/122/rotation = Quaternion(-0.571115, 0.50355, 0.488618, 0.426048)
+bones/123/rotation = Quaternion(-0.393422, -0.629617, 0.308773, 0.594526)
+bones/124/rotation = Quaternion(0.322695, 0.0185513, 0.163309, 0.932123)
+bones/125/rotation = Quaternion(-0.0115284, -0.229249, -0.0415046, 0.972414)
+bones/127/rotation = Quaternion(0.480051, 0.0217325, 0.0193645, 0.876758)
+bones/128/rotation = Quaternion(0.636927, 0.161497, -0.0781132, 0.749761)
+bones/130/rotation = Quaternion(-0.118449, -0.582146, -0.258056, 0.761895)
+bones/131/rotation = Quaternion(0.209276, -0.314583, -0.110793, 0.91922)
+bones/134/rotation = Quaternion(0.538043, 0.0677924, 0.0176413, 0.840002)
+bones/135/rotation = Quaternion(0.697448, 0.113969, -0.0233751, 0.707129)
+bones/138/rotation = Quaternion(0.541093, 0.0553802, 0.0209758, 0.838875)
+bones/139/rotation = Quaternion(0.653035, -0.0339873, 0.0298059, 0.755978)
+bones/142/rotation = Quaternion(0.494564, 0.108327, -0.00847217, 0.862322)
+bones/143/rotation = Quaternion(0.692999, -0.111305, 0.0589194, 0.709854)
+bones/145/rotation = Quaternion(-1.9424e-07, 0.785479, 0.618888, -2.46384e-07)
+bones/147/rotation = Quaternion(-0.0680575, -0.722472, -0.463481, 0.508515)
+bones/149/rotation = Quaternion(0.96975, 0.0346686, -0.0541207, 0.235488)
+bones/150/rotation = Quaternion(0.597958, 0.00371642, -0.0126641, 0.801419)
+bones/151/rotation = Quaternion(-0.68603, -0.010434, 0.00753885, 0.727459)
+bones/152/rotation = Quaternion(-0.0155146, 0.987613, -0.155928, -0.00812052)
+bones/154/rotation = Quaternion(0.988799, 0.0321944, 0.076409, 0.124102)
+bones/155/rotation = Quaternion(0.280677, -0.064571, -0.000783204, 0.957628)
+bones/156/rotation = Quaternion(-0.745818, -0.0224938, 0.0268976, 0.665227)
+bones/157/rotation = Quaternion(-0.00549766, 0.985522, -0.169374, -0.00544242)
+bones/158/rotation = Quaternion(-0.705204, 0.705204, -0.0518445, -0.0518431)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xx22o")
+bus = &"SFX"
+
+[node name="HUD" parent="." instance=ExtResource("4_74pxd")]
+
+[editable path="Detektyw"]

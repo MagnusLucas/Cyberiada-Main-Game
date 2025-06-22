@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bpq8x6bwcrcy1"]
 
-[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://mess/ui/shared/graphics/themes/default_label.tres" id="1_hfu3w"]
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://mess-to-be-cleaned/ui/shared/graphics/themes/default_label.tres" id="1_hfu3w"]
 [ext_resource type="Script" uid="uid://cxpb346vukhpy" path="res://UI/in-game/HUD/hud.gd" id="1_iii7f"]
 [ext_resource type="Script" uid="uid://cifbmyldyrcdv" path="res://UI/in-game/HUD/message.gd" id="3_s1los"]
 [ext_resource type="PackedScene" uid="uid://b6jgovienj4ac" path="res://UI/in-game/HUD/in_level_ui.tscn" id="4_4mj14"]
-[ext_resource type="Texture2D" uid="uid://cmlmsctibocbg" path="res://mess/ZEmess/book.png" id="4_ih2lb"]
+[ext_resource type="Texture2D" uid="uid://cmlmsctibocbg" path="res://mess-to-be-cleaned/ZEmess/book.png" id="4_ih2lb"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kls76"]
 
