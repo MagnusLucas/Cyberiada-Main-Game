@@ -1,7 +1,7 @@
 extends GraphNode
 class_name NpcTextMode
 
-const npc_text_scene = preload("res://world/NPCs/dialog_maker/npc_statement.tscn")
+const npc_text_scene = preload("res://dialog_maker/npc_statement.tscn")
 
 static var id : int = 0
 var personal_id

@@ -1,6 +1,6 @@
 extends Node
 
-func play_sfx(path = "res://mess/audio/kartka_1.wav"):
+func play_sfx(path = "res://UI/shared/button_click.wav"):
 	$SFX.stream = load(path)
 	$SFX.play()
 	

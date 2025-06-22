@@ -1,7 +1,7 @@
 extends GraphNode
 class_name AnswerNode
 
-const answer_scene = preload("res://world/NPCs/dialog_maker/player_answer.tscn")
+const answer_scene = preload("res://dialog_maker/player_answer.tscn")
 
 static var id : int = 0
 var personal_id

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://f7apjse8641t"]
 
-[ext_resource type="Script" uid="uid://cxl56jial64wi" path="res://mess-to-be-cleaned/world/NPCs/dialog_maker/AnswerNode.gd" id="1_twlga"]
+[ext_resource type="Script" uid="uid://cxl56jial64wi" path="res://dialog_maker/AnswerNode.gd" id="1_twlga"]
 
 [node name="AnswerNode" type="GraphNode"]
 custom_minimum_size = Vector2(150, 150)

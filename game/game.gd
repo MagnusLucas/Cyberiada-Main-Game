@@ -1,6 +1,6 @@
 extends Control
 
-var pause = preload("res://ui/settings/in_game/pause.tscn")
+var pause = preload("res://UI/in-game/pause.tscn")
 var current_act = 1
 
 func _input(event: InputEvent) -> void:

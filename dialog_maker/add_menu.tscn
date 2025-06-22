@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://45hc8urqp50x"]
 
-[ext_resource type="Script" uid="uid://xoxja4mmaenf" path="res://mess-to-be-cleaned/world/NPCs/dialog_maker/add_menu.gd" id="1_h286y"]
+[ext_resource type="Script" uid="uid://xoxja4mmaenf" path="res://dialog_maker/add_menu.gd" id="1_h286y"]
 
 [node name="AddMenu" type="PanelContainer"]
 offset_right = 125.0

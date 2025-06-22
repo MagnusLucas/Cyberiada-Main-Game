@@ -1,6 +1,6 @@
 extends GraphEdit
 
-var add_menu = preload("res://world/NPCs/dialog_maker/add_menu.tscn")
+var add_menu = preload("res://dialog_maker/add_menu.tscn")
 
 var player_nodes : Dictionary = {} 
 var npc_nodes : Dictionary = {} 

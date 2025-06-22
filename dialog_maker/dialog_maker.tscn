@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwpoytvok2cyw"]
 
-[ext_resource type="Script" uid="uid://udts6wdaq3xm" path="res://mess-to-be-cleaned/world/NPCs/dialog_maker/dialog_maker.gd" id="1_8x78i"]
+[ext_resource type="Script" uid="uid://udts6wdaq3xm" path="res://dialog_maker/dialog_maker.gd" id="1_8x78i"]
 
 [node name="DialogMaker" type="Control"]
 layout_mode = 3

@@ -1,6 +1,6 @@
 extends PanelContainer
 
-var npc_scene = preload("res://world/NPCs/dialog_maker/npc_statement.tscn")
+var npc_scene = preload("res://dialog_maker/npc_statement.tscn")
 
 func _on_npc_pressed() -> void:
 	var instance = NpcTextMode.new_custom()

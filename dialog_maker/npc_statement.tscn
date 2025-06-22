@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxwa2phe6lg84"]
 
-[ext_resource type="Script" uid="uid://biydx8ldtbjoi" path="res://mess-to-be-cleaned/world/NPCs/dialog_maker/NpcTextNode.gd" id="1_b1bwu"]
+[ext_resource type="Script" uid="uid://biydx8ldtbjoi" path="res://dialog_maker/NpcTextNode.gd" id="1_b1bwu"]
 
 [node name="NpcTextNode" type="GraphNode"]
 custom_minimum_size = Vector2(150, 130)
