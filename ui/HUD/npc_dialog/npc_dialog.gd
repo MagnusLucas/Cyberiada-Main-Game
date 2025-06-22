@@ -3,13 +3,13 @@ extends MarginContainer
 var convo_data : Dictionary
 var current_state : String = "0"
 var answers : Dictionary
-@onready var character_name: Label = $VBoxContainer2/VBoxContainer/CharacterName
+@onready var character_name: Label = $VBoxContainer2/MarginContainer/VBoxContainer/CharacterName
 @onready var character_photo: TextureRect = $VBoxContainer2/CharacterPhoto
 
 func _ready() -> void:
 	if convo_data.is_empty():
 		get_data_from_file("res://ui/HUD/npc_dialog/example_dialog.json")
-		$VBoxContainer2/VBoxContainer/answers.focus_mode = FOCUS_ALL
+		$VBoxContainer2/MarginContainer/VBoxContainer/answers.focus_mode = FOCUS_ALL
 		initialize()
 		
 
@@ -50,12 +50,12 @@ func receive_item(item_name : String):
 	get_node("../character/HUD/InLevelUi").update_inv(character.inv)
 
 func next(id : String):
-	var answers_node = $VBoxContainer2/VBoxContainer/answers
+	var answers_node = $VBoxContainer2/MarginContainer/VBoxContainer/answers
 	current_state = id
 	if !convo_data.has(current_state):
 		queue_free()
 		return
-	$VBoxContainer2/VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]
+	$VBoxContainer2/MarginContainer/VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]
 	if convo_data[current_state].has("item") and convo_data[current_state]["item"] != "":
 		receive_item(convo_data[current_state]["item"])
 	answers = convo_data[current_state]["answers"]
@@ -64,7 +64,7 @@ func next(id : String):
 		answers_node.remove_child(child)
 	for key in answers:
 		var answer : RichTextLabel = RichTextLabel.new()
-		answer.theme = load("res://ui/shared/graphics/themes/default_rtl.tres")
+		answer.add_theme_color_override("default_color", Color.BLACK)
 		answer.text = answers[key]["text"]
 		answer.focus_mode = Control.FOCUS_ALL
 		var possible_answer_reactions : Array = answers[key]["next_id"]
