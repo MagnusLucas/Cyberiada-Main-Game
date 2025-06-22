@@ -1,0 +1,157 @@
+{
+	"0": {
+		"answers": {
+			"0": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					2
+				],
+				"text": "Znam takich, co się cieszą."
+			},
+			"1": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					1
+				],
+				"text": "Znałeś ją?"
+			},
+			"2": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					3
+				],
+				"text": "Jeśli przez sprawę masz na myśli morderstwo…"
+			}
+		},
+		"item": "",
+		"text": "Straszna sprawa z tą Dorotą, nie?"
+	},
+	"1": {
+		"answers": {
+			"6": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "Kim jesteś?"
+			}
+		},
+		"item": "",
+		"text": "A znałem, znałem. Była moją stałą klientką."
+	},
+	"2": {
+		"answers": {
+			"6": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "Kim jesteś?"
+			}
+		},
+		"item": "",
+		"text": "Niech zgadnę — pewnie ta Stefańska spod szóstki, hę? Ona zawsze mąci."
+	},
+	"3": {
+		"answers": {
+			"6": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "Kim jesteś?"
+			}
+		},
+		"item": "",
+		"text": "Poważnie myśli Pan, że to było morderstwo? Dobre mi żarty."
+	},
+	"4": {
+		"answers": {
+			"9": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					5
+				],
+				"text": "Nie wiem."
+			}
+		},
+		"item": "",
+		"text": "Starski Juliusz. Ale lokalni nazywają mnie Marynarzem. Brzmi bardziej enigmatycznie. I robi lepszą reklamę, jeśli wiesz, o co chodzi."
+	},
+	"5": {
+		"answers": {
+			"10": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					6
+				],
+				"next_start": "5",
+				"text": "Nie."
+			},
+			"11": {
+				"item": {
+					"disappears": true,
+					"name": "czapka"
+				},
+				"next_id": [
+					7
+				],
+				"text": "Tak."
+			}
+		},
+		"item": "",
+		"text": "Nieważne. Jakbyś potrzebował czegoś… Nietypowego, zaglądnij do mnie. A nóż widelec będę coś miał. Ach i jeszcze jedno - widziałeś może moją czapkę?"
+	},
+	"6": {
+		"answers": {
+			"12": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [],
+				"text": "..."
+			}
+		},
+		"item": "",
+		"text": "Te przeklęte dzieciaki… Cóż, jeśli jakimś cudem się na nią natkniesz, to proszę, oddaj mi ją. Odwdzięczę się sowicie. Arrivederci!"
+	},
+	"7": {
+		"answers": {
+			"13": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [],
+				"text": "Dzieki"
+			}
+		},
+		"item": "kartka_cukier",
+		"text": "Dzieki za czapke, trzymaj, mam tu kartke, ktorej nie potrzebuje"
+	}
+}

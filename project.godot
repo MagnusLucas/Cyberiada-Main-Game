@@ -11,17 +11,17 @@ config_version=5
 [application]
 
 config/name="Cyberiada Main Game"
-run/main_scene="res://ui/main_menu/main_menu.tscn"
+run/main_scene="res://UI/menu/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/show_image=false
 
 [audio]
 
-buses/default_bus_layout="res://audio/default_bus_layout.tres"
+buses/default_bus_layout="res://mess/audio/default_bus_layout.tres"
 
 [autoload]
 
-Sound="*res://ui/Sound.tscn"
+Sound="*res://autoloads/Sound.tscn"
 
 [global_group]
 

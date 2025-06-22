@@ -1,0 +1,45 @@
+{
+	"0": {
+		"answers": {
+			"0": {
+				"next_id": [
+					1
+				],
+				"text": "\\o"
+			},
+			"2": {
+				"next_id": [
+					2
+				],
+				"text": "hi"
+			}
+		},
+		"text": "o/"
+	},
+	"1": {
+		"answers": {
+			"1": {
+				"next_id": [
+					0
+				],
+				"text": "o/"
+			}
+		},
+		"text": "\\o"
+	},
+	"2": {
+		"answers": {
+			"3": {
+				"next_id": [],
+				"text": "no..."
+			},
+			"4": {
+				"next_id": [
+					1
+				],
+				"text": "oh, my bad, \\o"
+			}
+		},
+		"text": "you don kno emo lng?"
+	}
+}

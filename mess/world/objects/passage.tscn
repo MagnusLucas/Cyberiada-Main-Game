@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b440rwhlg20vk"]
+
+[ext_resource type="Script" uid="uid://b1kj1dkex2v6" path="res://mess/world/objects/passage.gd" id="1_tln4w"]
+[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://mess/audio/kartka_1.wav" id="2_ol6he"]
+[ext_resource type="PackedScene" uid="uid://bedn724rt1xlr" path="res://mess/3d_models/3d_mieszkanie_Janek/fbx/doors2.fbx" id="3_7fr5r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tln4w"]
+size = Vector3(1.565, 1.5, 0.2)
+
+[node name="Passage" type="StaticBody3D" groups=["pickable"]]
+script = ExtResource("1_tln4w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_tln4w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ol6he")
+
+[node name="doors2" parent="." instance=ExtResource("3_7fr5r")]
+transform = Transform3D(-0.0376902, 0, -0.999289, 0, 1, 0, 0.999289, 0, -0.0376902, 0, 0, 0)

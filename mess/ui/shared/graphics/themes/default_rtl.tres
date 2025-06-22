@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://db3ceyuaremoq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keuki"]
+bg_color = Color(0.786317, 0.658633, 0.516828, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hm1le"]
+bg_color = Color(0.602759, 0.480577, 0.346234, 1)
+
+[resource]
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_keuki")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_hm1le")
