@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4swq2bscm4n4"]
+[gd_scene load_steps=3 format=3 uid="uid://b4swq2bscm4n4"]
 
-[ext_resource type="Script" uid="uid://b00qvjrealvi0" path="res://UI/menu/settings/graphics/graphics_base.gd" id="1_m5esw"]
+[ext_resource type="Script" uid="uid://b00qvjrealvi0" path="res://UI/shared/settings/graphics.gd" id="1_m5esw"]
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://mess/ui/shared/graphics/themes/default_label.tres" id="1_nuthj"]
-[ext_resource type="Script" uid="uid://nomki5y07er0" path="res://UI/menu/settings/graphics/navigation.gd" id="2_ei7s1"]
 
 [node name="MarginContainer" type="MarginContainer"]
 size_flags_horizontal = 3
@@ -50,7 +49,6 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
-script = ExtResource("2_ei7s1")
 
 [node name="Back" type="Button" parent="VBoxContainer/MarginContainer/navigation"]
 layout_mode = 2
@@ -63,5 +61,5 @@ size_flags_horizontal = 3
 text = "Zapisz"
 
 [connection signal="toggled" from="VBoxContainer/HBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer/navigation/Back" to="VBoxContainer/MarginContainer/navigation" method="_on_back_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer/navigation/Save" to="VBoxContainer/MarginContainer/navigation" method="_on_save_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/navigation/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/navigation/Save" to="." method="_on_back_pressed"]

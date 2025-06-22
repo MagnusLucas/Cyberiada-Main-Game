@@ -14,7 +14,7 @@ func _on_load_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	Sound.play_sfx()
-	get_tree().change_scene_to_file("res://UI/menu/settings/settings/settings.tscn")
+	get_tree().change_scene_to_file("res://UI/menu/settings.tscn")
 
 
 func _on_new_game_pressed() -> void:

@@ -10,6 +10,8 @@ var inputingKey : bool = false
 	"interact" = $VBoxContainer/HBoxContainer5/interact
 }
 
+@export_file var back = "res://UI/shared/settings/settings.tscn"
+
 func get_key(actionName : String) -> String:
 	var events = InputMap.action_get_events(actionName)
 	for event in events:
@@ -40,3 +42,8 @@ func _input(event: InputEvent) -> void:
 		for keyBind in keyBinds:
 			if keyBinds[keyBind].text == " ":
 				change_key(keyBind, event)
+
+
+func _on_back_pressed() -> void:
+	add_sibling(load(back).instantiate())
+	queue_free()
