@@ -4,7 +4,7 @@ extends Area3D
 const texture : String = "texture.png"
 const dialog_data : String = "dialog.json"
 
-var dialog_scene = preload("res://ui/HUD/npc_dialog/npc_dialog.tscn")
+var dialog_scene = preload("res://UI/in-game/HUD/npc_dialog.tscn")
 
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 
