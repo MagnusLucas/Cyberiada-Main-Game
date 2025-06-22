@@ -2,14 +2,20 @@
 	"0": {
 		"answers": {
 			"0": {
-				"item": "",
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
 				"next_id": [
 					1
 				],
 				"text": "Papierosow, uzaleznienie..."
 			},
 			"2": {
-				"item": "kartka_cukier",
+				"item": {
+					"disappears": false,
+					"name": "kartka_cukier"
+				},
 				"next_id": [
 					2
 				],
@@ -22,7 +28,10 @@
 	"1": {
 		"answers": {
 			"1": {
-				"item": "",
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
 				"next_id": [],
 				"text": "Dzieki"
 			}
@@ -33,7 +42,10 @@
 	"2": {
 		"answers": {
 			"1": {
-				"item": "",
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
 				"next_id": [],
 				"text": "Dzieki"
 			}
