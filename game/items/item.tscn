@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2nw30xxslme8"]
+
+[ext_resource type="Script" uid="uid://dmxlj6nqmtjv8" path="res://game/items/item.gd" id="1_sfe4x"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_6bbg1"]
+resource_local_to_scene = true
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fnqbq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3cwi"]
+resource_local_to_scene = true
+albedo_texture = SubResource("PlaceholderTexture2D_fnqbq")
+billboard_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ftox"]
+
+[node name="example_item" type="Area3D"]
+script = ExtResource("1_sfe4x")
+texture = "uid://bhhybeveup54y"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_6bbg1")
+surface_material_override/0 = SubResource("StandardMaterial3D_n3cwi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_3ftox")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://615dadx87lwf"]
 
-[ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://mess-to-be-cleaned/player/character.tscn" id="1_yadum"]
+[ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://game/player.tscn" id="1_yadum"]
 
 [node name="act_2" type="Node3D"]
 

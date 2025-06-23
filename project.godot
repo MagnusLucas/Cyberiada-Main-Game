@@ -23,10 +23,6 @@ buses/default_bus_layout="res://mess-to-be-cleaned/audio/default_bus_layout.tres
 
 Sound="*res://autoloads/Sound.tscn"
 
-[global_group]
-
-pickable="items that u can pick up"
-
 [input]
 
 go_left={

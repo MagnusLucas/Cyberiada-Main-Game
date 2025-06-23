@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://d31lk7cftx5hb"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://mess-to-be-cleaned/world/ACT_1_places/test_level.gd" id="1_hkp2u"]
-[ext_resource type="PackedScene" uid="uid://b2nw30xxslme8" path="res://mess-to-be-cleaned/world/items/example_item.tscn" id="5_6hysj"]
+[ext_resource type="PackedScene" uid="uid://b2nw30xxslme8" path="res://game/items/item.tscn" id="5_6hysj"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://mess-to-be-cleaned/world/objects/passage.tscn" id="6_g154u"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
