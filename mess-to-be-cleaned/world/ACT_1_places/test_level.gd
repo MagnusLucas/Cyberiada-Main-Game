@@ -6,7 +6,6 @@ func _ready() -> void:
 func for_act_load():
 	var character = get_node("../act_"+str($"..".current_act)+"/character")
 	character.position = $Marker3D.position
-	print($Marker3D.position)
 	character.do_kam_diff = 0
 	character.kamz = 0
 	

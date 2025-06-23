@@ -1,11 +1,11 @@
 [gd_scene load_steps=1291 format=3 uid="uid://dsy8pq7ndjoy7"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://mess-to-be-cleaned/world/ACT_1_places/test_level.gd" id="1_1bayx"]
-[ext_resource type="PackedScene" uid="uid://cj4uqwu47ihsf" path="res://mess-to-be-cleaned/3d_models/mieszkanie doroty-1/POKÓJ-DOROTA.glb" id="2_gxk1n"]
-[ext_resource type="Texture2D" uid="uid://cybtawhxxpsya" path="res://mess-to-be-cleaned/3d_models/mieszkanie doroty-1/docklands_01_4k.hdr" id="3_ucbln"]
-[ext_resource type="PackedScene" uid="uid://dpue3ugqte7py" path="res://mess-to-be-cleaned/3d_models/sklep+ miszkanie Miki/miki-miszkanie.glb" id="3_wu4pn"]
+[ext_resource type="PackedScene" uid="uid://cj4uqwu47ihsf" path="res://game/3d_models/rooms/dorota/room/POKÓJ-DOROTA.glb" id="2_gxk1n"]
+[ext_resource type="Texture2D" uid="uid://cybtawhxxpsya" path="res://game/3d_models/rooms/dorota/docklands_01_4k.hdr" id="3_ucbln"]
+[ext_resource type="PackedScene" uid="uid://dpue3ugqte7py" path="res://game/3d_models/rooms/miki/miki-miszkanie.glb" id="3_wu4pn"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://mess-to-be-cleaned/world/objects/passage.tscn" id="5_qf1ib"]
-[ext_resource type="PackedScene" uid="uid://bu1xd0fp2kop5" path="res://mess-to-be-cleaned/3d_models/mieszkanie doroty-1/kuchnia-dorota.glb" id="8_8yh1q"]
+[ext_resource type="PackedScene" uid="uid://bu1xd0fp2kop5" path="res://game/3d_models/rooms/dorota/kitchen/kuchnia-dorota.glb" id="8_8yh1q"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g154u"]
 size = Vector3(20, 8, 20)

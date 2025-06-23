@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://mess-to-be-cleaned/world/ACT_1_places/test_level.gd" id="1_icsrx"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://mess-to-be-cleaned/world/objects/passage.tscn" id="3_aryeu"]
-[ext_resource type="PackedScene" uid="uid://c8jnrblmcl016" path="res://mess-to-be-cleaned/3d_models/sklep+ miszkanie Miki/sklep.glb" id="3_icsrx"]
+[ext_resource type="PackedScene" uid="uid://c8jnrblmcl016" path="res://game/3d_models/rooms/shop/sklep.glb" id="3_icsrx"]
 
 [node name="test_level2" type="Node3D"]
 script = ExtResource("1_icsrx")

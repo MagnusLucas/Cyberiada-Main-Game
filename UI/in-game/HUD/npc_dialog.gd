@@ -47,7 +47,7 @@ func receive_item(item_name : String):
 	if item_name in character.inv:
 		return
 	character.inv.append(item_name)
-	get_node("../character/HUD/InLevelUi").update_inv(character.inv)
+	character.get_node("HUD").update_inv(character.inv)
 
 func next(id : String):
 	var answers_node = $VBoxContainer2/MarginContainer/VBoxContainer/answers
@@ -112,7 +112,7 @@ func _handle_response(response : Dictionary):
 					var owned_items : Array[String] = character.inv
 					if owned_items.has(item["name"]):
 						character.inv.erase(item["name"])
-						get_node("../character/HUD/InLevelUi").update_inv(character.inv)
+						character.get_node("HUD").update_inv(character.inv)
 	if response.has("next_start"):
 		var character = get_node_or_null("../character")
 		if !character:

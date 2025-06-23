@@ -8,6 +8,6 @@ func _on_notebook_pressed() -> void:
 
 
 func update_inv(inventory):
-	var item_belt = $ItemBelt/MarginContainer/Container
+	var item_belt = $MarginContainer/Container
 	for i in range(len(inventory)):
-		item_belt.get_child(i).texture =load("res://world/items/2d/"+inventory[int(i)]+".png")
+		item_belt.get_child(i).get_child(0).texture =load("res://game/items/2d/"+inventory[int(i)]+".png")

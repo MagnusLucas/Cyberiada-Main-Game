@@ -18,7 +18,7 @@ script = ExtResource("1_e7hdk")
 
 [node name="act_1" parent="." instance=ExtResource("3_feb5d")]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Shader" type="ColorRect" parent="."]
 material = ExtResource("4_fc0e3")
 layout_mode = 0
 offset_right = 1167.0

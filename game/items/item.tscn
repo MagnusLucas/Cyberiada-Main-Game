@@ -16,7 +16,6 @@ billboard_mode = 1
 
 [node name="example_item" type="Area3D"]
 script = ExtResource("1_sfe4x")
-texture = "uid://bhhybeveup54y"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("QuadMesh_6bbg1")

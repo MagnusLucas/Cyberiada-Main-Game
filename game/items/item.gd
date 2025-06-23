@@ -2,8 +2,8 @@ extends Area3D
 class_name Item
 @onready var character = $"../character"
 
-@export_file(".png") var texture = "res://mess-to-be-cleaned/world/items/2d/example_item.png"
-@export_file(".wav") var pickup_sound = "res://mess-to-be-cleaned/audio/podnoszenie-przedmiotu-kubek.mp3"
+@export_file(".png") var texture = "res://game/items/2d/example_item.png"
+@export_file(".wav") var pickup_sound = "res://game/audio/SFX/pstryczek.wav"
 
 func _ready() -> void:
 	var material : StandardMaterial3D = $MeshInstance3D.get_surface_override_material(0)

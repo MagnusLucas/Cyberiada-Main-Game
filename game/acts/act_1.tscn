@@ -13,6 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57815, 0.891999, -4.77239)
 
 [node name="czapka" parent="." instance=ExtResource("5_detl5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7946, 0.751426, 1.53163)
+texture = "uid://bhhybeveup54y"
 
 [node name="NPC2" parent="." instance=ExtResource("1_4bpop")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.862, 0.988, -0.324)

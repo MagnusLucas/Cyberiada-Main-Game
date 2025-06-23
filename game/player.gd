@@ -18,8 +18,6 @@ func sort_by_index(a, b):
 	return a[1] < b[1]
 
 var inv : Array[String] = []
-#dźwięk
-var audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
 var sound_timer : Timer
 
 var dialogues_state : Dictionary = {}
@@ -87,7 +85,7 @@ func _physics_process(delta: float) -> void:
 		#dźwięk contuwued
 		#print($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
 		if $AudioStreamPlayer.playing == false and sound_timer.time_left == 0:
-			audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
+			var audio_path = "res://game/audio/SFX/footsteps/krok_"+str(randi_range(1,4))+".wav"
 			$AudioStreamPlayer.stream = load(audio_path)
 			sound_timer.start(randf_range(0.5,0.5)) 
 			$AudioStreamPlayer.play()
