@@ -14,11 +14,11 @@ radius = 2.0
 script = ExtResource("1_v7l8u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.926009, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994836, 0)
 shape = SubResource("CapsuleShape3D_5k8hl")
 
 [node name="interactable_area" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.926009, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994836, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="interactable_area"]
 shape = SubResource("CylinderShape3D_tvile")
@@ -45,3 +45,4 @@ bus = &"SFX"
 [node name="HUD" parent="." instance=ExtResource("4_74pxd")]
 
 [node name="Detektyw" parent="." instance=ExtResource("2_1t06j")]
+transform = Transform3D(1, 0, 0, 0, 0.919118, 0, 0, 0, 1, 0, 0.068827, 0)

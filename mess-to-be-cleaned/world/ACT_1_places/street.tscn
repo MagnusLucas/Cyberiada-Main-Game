@@ -16,13 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://cljjx1h61y8jr" path="res://mess-to-be-cleaned/3d_models/objekts1-lawka.glb" id="16_w4jl2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wo7lo"]
-size = Vector2(20, 20)
+size = Vector2(200, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w71c0"]
 size = Vector3(20, 1, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_g154u"]
-size = Vector3(20, 8, 20)
+size = Vector3(200, 20, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hkp2u"]
 data = PackedVector3Array(-10, 4, 10, 10, 4, 10, -10, -4, 10, 10, 4, 10, 10, -4, 10, -10, -4, 10, 10, 4, -10, -10, 4, -10, 10, -4, -10, -10, 4, -10, -10, -4, -10, 10, -4, -10, 10, 4, 10, 10, 4, -10, 10, -4, 10, 10, 4, -10, 10, -4, -10, 10, -4, 10, -10, 4, -10, -10, 4, 10, -10, -4, -10, -10, 4, 10, -10, -4, 10, -10, -4, -10, 10, 4, 10, -10, 4, 10, 10, 4, -10, -10, 4, 10, -10, 4, -10, 10, 4, -10, -10, -4, 10, 10, -4, 10, -10, -4, -10, 10, -4, 10, 10, -4, -10, -10, -4, -10)
@@ -7643,10 +7643,10 @@ points = PackedVector3Array(0.1431, 4.12473, 0.281795, -0.865903, 4.18294, 0.012
 script = ExtResource("1_op38q")
 
 [node name="ground" type="StaticBody3D" parent="."]
-transform = Transform3D(4.24712, 0, 0, 0, 1, 0, 0, 0, 1, 20.8491, -0.125, -0.860062)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.82911)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+visible = false
 mesh = SubResource("PlaneMesh_wo7lo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
@@ -7660,7 +7660,7 @@ transform = Transform3D(1, 0, 0, 0, 0.970905, 0.239466, 0, -0.239466, 0.970905, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211916, 2.20446, -1.80272)
 
 [node name="blokada" type="StaticBody3D" parent="."]
-transform = Transform3D(6.03393, 0, 0, 0, 1.69055, 0, 0, 0, 1, 25.3476, 6.68475, -5.52955)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -4.829)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="blokada"]
 visible = false
