@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://qli2jd2u7npw"]
 
-[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://mess-to-be-cleaned/ui/shared/graphics/themes/default_label.tres" id="1_1n77n"]
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://UI/shared/themes/default_label.tres" id="1_1n77n"]
 [ext_resource type="Script" uid="uid://361yvm7fvkcg" path="res://UI/shared/settings/controls.gd" id="1_ntx1o"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_jhesj"]

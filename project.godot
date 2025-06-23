@@ -15,10 +15,6 @@ run/main_scene="res://UI/menu/main_menu.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/show_image=false
 
-[audio]
-
-buses/default_bus_layout="res://mess-to-be-cleaned/audio/default_bus_layout.tres"
-
 [autoload]
 
 Sound="*res://autoloads/Sound.tscn"

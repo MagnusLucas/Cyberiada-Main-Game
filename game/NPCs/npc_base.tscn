@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bvdqujiy0oilp"]
 
 [ext_resource type="Script" uid="uid://dcunl4pq5eql3" path="res://game/NPCs/npc_base.gd" id="1_fiju2"]
-[ext_resource type="AudioStream" uid="uid://c0m4n56boy0ax" path="res://mess-to-be-cleaned/audio/podnoszenie-przedmiotu-kubek2.mp3" id="2_ie3bn"]
+[ext_resource type="AudioStream" uid="uid://c0m4n56boy0ax" path="res://game/audio/SFX/grabbing_items/podnoszenie-przedmiotu-kubek2.mp3" id="2_ie3bn"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dp5yl"]
 height = 2.4

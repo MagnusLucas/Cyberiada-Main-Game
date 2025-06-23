@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjjxcy0x4eo83"]
 
-[ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://mess-to-be-cleaned/ui/shared/graphics/background.png" id="1_n4b5m"]
+[ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://UI/menu/background.png" id="1_n4b5m"]
 [ext_resource type="PackedScene" uid="uid://c3hjvx42uuvgd" path="res://UI/shared/settings/settings.tscn" id="2_7oq4m"]
 
 [node name="Control" type="Control"]

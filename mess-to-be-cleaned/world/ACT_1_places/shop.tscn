@@ -11,12 +11,9 @@ script = ExtResource("1_icsrx")
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 14, 16)
 
 [node name="Passage2" parent="." instance=ExtResource("3_aryeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.93109, 0, -1.61081)
+transform = Transform3D(8.1033, 0, 0, 0, 1.8172, 0, 0, 0, 1, -5.02663, 0.170975, 10.8202)
+visible = false
 next_scene = "uid://d4uohc6ywne2"
-
-[node name="Passage" parent="." instance=ExtResource("3_aryeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35107, 0.62121, -4.53426)
-next_scene = "uid://bwyaext20uchn"
 
 [node name="Marker3D" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

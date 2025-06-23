@@ -1,6 +1,6 @@
 extends MarginContainer
 
-var notebook = preload("res://UI/in-game/HUD/notebook.tscn")
+var notebook = preload("res://UI/in-game/notebook/notebook.tscn")
 
 func _on_notebook_pressed() -> void:
 	get_tree().paused = true

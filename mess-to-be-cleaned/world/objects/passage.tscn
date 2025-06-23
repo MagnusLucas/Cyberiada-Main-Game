@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b440rwhlg20vk"]
 
 [ext_resource type="Script" uid="uid://b1kj1dkex2v6" path="res://mess-to-be-cleaned/world/objects/passage.gd" id="1_tln4w"]
-[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://mess-to-be-cleaned/audio/kartka_1.wav" id="2_ol6he"]
+[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://game/audio/SFX/kartka_1.wav" id="2_ol6he"]
 [ext_resource type="PackedScene" uid="uid://bedn724rt1xlr" path="res://mess-to-be-cleaned/3d_models/3d_mieszkanie_Janek/fbx/doors2.fbx" id="3_7fr5r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tln4w"]

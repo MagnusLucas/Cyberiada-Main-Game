@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game/game.gd" id="1_e7hdk"]
 [ext_resource type="PackedScene" uid="uid://d4uohc6ywne2" path="res://mess-to-be-cleaned/world/ACT_1_places/street.tscn" id="2_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dm5d3um25i4wl" path="res://game/acts/act_1.tscn" id="3_feb5d"]
-[ext_resource type="Material" uid="uid://byxirhydumxe4" path="res://mess-to-be-cleaned/shader stuff/material_shader.tres" id="4_fc0e3"]
+[ext_resource type="Material" uid="uid://byxirhydumxe4" path="res://game/shader/material_shader.tres" id="4_fc0e3"]
 
 [node name="world" type="Control"]
 layout_mode = 3

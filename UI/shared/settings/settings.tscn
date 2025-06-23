@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3hjvx42uuvgd"]
 
 [ext_resource type="Script" uid="uid://c4pbej6nd6s5j" path="res://UI/shared/settings/settings.gd" id="1_iaicr"]
-[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://mess-to-be-cleaned/ui/shared/graphics/themes/default_label.tres" id="2_udxak"]
+[ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://UI/shared/themes/default_label.tres" id="2_udxak"]
 
 [node name="navigation" type="VBoxContainer"]
 script = ExtResource("1_iaicr")
