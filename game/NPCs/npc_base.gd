@@ -1,4 +1,5 @@
 extends Area3D
+class_name NPC
 
 @export_dir
 var folder_path : String = "res://game/NPCs/NPC-folders/babcia/"
@@ -17,7 +18,6 @@ func _ready() -> void:
 func initialize():
 	name = folder_path.get_base_dir().get_slicec("/".unicode_at(0), folder_path.get_base_dir().get_slice_count("/")-1)
 	var material : StandardMaterial3D = mesh.get_surface_override_material(0)
-	print("initializing ", name)
 	material.albedo_texture = load(folder_path + texture)
 	
 

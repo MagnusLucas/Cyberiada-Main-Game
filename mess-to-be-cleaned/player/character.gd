@@ -15,7 +15,7 @@ var kamz = position.z
 var zoom = 0
 #do sortowania itemów
 func sort_by_index(a, b):
-			return a[1] < b[1]
+	return a[1] < b[1]
 
 var inv : Array[String] = []
 #dźwięk
@@ -31,7 +31,7 @@ func _ready() -> void:
 	add_child(sound_timer)
 	start_kam = $Camera_control.position.z
 	
-func _get_closest_npc() -> Area3D:
+func _get_closest_interactable() -> Area3D:
 	#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
 	var npc_tab = []
 	for i in $interactable_area.get_overlapping_areas(): #these are the human bodies (NPCs)
@@ -41,41 +41,12 @@ func _get_closest_npc() -> Area3D:
 		return npc_tab[0][0]
 	return null
 
-func _get_closest_item() -> StaticBody3D:
-	var item_tab = []
-	#print($interactable_area.get_overlapping_bodies())
-	for i in $interactable_area.get_overlapping_bodies(): #these are the items, obviously.
-		if i.is_in_group("pickable"):
-			item_tab.append([i,position.distance_to(i.position)])
-	item_tab.sort_custom(sort_by_index)
-	#sprawdza czy w tej tabeli coś jest bo jak nie to sie wykrzacza
-	if len(item_tab) >0:
-		return item_tab[0][0]
-	return null
-	
-func try_to_interact(item : StaticBody3D, npc : Area3D) -> void:
-	if !item and !npc:
-		return
-	elif item and !npc:
-		#nie pamiętam już czym było can take ale było w poprzedniej wersji so
-		if item.can_take:
-			item.taken()
-	elif npc and !item:
-		if dialogues_state.has(npc.name):
-			npc.start_dialog(dialogues_state[npc.name])
-		else:
-			npc.start_dialog()
-	elif npc.position.distance_to(position) < item.position.distance_to(position):
-		if dialogues_state.has(npc.name):
-			npc.start_dialog(dialogues_state[npc.name])
-		else:
-			npc.start_dialog()
-	else:
-		#nie pamiętam już czym było can take ale było w poprzedniej wersji so
-		if item.can_take:
-			item.taken()
-		
-		
+
+func try_to_interact(interactable : Area3D) -> void:
+	if interactable is Item:
+		interactable.taken()
+	elif interactable is NPC:
+		interactable.start_dialog()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -84,14 +55,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Interact/take items
 	if Input.is_action_just_pressed("interact"):
-		try_to_interact(_get_closest_item(), _get_closest_npc())
+		try_to_interact(_get_closest_interactable())
 	
-	#print(MOUSE_BUTTON_RIGHT)
-	#if Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_UP):
-		#print(MOUSE_BUTTON_WHEEL_UP)
-		#print(get_global_mouse_position())
-		
-		
+	
 	do_kam_1 = position.z 
 	# Handle jump.
 		
@@ -104,9 +70,6 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("go_left", "go_right", "go_up", "go_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction != Vector3(0,0,0):
-		#print(direction)
-		#detektyw kręci się ale nie smooth
-		# $Detektyw.rotation = Vector3(0 , Vector2(direction[2],direction[0]).angle() , 0)
 		#detektyw kręci się kinda smooth
 		$Detektyw.rotation = Vector3(0 , lerp_angle($Detektyw.rotation[1],Vector2(direction[2],direction[0]).angle(),0.2) , 0)
 	if direction:
@@ -115,7 +78,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-	#print('hee hee ' ,JUMP_VELOCITY, ' hee? ',SPEED, ' ', velocity)
 	if not is_on_floor():
 		#warunek do pierwszej pozycji skoku
 		#if velocity.y >0:
@@ -126,9 +88,7 @@ func _physics_process(delta: float) -> void:
 		#print($AudioStreamPlayer.playing, sound_timer.time_left == 0, sound_timer.time_left)
 		if $AudioStreamPlayer.playing == false and sound_timer.time_left == 0:
 			audio_path = "res://audio/krok_"+str(randi_range(1,4))+".wav"
-			#print('disadgjhvbxzx')
 			$AudioStreamPlayer.stream = load(audio_path)
-			#print(audio_path)
 			sound_timer.start(randf_range(0.5,0.5)) 
 			$AudioStreamPlayer.play()
 		
@@ -153,18 +113,13 @@ func _physics_process(delta: float) -> void:
 	$Camera_control.position.y = lerp($Camera_control.position.y, position.y, 0.08)
 	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
 	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
-	#ni«ej print do kamery, plz dont delete till fixed
-	#print(kamz, $Camera_control.position.z)
-	#testowa animacja żeby działała w otworzeniu
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		#pozostałości wyhashtagowane to próba zrobienia tego w sensowniejszy sposób, ale nie działa więc pierdolić XD
-		#its not that importnat anyway
 		var zoom_limit = (self.position.z - start_kam) * (-1)
 		if event.is_pressed():
-			print(zoom_limit, ' ',zoom)
 			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				print(zoom_limit, ' ',zoom)
 				var zoom_scale:float = 2.0 ** (-event.factor if event.factor else 1.0)
 				if zoom <= zoom_limit:
 					zoom += zoom_scale
