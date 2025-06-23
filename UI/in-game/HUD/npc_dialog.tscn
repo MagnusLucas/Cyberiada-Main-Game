@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dd2cxepivnk4k"]
 
 [ext_resource type="Script" uid="uid://bng8cqeisgd0g" path="res://UI/in-game/HUD/npc_dialog.gd" id="1_ybdnl"]
-[ext_resource type="Texture2D" uid="uid://boqv0yql0sa42" path="res://mess-to-be-cleaned/world/NPCs/NPC-folders/anna/texture.png" id="2_ons1r"]
+[ext_resource type="Texture2D" uid="uid://boqv0yql0sa42" path="res://game/NPCs/NPC-folders/anna/texture.png" id="2_ons1r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvtet"]
 bg_color = Color(0.839216, 0.752941, 0.458824, 1)

@@ -1,0 +1,56 @@
+{
+	"0": {
+		"answers": {
+			"0": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					1
+				],
+				"text": "Papierosow, uzaleznienie..."
+			},
+			"2": {
+				"item": {
+					"disappears": false,
+					"name": "kartka_cukier"
+				},
+				"next_id": [
+					2
+				],
+				"text": "Papier na cukier wymienic"
+			}
+		},
+		"item": "",
+		"text": "Czego potrzebuje?"
+	},
+	"1": {
+		"answers": {
+			"1": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [],
+				"text": "Dzieki"
+			}
+		},
+		"item": "papierosy",
+		"text": "Jak mus to mus"
+	},
+	"2": {
+		"answers": {
+			"1": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [],
+				"text": "Dzieki"
+			}
+		},
+		"item": "cukier",
+		"text": "Prosz..."
+	}
+}

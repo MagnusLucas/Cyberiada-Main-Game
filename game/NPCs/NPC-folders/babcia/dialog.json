@@ -1,0 +1,172 @@
+{
+	"0": {
+		"answers": {
+			"0": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					1
+				],
+				"text": "Naprawdę sądzi Pani, że to było samobójstwo?"
+			},
+			"1": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					2
+				],
+				"text": "Nieładnie tak mówić o zmarłych."
+			},
+			"2": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					3
+				],
+				"text": "Proszę Pani, ja sam siebie dobrze nie znam."
+			}
+		},
+		"item": "",
+		"text": "Słyszał Pan o tej całej Dorocie? Podobno wyskoczyła z okna i kaput. Słyszałam, że była niezrównoważona, ale żeby aż tak? Cóż… Widocznie nigdy nie poznasz człowieka, prawda?"
+	},
+	"1": {
+		"answers": {
+			"3": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
+		},
+		"item": "",
+		"text": "No a jakżeby inaczej? Wariatka wyskoczyła przez okno, ot co. Po kie licho drążyć? Trup to trup."
+	},
+	"2": {
+		"answers": {
+			"3": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
+		},
+		"item": "",
+		"text": "A tam nieładnie. Ja żyję od 70 lat, a ludzie codziennie o mnie coś nieładnego mówią. Nieboszczce różnicy to już nie zrobi."
+	},
+	"3": {
+		"answers": {
+			"3": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					4
+				],
+				"text": "..."
+			}
+		},
+		"item": "",
+		"text": "Pan to zawsze taki posępny. Trochę słońca, by Panu nie zaszkodziło. Ba, może i by nawet pomogło…"
+	},
+	"4": {
+		"answers": {
+			"4": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					5
+				],
+				"text": "Co tu robili milicjanci?"
+			}
+		},
+		"item": "",
+		"text": "Zresztą — nie ma co biadolić! Muszę pozamiatać po tych hultajach, co mi tu błota na klatkę ponanosili!"
+	},
+	"5": {
+		"answers": {
+			"5": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					6
+				],
+				"text": "Te klucze do mieszkania Doroty… mógłbym je pożyczyć? Tak się składa, że też coś ode mnie pożyczyła i chciałbym to odzyskać."
+			}
+		},
+		"item": "",
+		"text": "Myszkowali w mieszkaniu Doroty. Ale chyba nic nie znaleźli, bo wyszli rozczarowani. Dobrze, że nic nie pozabierali, bo ta dziewucha dalej mi mąki nie oddała. Jeszcze by wzięli. A bez mąki to ani rusz. Jak ja mam upiec szarlotkę dla wnuczki bez mąki?! Całe szczęście, że mam klucze do wszy… do jej mieszkania. Kiedyś mi je pożyczyła, żebym jej monstery podlała.\n"
+	},
+	"6": {
+		"answers": {
+			"6": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [
+					7
+				],
+				"text": "Nie jestem chłopcem na posyłki."
+			}
+		},
+		"item": "",
+		"text": "Nie jestem zwykła rozporządzać tak kluczami na lewo i prawo… Ale dobrze Panu z oczu patrzy to może mogłabym zrobić wyjątek. Ale tylko pod jednym warunkiem! Potrzebuję czegoś słodkiego do ciasta. Jeśli coś takiego mi przyniesiesz klucze będą twoje. Oczywiście tylko na chwilę. Później mają wrócić do mnie, ma się rozumieć. \n"
+	},
+	"7": {
+		"answers": {
+			"7": {
+				"item": {
+					"disappears": true,
+					"name": "cukier"
+				},
+				"next_id": [
+					8
+				],
+				"text": "Smacznego cukru"
+			},
+			"8": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [],
+				"text": "No to elo"
+			}
+		},
+		"item": "",
+		"text": "A ja nic za darmo nie daję. Wróć z tym czego potrzebuję to porozmawiamy."
+	},
+	"8": {
+		"answers": {
+			"9": {
+				"item": {
+					"disappears": false,
+					"name": ""
+				},
+				"next_id": [],
+				"text": "Dzieki"
+			}
+		},
+		"item": "kluczyk",
+		"text": "Tylko oddaj zaraz"
+	}
+}
