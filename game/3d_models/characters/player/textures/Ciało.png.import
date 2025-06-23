@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo37hoth0qevg"
-path.s3tc="res://.godot/imported/Wlosy.png-9ef327a53bea20a6065196c81bbf2f58.s3tc.ctex"
+uid="uid://cg4oaa7truupq"
+path.s3tc="res://.godot/imported/Ciało.png-d72805265a219fcc8ed7f473cdc9b0a1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mess-to-be-cleaned/3d_models/textures/Wlosy.png"
-dest_files=["res://.godot/imported/Wlosy.png-9ef327a53bea20a6065196c81bbf2f58.s3tc.ctex"]
+source_file="res://game/3d_models/characters/player/textures/Ciało.png"
+dest_files=["res://.godot/imported/Ciało.png-d72805265a219fcc8ed7f473cdc9b0a1.s3tc.ctex"]
 
 [params]
 

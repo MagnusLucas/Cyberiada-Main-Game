@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://34crylre0ihk"
-path="res://.godot/imported/Detektyw.gltf-44eb7e3482c45d42e510a1bc72c96782.scn"
+uid="uid://ocj327prc8g2"
+path="res://.godot/imported/Detektyw.gltf-5273d24bf837a857920d90e848dbb2fc.scn"
 
 [deps]
 
-source_file="res://mess-to-be-cleaned/3d_models/Detektyw.gltf"
-dest_files=["res://.godot/imported/Detektyw.gltf-44eb7e3482c45d42e510a1bc72c96782.scn"]
+source_file="res://game/3d_models/characters/player/Detektyw.gltf"
+dest_files=["res://.godot/imported/Detektyw.gltf-5273d24bf837a857920d90e848dbb2fc.scn"]
 
 [params]
 

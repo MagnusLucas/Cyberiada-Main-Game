@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwnjgfmwtfqle"
-path.s3tc="res://.godot/imported/Buty.png-c3bc8b331363527bb4adaf258ca2136c.s3tc.ctex"
+path.s3tc="res://.godot/imported/Buty.png-d3fbfe0c5a056f413932a77e2d111de4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mess-to-be-cleaned/3d_models/textures/Buty.png"
-dest_files=["res://.godot/imported/Buty.png-c3bc8b331363527bb4adaf258ca2136c.s3tc.ctex"]
+source_file="res://game/3d_models/characters/player/textures/Buty.png"
+dest_files=["res://.godot/imported/Buty.png-d3fbfe0c5a056f413932a77e2d111de4.s3tc.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://yl8edsf2vjry"]
 
 [ext_resource type="Script" uid="uid://myij85pvlke1" path="res://game/player.gd" id="1_v7l8u"]
-[ext_resource type="PackedScene" uid="uid://bo6q8pymw8kyu" path="res://mess-to-be-cleaned/3d_models/Detektyw.gltf" id="2_1t06j"]
+[ext_resource type="PackedScene" uid="uid://ocj327prc8g2" path="res://game/3d_models/characters/player/Detektyw.gltf" id="2_1t06j"]
 [ext_resource type="AudioStream" uid="uid://bs8stj7a5q18f" path="res://game/audio/SFX/boing.wav" id="3_xx22o"]
 [ext_resource type="PackedScene" uid="uid://bpq8x6bwcrcy1" path="res://UI/in-game/HUD/hud.tscn" id="4_74pxd"]
 
@@ -38,10 +38,10 @@ transform = Transform3D(1, 0, 0, 0, 0.893371, 0.449319, 0, -0.449319, 0.893371, 
 projection = 1
 size = 13.612
 
-[node name="Detektyw" parent="." instance=ExtResource("2_1t06j")]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_xx22o")
 bus = &"SFX"
 
 [node name="HUD" parent="." instance=ExtResource("4_74pxd")]
+
+[node name="Detektyw" parent="." instance=ExtResource("2_1t06j")]

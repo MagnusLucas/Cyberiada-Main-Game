@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnpf63hml66tx"
-path.s3tc="res://.godot/imported/Oczy.png-df49e3abbbd58e03efc4347092b81057.s3tc.ctex"
+uid="uid://bdgfjv0v5uo1d"
+path.s3tc="res://.godot/imported/Czapka.png-d4dd29d175cada1e2025ecb469adcf0d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mess-to-be-cleaned/3d_models/textures/Oczy.png"
-dest_files=["res://.godot/imported/Oczy.png-df49e3abbbd58e03efc4347092b81057.s3tc.ctex"]
+source_file="res://game/3d_models/characters/player/textures/Czapka.png"
+dest_files=["res://.godot/imported/Czapka.png-d4dd29d175cada1e2025ecb469adcf0d.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck2kt6yanjlax"
-path.s3tc="res://.godot/imported/Skora.png-1e7e7c3ec1a9443087d323f3c982a184.s3tc.ctex"
+uid="uid://bo37hoth0qevg"
+path.s3tc="res://.godot/imported/Wlosy.png-665aed0907a63406c36136a8cd5465e5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://mess-to-be-cleaned/3d_models/textures/Skora.png"
-dest_files=["res://.godot/imported/Skora.png-1e7e7c3ec1a9443087d323f3c982a184.s3tc.ctex"]
+source_file="res://game/3d_models/characters/player/textures/Wlosy.png"
+dest_files=["res://.godot/imported/Wlosy.png-665aed0907a63406c36136a8cd5465e5.s3tc.ctex"]
 
 [params]
 
