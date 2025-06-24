@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://corco7uheooas" path="res://autoloads/Sound.gd" id="1_nt4f7"]
 
 [node name="SoundControl" type="Node"]
+process_mode = 3
 script = ExtResource("1_nt4f7")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

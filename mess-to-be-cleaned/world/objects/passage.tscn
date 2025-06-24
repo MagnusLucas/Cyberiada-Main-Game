@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b440rwhlg20vk"]
 
 [ext_resource type="Script" uid="uid://b1kj1dkex2v6" path="res://mess-to-be-cleaned/world/objects/passage.gd" id="1_tln4w"]
-[ext_resource type="PackedScene" uid="uid://bedn724rt1xlr" path="res://mess-to-be-cleaned/3d_models/3d_mieszkanie_Janek/fbx/doors2.fbx" id="3_7fr5r"]
+[ext_resource type="PackedScene" uid="uid://bedn724rt1xlr" path="res://game/3d_models/rooms/janek/fbx/doors2.fbx" id="3_7fr5r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tln4w"]
 size = Vector3(1.565, 1.5, 0.2)
