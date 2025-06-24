@@ -1,26 +1,23 @@
-[gd_scene load_steps=2559 format=3 uid="uid://d4uohc6ywne2"]
+[gd_scene load_steps=2558 format=3 uid="uid://d4uohc6ywne2"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://game/acts/ACT_1_places/test_level.gd" id="1_op38q"]
-[ext_resource type="PackedScene" uid="uid://rxgavgumbpjf" path="res://mess-to-be-cleaned/3d_models/levels2wariant/blok1-left.glb" id="2_8dqh3"]
+[ext_resource type="PackedScene" uid="uid://rxgavgumbpjf" path="res://mess-to-be-cleaned/3d_models/buildings/blok1-left.glb" id="2_8dqh3"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://mess-to-be-cleaned/world/objects/passage.tscn" id="5_rgqxd"]
-[ext_resource type="PackedScene" uid="uid://dstgfqku0v8q2" path="res://mess-to-be-cleaned/3d_models/levels2wariant/blok2-midle.glb" id="7_udsp4"]
-[ext_resource type="PackedScene" uid="uid://bhcouuwdmt14m" path="res://mess-to-be-cleaned/3d_models/levels2wariant/blok3-right.glb" id="8_6ulgc"]
-[ext_resource type="PackedScene" uid="uid://m22g0eb2dgav" path="res://mess-to-be-cleaned/3d_models/levels2wariant/objekts1-boat1.glb" id="9_3d4le"]
-[ext_resource type="PackedScene" uid="uid://bwgbvehcmu1p5" path="res://mess-to-be-cleaned/3d_models/levels2wariant/ground-back-light.glb" id="10_uy74x"]
-[ext_resource type="PackedScene" uid="uid://b54477avckq4d" path="res://mess-to-be-cleaned/3d_models/ulica/Tree2.glb" id="11_5840p"]
-[ext_resource type="PackedScene" uid="uid://cpum0tsoc2cck" path="res://mess-to-be-cleaned/3d_models/ulica/Tree3.glb" id="12_77smr"]
-[ext_resource type="PackedScene" uid="uid://dux6fxe3a4acn" path="res://mess-to-be-cleaned/3d_models/levels2wariant/objekts1-road-sign1.glb" id="12_xs62a"]
-[ext_resource type="PackedScene" uid="uid://dhng0iy6v5c8m" path="res://mess-to-be-cleaned/3d_models/ulica/Tree1.glb" id="13_5840p"]
-[ext_resource type="PackedScene" uid="uid://xe8qke76j3nw" path="res://mess-to-be-cleaned/3d_models/objekts1-hydrant1.glb" id="14_77smr"]
-[ext_resource type="PackedScene" uid="uid://bfh4oyf675v4f" path="res://mess-to-be-cleaned/3d_models/objekts1-kosz.glb" id="15_30ws0"]
+[ext_resource type="PackedScene" uid="uid://dstgfqku0v8q2" path="res://mess-to-be-cleaned/3d_models/buildings/blok2-midle.glb" id="7_udsp4"]
+[ext_resource type="PackedScene" uid="uid://bhcouuwdmt14m" path="res://mess-to-be-cleaned/3d_models/buildings/blok3-right.glb" id="8_6ulgc"]
+[ext_resource type="PackedScene" uid="uid://m22g0eb2dgav" path="res://mess-to-be-cleaned/3d_models/buildings/objekts1-boat1.glb" id="9_3d4le"]
+[ext_resource type="PackedScene" uid="uid://bwgbvehcmu1p5" path="res://mess-to-be-cleaned/3d_models/buildings/ground-back-light.glb" id="10_uy74x"]
+[ext_resource type="PackedScene" uid="uid://b54477avckq4d" path="res://game/3d_models/street/Tree2.glb" id="11_5840p"]
+[ext_resource type="PackedScene" uid="uid://cpum0tsoc2cck" path="res://game/3d_models/street/Tree3.glb" id="12_77smr"]
+[ext_resource type="PackedScene" uid="uid://dux6fxe3a4acn" path="res://mess-to-be-cleaned/3d_models/buildings/objekts1-road-sign1.glb" id="12_xs62a"]
+[ext_resource type="PackedScene" uid="uid://dhng0iy6v5c8m" path="res://game/3d_models/street/Tree1.glb" id="13_5840p"]
+[ext_resource type="PackedScene" uid="uid://xe8qke76j3nw" path="res://game/3d_models/street/objekts1-hydrant1.glb" id="14_77smr"]
+[ext_resource type="PackedScene" uid="uid://bfh4oyf675v4f" path="res://game/3d_models/street/objekts1-kosz.glb" id="15_30ws0"]
 [ext_resource type="Texture2D" uid="uid://cbvsfbgiqkkjo" path="res://game/world_lighting.exr" id="15_u1ch7"]
-[ext_resource type="PackedScene" uid="uid://cljjx1h61y8jr" path="res://mess-to-be-cleaned/3d_models/objekts1-lawka.glb" id="16_w4jl2"]
+[ext_resource type="PackedScene" uid="uid://cljjx1h61y8jr" path="res://game/3d_models/street/objekts1-lawka.glb" id="16_w4jl2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w71c0"]
 size = Vector3(200, 1, 20)
-
-[sub_resource type="BoxMesh" id="BoxMesh_g154u"]
-size = Vector3(200, 20, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hkp2u"]
 data = PackedVector3Array(-10, 4, 10, 10, 4, 10, -10, -4, 10, 10, 4, 10, 10, -4, 10, -10, -4, 10, 10, 4, -10, -10, 4, -10, 10, -4, -10, -10, 4, -10, -10, -4, -10, 10, -4, -10, 10, 4, 10, 10, 4, -10, 10, -4, 10, 10, 4, -10, 10, -4, -10, 10, -4, 10, -10, 4, -10, -10, 4, 10, -10, -4, -10, -10, 4, 10, -10, -4, 10, -10, -4, -10, 10, 4, 10, -10, 4, 10, 10, 4, -10, -10, 4, 10, -10, 4, -10, 10, 4, -10, -10, -4, 10, 10, -4, 10, -10, -4, -10, 10, -4, 10, 10, -4, -10, -10, -4, -10)
@@ -7664,11 +7661,7 @@ transform = Transform3D(1, 0, 0, 0, 0.970905, 0.239466, 0, -0.239466, 0.970905, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211916, 2.20446, -1.80272)
 
 [node name="blokada" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -4.829)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="blokada"]
-visible = false
-mesh = SubResource("BoxMesh_g154u")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.829)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blokada"]
 shape = SubResource("ConcavePolygonShape3D_hkp2u")

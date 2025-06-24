@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c4iwk0t34k3xb"
+path.s3tc="res://.godot/imported/blok1-left_window-small-updoor1-nor.png-fbb63b0897b8d03d3e3c11e1b9a3d2e2.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2c25071def623c7bd236bfeeb4a1c931"
+}
+
+[deps]
+
+source_file="res://mess-to-be-cleaned/3d_models/buildings/blok1-left_window-small-updoor1-nor.png"
+dest_files=["res://.godot/imported/blok1-left_window-small-updoor1-nor.png-fbb63b0897b8d03d3e3c11e1b9a3d2e2.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
