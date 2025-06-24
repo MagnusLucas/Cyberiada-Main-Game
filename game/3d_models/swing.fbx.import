@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d24vu7vkh8vyc"
-path="res://.godot/imported/swing.fbx-657636dc3d6fb32b270c1ccdddf6a793.scn"
+path="res://.godot/imported/swing.fbx-5b3940c0356c65938af59818721d6464.scn"
 
 [deps]
 
-source_file="res://mess-to-be-cleaned/3d_models/3d_models_other/fbx/swing.fbx"
-dest_files=["res://.godot/imported/swing.fbx-657636dc3d6fb32b270c1ccdddf6a793.scn"]
+source_file="res://game/3d_models/swing.fbx"
+dest_files=["res://.godot/imported/swing.fbx-5b3940c0356c65938af59818721d6464.scn"]
 
 [params]
 
