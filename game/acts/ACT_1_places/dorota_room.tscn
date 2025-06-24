@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cj4uqwu47ihsf" path="res://game/3d_models/rooms/dorota/room/POKÓJ-DOROTA.glb" id="2_gxk1n"]
 [ext_resource type="Texture2D" uid="uid://cybtawhxxpsya" path="res://game/3d_models/rooms/dorota/docklands_01_4k.hdr" id="3_ucbln"]
 [ext_resource type="PackedScene" uid="uid://dpue3ugqte7py" path="res://game/3d_models/rooms/miki/miki-miszkanie.glb" id="3_wu4pn"]
-[ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://mess-to-be-cleaned/world/objects/passage.tscn" id="5_qf1ib"]
+[ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://game/passage.tscn" id="5_qf1ib"]
 [ext_resource type="PackedScene" uid="uid://bu1xd0fp2kop5" path="res://game/3d_models/rooms/dorota/kitchen/kuchnia-dorota.glb" id="8_8yh1q"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g154u"]
