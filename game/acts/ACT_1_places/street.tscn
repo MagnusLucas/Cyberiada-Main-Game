@@ -7683,6 +7683,10 @@ transform = Transform3D(0.955, 0, 0, 0, 0.73, 0, 0, 0, 0.73, -6.66086, 0.112717,
 next_scene = "uid://dsy8pq7ndjoy7"
 item_name = "kluczyk"
 
+[node name="Passage2" parent="." instance=ExtResource("5_rgqxd")]
+transform = Transform3D(1.212, 0, 0, 0, 0.65, 0, 0, 0, 0.927, 24.0939, 0.0149654, -6.0311)
+next_scene = "uid://cy0kfigx138gf"
+
 [node name="blok1-left" parent="." instance=ExtResource("2_8dqh3")]
 transform = Transform3D(-0.00755494, 0, -48.1077, 0, 48.1077, 0, 48.1077, 0, -0.00755494, 54.8065, -10.2244, -13.8513)
 

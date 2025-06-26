@@ -1,25 +1,63 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy0kfigx138gf"]
+[gd_scene load_steps=10 format=3 uid="uid://cy0kfigx138gf"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://game/acts/ACT_1_places/test_level.gd" id="1_icsrx"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://game/passage.tscn" id="3_aryeu"]
 [ext_resource type="PackedScene" uid="uid://c8jnrblmcl016" path="res://game/3d_models/rooms/shop/sklep.glb" id="3_icsrx"]
+[ext_resource type="PackedScene" uid="uid://bvdqujiy0oilp" path="res://game/NPCs/npc_base.tscn" id="4_c1r4h"]
 
-[node name="test_level2" type="Node3D"]
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_omto2"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c1r4h"]
+plane = Plane(0, 0, -1, -12.75)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_j8ywg"]
+plane = Plane(0, 0, 1, 6.545)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_4vh3x"]
+plane = Plane(1, 0, 0, -11.645)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c38n1"]
+plane = Plane(-1, 0, 0, -1.53)
+
+[node name="shop" type="Node3D"]
 script = ExtResource("1_icsrx")
+camera_z_offset = 10
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 14, 16)
 
-[node name="Passage2" parent="." instance=ExtResource("3_aryeu")]
-transform = Transform3D(8.1033, 0, 0, 0, 1.8172, 0, 0, 0, 1, -5.02663, 0.170975, 10.8202)
+[node name="sklep" parent="." instance=ExtResource("3_icsrx")]
+transform = Transform3D(-2.55712e-08, 0, -0.585, 0, 0.585, 0, 0.585, 0, -2.55712e-08, -5.03411, 0, 6.19477)
+
+[node name="sceneBoundries" type="StaticBody3D" parent="sklep"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.19477, 0, -5.03411)
+
+[node name="Bottom" type="CollisionShape3D" parent="sklep/sceneBoundries"]
+shape = SubResource("WorldBoundaryShape3D_omto2")
+
+[node name="Back" type="CollisionShape3D" parent="sklep/sceneBoundries"]
+shape = SubResource("WorldBoundaryShape3D_c1r4h")
+
+[node name="Front" type="CollisionShape3D" parent="sklep/sceneBoundries"]
+shape = SubResource("WorldBoundaryShape3D_j8ywg")
+
+[node name="Left" type="CollisionShape3D" parent="sklep/sceneBoundries"]
+shape = SubResource("WorldBoundaryShape3D_4vh3x")
+
+[node name="Right" type="CollisionShape3D" parent="sklep/sceneBoundries"]
+shape = SubResource("WorldBoundaryShape3D_c38n1")
+
+[node name="Passage2" parent="sklep" instance=ExtResource("3_aryeu")]
+transform = Transform3D(-3.54207e-07, 0, 1, 0, 1.8172, 0, -8.1033, 0, -4.37114e-08, 4.62543, 0.170975, -0.00748014)
 visible = false
 next_scene = "uid://d4uohc6ywne2"
 
+[node name="NPC" parent="." instance=ExtResource("4_c1r4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24415, 0.8143, 5.16052)
+folder_path = "res://game/NPCs/NPC-folders/sklepowa/"
+
 [node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.79347, 2.07987, 7.2219)
 
 [node name="MarkerCamera3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88708, 7.49237)
-
-[node name="sklep" parent="." instance=ExtResource("3_icsrx")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.03411, 0, 6.19477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99503, 2.24273, 13.9324)
