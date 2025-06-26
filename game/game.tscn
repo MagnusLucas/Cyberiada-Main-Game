@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e7hdk")
 
-[node name="test_level" parent="." instance=ExtResource("2_ryrav")]
+[node name="street" parent="." instance=ExtResource("2_ryrav")]
 
 [node name="act_1" parent="." instance=ExtResource("3_feb5d")]
 

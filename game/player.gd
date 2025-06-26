@@ -30,13 +30,12 @@ func _ready() -> void:
 	start_kam = $Camera_control.position.z
 	
 func _get_closest_interactable() -> Area3D:
-	#tworzy tabelę z itemami w zasięgu i sortuje je od najbliższego do najdalszego
-	var npc_tab = []
-	for i in $interactable_area.get_overlapping_areas(): #these are the human bodies (NPCs)
-		npc_tab.append([i,position.distance_to(i.position)])
-	npc_tab.sort_custom(sort_by_index)
-	if npc_tab.size() > 0:
-		return npc_tab[0][0]
+	var interactable_tab = []
+	for i in $interactable_area.get_overlapping_areas(): 
+		interactable_tab.append([i,position.distance_to(i.position)])
+	interactable_tab.sort_custom(sort_by_index)
+	if interactable_tab.size() > 0:
+		return interactable_tab[0][0]
 	return null
 
 
@@ -44,6 +43,8 @@ func try_to_interact(interactable : Area3D) -> void:
 	if interactable is Item:
 		interactable.taken()
 	elif interactable is NPC:
+		if dialogues_state.has(interactable.name):
+			interactable.start_dialog(dialogues_state[interactable.name])
 		interactable.start_dialog()
 
 func _physics_process(delta: float) -> void:
