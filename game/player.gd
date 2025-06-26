@@ -41,11 +41,13 @@ func _get_closest_interactable() -> Area3D:
 
 func try_to_interact(interactable : Area3D) -> void:
 	if interactable is Item:
-		interactable.taken()
+		interactable.take()
 	elif interactable is NPC:
 		if dialogues_state.has(interactable.name):
 			interactable.start_dialog(dialogues_state[interactable.name])
 		interactable.start_dialog()
+	elif interactable is Passage:
+		interactable.use(inv)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

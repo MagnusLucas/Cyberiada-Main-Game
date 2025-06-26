@@ -1,14 +1,14 @@
-extends StaticBody3D
+extends Area3D
+class_name Passage
 @export_file("*.tscn") var next_scene : String
 @export var item_name : String
 
 var audio_path = "res://game/audio/SFX/unlocking/otwieranie_zamka_kluczem_"+str(randi_range(1,3))+".wav"
 
 
-func taken():
+func use(item_tab : Array[String]):
 	if item_name:
-		var items_player_has : Array[String] = get_node("../../character").inv
-		if !items_player_has.has(item_name):
+		if !item_tab.has(item_name):
 			return
 	
 	Sound.play_sfx(audio_path)
