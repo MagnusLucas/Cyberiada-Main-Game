@@ -1,6 +1,6 @@
 [gd_scene load_steps=2561 format=3 uid="uid://d4uohc6ywne2"]
 
-[ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://game/acts/ACT_1_places/test_level.gd" id="1_op38q"]
+[ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://game/acts/ACT_1_places/location_init.gd" id="1_op38q"]
 [ext_resource type="PackedScene" uid="uid://rxgavgumbpjf" path="res://game/3d_models/buildings/blok1-left.glb" id="2_8dqh3"]
 [ext_resource type="PackedScene" uid="uid://b440rwhlg20vk" path="res://game/passage.tscn" id="5_rgqxd"]
 [ext_resource type="PackedScene" uid="uid://dstgfqku0v8q2" path="res://game/3d_models/buildings/blok2-midle.glb" id="7_udsp4"]
@@ -7651,7 +7651,7 @@ sky_material = SubResource("PanoramaSkyMaterial_shrs5")
 background_mode = 2
 sky = SubResource("Sky_paw7g")
 
-[node name="test_level" type="Node3D"]
+[node name="street" type="Node3D"]
 script = ExtResource("1_op38q")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

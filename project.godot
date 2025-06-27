@@ -18,6 +18,7 @@ boot_splash/show_image=false
 [autoload]
 
 Sound="*res://autoloads/Sound.tscn"
+Globals="*res://autoloads/Globals.gd"
 
 [input]
 

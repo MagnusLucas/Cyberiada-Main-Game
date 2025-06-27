@@ -24,10 +24,7 @@ func get_data_from_file(filepath : String) -> bool:
 
 # it should modify the convo data to be correct according to owned items
 func initialize():
-	var character = get_node_or_null("../character")
-	if !character:
-		next(current_state)
-		return
+	var character = get_node(Globals.CHARACTER_NODE_POSITION)
 	var owned_items : Array[String] = character.inv
 	
 	for state in convo_data:
@@ -43,7 +40,7 @@ func initialize():
 	next(current_state)
 
 func receive_item(item_name : String):
-	var character = get_node("../character")
+	var character = get_node(Globals.CHARACTER_NODE_POSITION)
 	if item_name in character.inv:
 		return
 	character.inv.append(item_name)

@@ -1,6 +1,6 @@
 extends Area3D
 class_name Item
-@onready var character = $"../character"
+@onready var character = get_node(Globals.CHARACTER_NODE_POSITION)
 
 @export_file(".png") var texture = "res://game/items/2d/example_item.png"
 @export_file(".wav") var pickup_sound = "res://game/audio/SFX/pstryczek.wav"

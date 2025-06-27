@@ -12,9 +12,9 @@ func use(item_tab : Array[String]):
 			return
 	
 	Sound.play_sfx(audio_path)
-	var nexter = load(next_scene)
+	var next = load(next_scene)
 	
 	var scene_node = get_parent()
 	scene_node.queue_free()
-	var roott = get_node('/root/world')
-	roott.add_child(nexter.instantiate())
+	var act = get_node('/root/world').get_child(0)
+	act.add_child(next.instantiate())
