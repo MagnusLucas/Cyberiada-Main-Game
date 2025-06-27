@@ -163,12 +163,11 @@ func _input(event: InputEvent) -> void:
 		#its not that importnat anyway
 		var zoom_limit = (self.position.z - start_kam) * (-1)
 		if event.is_pressed():
-			print(zoom_limit, ' ',zoom)
+			#print(zoom_limit, ' ',zoom)
 			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 				var zoom_scale:float = 2.0 ** (-event.factor if event.factor else 1.0)
 				if zoom <= zoom_limit:
-					zoom += zoom_scale
-				
+					zoom += zoom_scale				
 
 			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				var zoom_scale:float = 2.0 ** (-event.factor if event.factor else -1.0)
