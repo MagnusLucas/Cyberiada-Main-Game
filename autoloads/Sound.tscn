@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3qvvd6h1lp0j"]
+
+[ext_resource type="AudioStream" uid="uid://c8yt31akqtt0j" path="res://game/audio/SFX/lethal_company_mine_sfx.wav" id="1_as26r"]
+[ext_resource type="Script" uid="uid://corco7uheooas" path="res://autoloads/Sound.gd" id="1_nt4f7"]
+
+[node name="SoundControl" type="Node"]
+process_mode = 3
+script = ExtResource("1_nt4f7")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_as26r")
+bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_as26r")
+bus = &"SFX"

@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://yl8edsf2vjry"]
+
+[ext_resource type="Script" uid="uid://myij85pvlke1" path="res://game/player.gd" id="1_usikb"]
+[ext_resource type="AudioStream" uid="uid://bs8stj7a5q18f" path="res://game/audio/SFX/boing.wav" id="2_aqpyw"]
+[ext_resource type="PackedScene" uid="uid://bpq8x6bwcrcy1" path="res://UI/in-game/HUD/hud.tscn" id="3_3v6ie"]
+[ext_resource type="PackedScene" uid="uid://ocj327prc8g2" path="res://game/3d_models/characters/player/Detektyw.gltf" id="4_1bglq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5k8hl"]
+height = 2.16063
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tvile"]
+height = 2.1626
+radius = 2.0
+
+[node name="character" type="CharacterBody3D"]
+script = ExtResource("1_usikb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07704, 0)
+shape = SubResource("CapsuleShape3D_5k8hl")
+
+[node name="interactable_area" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994836, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="interactable_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0812988, 0)
+shape = SubResource("CylinderShape3D_tvile")
+
+[node name="Camera_control" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+top_level = true
+
+[node name="Camera_pos" type="Node3D" parent="Camera_control"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 1.701, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_control/Camera_pos"]
+transform = Transform3D(1, 0, 0, 0, 0.893371, 0.449319, 0, -0.449319, 0.893371, 0, 0, 0)
+current = true
+
+[node name="Camera3D2" type="Camera3D" parent="Camera_control/Camera_pos"]
+transform = Transform3D(1, 0, 0, 0, 0.893371, 0.449319, 0, -0.449319, 0.893371, 0, 0, 0)
+projection = 1
+size = 13.612
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_aqpyw")
+bus = &"SFX"
+
+[node name="HUD" parent="." instance=ExtResource("3_3v6ie")]
+
+[node name="Detektyw" parent="." instance=ExtResource("4_1bglq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.068827, 0)

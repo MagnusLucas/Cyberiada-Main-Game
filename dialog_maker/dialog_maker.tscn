@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwpoytvok2cyw"]
+
+[ext_resource type="Script" uid="uid://udts6wdaq3xm" path="res://dialog_maker/dialog_maker.gd" id="1_8x78i"]
+
+[node name="DialogMaker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+show_grid = false
+snapping_enabled = false
+right_disconnects = true
+minimap_enabled = false
+show_menu = false
+script = ExtResource("1_8x78i")
+
+[node name="Label" type="Label" parent="GraphEdit"]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 23.0
+text = "RMB to add a node"
+
+[node name="MarginContainer" type="MarginContainer" parent="GraphEdit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GraphEdit/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Load" type="Button" parent="GraphEdit/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Load"
+
+[node name="Save" type="Button" parent="GraphEdit/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Save"
+
+[connection signal="connection_request" from="GraphEdit" to="GraphEdit" method="_on_connection_request"]
+[connection signal="connection_to_empty" from="GraphEdit" to="GraphEdit" method="_on_connection_to_empty"]
+[connection signal="disconnection_request" from="GraphEdit" to="GraphEdit" method="_on_disconnection_request"]
+[connection signal="gui_input" from="GraphEdit" to="GraphEdit" method="_on_gui_input"]
+[connection signal="node_deselected" from="GraphEdit" to="GraphEdit" method="_on_node_deselected"]
+[connection signal="node_selected" from="GraphEdit" to="GraphEdit" method="_on_node_selected"]
+[connection signal="pressed" from="GraphEdit/MarginContainer/HBoxContainer/Load" to="GraphEdit" method="_on_load_pressed"]
+[connection signal="pressed" from="GraphEdit/MarginContainer/HBoxContainer/Save" to="GraphEdit" method="_on_save_pressed"]
