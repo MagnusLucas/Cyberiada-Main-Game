@@ -52,7 +52,7 @@ func next(id : String):
 	if !convo_data.has(current_state):
 		queue_free()
 		return
-	$VBoxContainer2/MarginContainer/VBoxContainer/PreviousStatement.text = convo_data[current_state]["text"]
+	$VBoxContainer2/MarginContainer/VBoxContainer/PreviousStatement.text = "[b]" + convo_data[current_state]["text"]
 	if convo_data[current_state].has("item") and convo_data[current_state]["item"] != "":
 		receive_item(convo_data[current_state]["item"])
 	answers = convo_data[current_state]["answers"]
