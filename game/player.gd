@@ -8,6 +8,7 @@ const JUMP_VELOCITY = 4.5
 var do_kam_1 = position.z 
 var do_kam_2
 var kamz = position.z
+var kam_fov : float = 75
 var SceneCameraOffset = Vector3(0,0,4)
 
 #do sortowania itemów
@@ -86,11 +87,13 @@ func _physics_process(delta: float) -> void:
 	kamz = kamz - (do_kam_diff * 0.25)
 	#Camera smoothing based on a yt tutorialsssssss/
 	const CAMERA_WEIGHT = 0.06
+	$Camera_control/Camera_pos/Camera3D.fov = lerp($Camera_control/Camera_pos/Camera3D.fov, kam_fov ,CAMERA_WEIGHT)
 	$Camera_control.position.z = lerp($Camera_control.position.z, kamz, CAMERA_WEIGHT)
 	$Camera_control.position.x = lerp($Camera_control.position.x, position.x, CAMERA_WEIGHT)
 	$Camera_control.position.y = lerp($Camera_control.position.y, position.y, CAMERA_WEIGHT)
 	#ps: the other camera in camera control is purely for "hey this is kinda cool" purpose
 	#Camera control is for this to be linked to camera, Camera pos is for offset, and cameras are to see
+	
 	
 	
 	
@@ -122,11 +125,11 @@ func _input(event: InputEvent) -> void:
 			
 			var zoom_scale:float = 5 * (event.factor if event.factor else 1.0)
 			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-				if camera.fov + zoom_scale < MIN_ZOOM:
-					camera.fov += zoom_scale
+				if kam_fov + zoom_scale < MIN_ZOOM:
+					kam_fov += zoom_scale
 
 			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 				#jeżeli zoom jest większy od limitu
-				if camera.fov - zoom_scale > MAX_ZOOM:
+				if kam_fov - zoom_scale > MAX_ZOOM:
 					#zmniejsza zooma aka przybliża
-					camera.fov -= zoom_scale
+					kam_fov -= zoom_scale
