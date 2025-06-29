@@ -42,6 +42,7 @@ func try_to_interact(interactable : Area3D) -> void:
 	if interactable is Item:
 		interactable.take()
 	elif interactable is NPC:
+		print(interactable.name)
 		if dialogues_state.has(interactable.name):
 			interactable.start_dialog(dialogues_state[interactable.name])
 		interactable.start_dialog()
@@ -119,7 +120,6 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			var camera = $Camera_control/Camera_pos/Camera3D
 			const MIN_ZOOM = 100
 			const MAX_ZOOM = 20
 			

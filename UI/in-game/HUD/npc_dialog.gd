@@ -79,6 +79,7 @@ func next(id : String):
 		answer.fit_content = true
 		answers_node.add_child(answer)
 	
+	# focus stuff
 	answers_node.focus_next = NodePath(answers_node.get_child(0).name)
 	
 	for index in answers_node.get_child_count() - 2:
@@ -105,17 +106,13 @@ func _handle_response(response : Dictionary):
 			var item = response["item"]
 			if item.has("disappears"):
 				if item["disappears"]:
-					var character = get_node_or_null("../character")
-					if !character:
-						return
+					var character = get_node(Globals.CHARACTER_NODE_POSITION)
 					var owned_items : Array[String] = character.inv
 					if owned_items.has(item["name"]):
 						character.inv.erase(item["name"])
 						character.get_node("HUD").update_inv(character.inv)
 	if response.has("next_start"):
-		var character = get_node_or_null("../character")
-		if !character:
-			return
+		var character = get_node(Globals.CHARACTER_NODE_POSITION)
 		character.dialogues_state[character_name.text] = response["next_start"]
 
 func _on_answer_gui_input(event: InputEvent, next_id : int = 0, response_data : Dictionary = {}) -> void:
