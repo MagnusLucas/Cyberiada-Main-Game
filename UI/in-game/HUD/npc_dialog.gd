@@ -25,7 +25,6 @@ func get_data_from_file(filepath : String) -> bool:
 # it should modify the convo data to be correct according to owned items
 func initialize():
 	var character = get_node(Globals.CHARACTER_NODE_POSITION)
-	print(character)
 	var owned_items : Array[String] = character.inv
 	
 	for state in convo_data:

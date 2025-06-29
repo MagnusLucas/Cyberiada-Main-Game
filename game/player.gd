@@ -42,7 +42,6 @@ func try_to_interact(interactable : Area3D) -> void:
 	if interactable is Item:
 		interactable.take()
 	elif interactable is NPC:
-		print(interactable.name)
 		if dialogues_state.has(interactable.name):
 			interactable.start_dialog(dialogues_state[interactable.name])
 		interactable.start_dialog()
