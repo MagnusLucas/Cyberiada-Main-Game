@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-@export_file var settings = "res://UI/menu/settings/settings/settings_base.tscn"
+@export_file var settings = "res://UI/shared/settings/settings.tscn"
 
 func _on_menu_pressed() -> void:
 	get_tree().paused = false

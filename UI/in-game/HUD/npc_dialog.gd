@@ -25,6 +25,7 @@ func get_data_from_file(filepath : String) -> bool:
 # it should modify the convo data to be correct according to owned items
 func initialize():
 	var character = get_node(Globals.CHARACTER_NODE_POSITION)
+	print(character)
 	var owned_items : Array[String] = character.inv
 	
 	for state in convo_data:
@@ -62,6 +63,7 @@ func next(id : String):
 	for key in answers:
 		var answer : RichTextLabel = RichTextLabel.new()
 		answer.add_theme_color_override("default_color", Color.BLACK)
+		answer.add_theme_stylebox_override("focus", load("res://UI/in-game/HUD/focused_answer.tres"))
 		answer.text = answers[key]["text"]
 		answer.focus_mode = Control.FOCUS_ALL
 		var possible_answer_reactions : Array = answers[key]["next_id"]
