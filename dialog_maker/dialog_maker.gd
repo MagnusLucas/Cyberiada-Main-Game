@@ -103,7 +103,7 @@ func _from_dict(dict : Dictionary) -> void:
 
 func _on_load_pressed() -> void:
 	var loading_dialog = FileDialog.new()
-	loading_dialog.current_dir = "res://world/NPCs/NPC-folders/"
+	loading_dialog.current_dir = "res://game/NPCs/NPC-folders/"
 	loading_dialog.current_file = "dialog.json"
 	loading_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
 	add_child(loading_dialog)
@@ -122,7 +122,7 @@ func _on_load_confirmed(path : String) -> void:
 
 func _on_save_pressed() -> void:
 	var saving_dialog = FileDialog.new()
-	saving_dialog.current_dir = "res://world/NPCs/NPC-folders/"
+	saving_dialog.current_dir = "res://game/NPCs/NPC-folders/"
 	saving_dialog.current_file = "dialog.json"
 	add_child(saving_dialog)
 	saving_dialog.show()

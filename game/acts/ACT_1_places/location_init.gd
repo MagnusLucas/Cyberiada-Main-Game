@@ -12,3 +12,7 @@ func for_act_load():
 	character.position = $Marker3D.position
 	character.reset_camera(camera_z_offset)
 	
+	if Globals.act == 1:
+		if Notebook.data["inhabitants"]["marynarz"].has("czapka"):
+			$czapka.queue_free()
+	

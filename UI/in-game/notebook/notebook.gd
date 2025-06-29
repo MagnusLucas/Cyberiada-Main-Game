@@ -1,4 +1,8 @@
 extends Control
+class_name Notebook
+
+static var data : Dictionary
+
 func _ready() -> void:
 	$AudioStreamPlayer.play()
 
