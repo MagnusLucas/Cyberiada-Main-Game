@@ -1,7 +1,24 @@
 extends Control
 class_name Notebook
 
-static var data : Dictionary
+static var data : Dictionary = {
+	"diary" : {},
+	"inhabitants" : {
+		"anna" : {},
+		"babcia" : {},
+		"dorota" : {},
+		"janek" : {},
+		"kapral" : {},
+		"marynarz" : {},
+		"sierzant" : {},
+		"sklepowa" : {}
+	},
+	"clues" : {},
+	"places" : {
+		"falowiec" : {},
+		"gdansk" : {}
+	}
+}
 
 func _ready() -> void:
 	$AudioStreamPlayer.play()
@@ -15,25 +32,6 @@ func _on_close_pressed() -> void:
 
 
 func _on_notebook_pressed() -> void:
-	add_sibling(load("res://ui/HUD/notebook.tscn").instantiate())
-	queue_free()
-
-
-func _on_diary_pressed() -> void:
-	add_sibling(load("res://ui/HUD/notebook/diary.tscn").instantiate())
-	queue_free()
-
-
-func _on_inhabitants_pressed() -> void:
-	add_sibling(load("res://ui/HUD/notebook/inhabitants.tscn").instantiate())
-	queue_free()
-
-
-func _on_items_pressed() -> void:
-	add_sibling(load("res://ui/HUD/notebook/clues.tscn").instantiate())
-	queue_free()
-
-
-func _on_places_pressed() -> void:
-	add_sibling(load("res://ui/HUD/notebook/places.tscn").instantiate())
-	queue_free()
+	$MarginContainer/MarginContainer2/pages/left.get_child(0).queue_free()
+	$MarginContainer/MarginContainer2/pages/left.add_child(load("res://UI/in-game/notebook/navigation.tscn").instantiate())
+	$MarginContainer/MarginContainer2/pages/right/HBoxContainer/back.hide()
