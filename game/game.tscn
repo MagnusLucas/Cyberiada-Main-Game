@@ -17,10 +17,14 @@ script = ExtResource("1_e7hdk")
 [node name="act_1" parent="." instance=ExtResource("3_feb5d")]
 
 [node name="Shader" type="ColorRect" parent="."]
+z_index = 1
 material = ExtResource("4_fc0e3")
-layout_mode = 0
-offset_right = 1167.0
-offset_bottom = 658.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="character" parent="." instance=ExtResource("4_4fuuu")]
 
