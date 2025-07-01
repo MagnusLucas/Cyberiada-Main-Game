@@ -37,7 +37,7 @@ func to_dict(possible_answers : Dictionary) -> Dictionary:
 	if $next_start_id.text != "":
 		dict["next_start"] = $next_start_id.text
 	if $notebook_trigger.text != "":
-		dict["notebook"] = $next_start_id.text
+		dict["notebook"] = $notebook_trigger.text
 	dict["answers"] = possible_answers
 	dict["text"] = $text.text
 	dict["item"] = $given_item.text

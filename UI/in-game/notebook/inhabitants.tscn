@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpw2sqn3b44lq"]
+[gd_scene load_steps=10 format=3 uid="uid://dpw2sqn3b44lq"]
 
+[ext_resource type="Script" uid="uid://c5bgwykb08ltm" path="res://UI/in-game/notebook/inhabitants.gd" id="1_6fwjl"]
 [ext_resource type="Texture2D" uid="uid://uqoxqwixdm67" path="res://UI/in-game/notebook/notebook-graphics/dorota2.png" id="3_uqrx7"]
 [ext_resource type="Texture2D" uid="uid://dlrf6g6cfbpum" path="res://game/NPCs/NPC-folders/babcia/texture.png" id="4_6yo4e"]
 [ext_resource type="Texture2D" uid="uid://b36epmy7eqqqv" path="res://game/NPCs/NPC-folders/sklepowa/texture.png" id="5_rb6jl"]
@@ -12,6 +13,7 @@
 [node name="VBoxContainer" type="VBoxContainer"]
 offset_right = 300.0
 offset_bottom = 388.0
+script = ExtResource("1_6fwjl")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
