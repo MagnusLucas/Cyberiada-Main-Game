@@ -9,7 +9,7 @@ gradient = ExtResource("2_mpunf")
 [resource]
 shader = ExtResource("1_bvix7")
 shader_parameter/gradient_texture = SubResource("GradientTexture1D_bxu4s")
-shader_parameter/mix_strength = 1.0
-shader_parameter/opacity = 1.0
+shader_parameter/mix_strength = 0.641
+shader_parameter/opacity = 0.933
 shader_parameter/blend_mode = 8
 shader_parameter/hue_shift = 0.0
