@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq5pjulh3yhqo"]
+
+[ext_resource type="Script" uid="uid://cysgs1c32am7k" path="res://UI/in-game/notebook/navigation.gd" id="1_2bn72"]
+
+[node name="navigation" type="VBoxContainer"]
+script = ExtResource("1_2bn72")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Notatnik"
+horizontal_alignment = 1
+
+[node name="Diary" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Dziennik"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Mieszkańcy falowca"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Poszlaki"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Lokacje"
+
+[connection signal="pressed" from="Diary" to="." method="_on_diary_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_inhabitants_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_items_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_places_pressed"]

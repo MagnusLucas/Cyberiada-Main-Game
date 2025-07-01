@@ -1,157 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://co7hemmfse80y"]
+[gd_scene format=3 uid="uid://co7hemmfse80y"]
 
-[ext_resource type="Script" uid="uid://1gr5sxlvbrxx" path="res://UI/in-game/notebook/notebook.gd" id="1_eftuq"]
-[ext_resource type="Texture2D" uid="uid://bh0erlkboubwc" path="res://UI/in-game/HUD/book- main.png" id="2_ooekt"]
-[ext_resource type="AudioStream" uid="uid://br4ih3fvucdst" path="res://game/audio/SFX/kartka_1.wav" id="3_g6qui"]
+[node name="clues" type="VBoxContainer"]
+offset_right = 279.0
+offset_bottom = 388.0
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l6rjd"]
-
-[node name="clues" type="Control"]
-process_mode = 2
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_eftuq")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_ooekt")
-expand_mode = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 275
-theme_override_constants/margin_top = 140
-theme_override_constants/margin_right = 295
-theme_override_constants/margin_bottom = 100
-
-[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
-visible = false
-layout_mode = 2
-color = Color(0.733333, 0.733333, 0.733333, 1)
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer2"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="."]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Poszlaki"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button2" type="Button" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button2" type="Button" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/MarginContainer2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 40
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer2"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="notebook" type="Button" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
-text = "X"
-icon = SubResource("PlaceholderTexture2D_l6rjd")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="close" type="Button" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
-text = "X"
-icon = SubResource("PlaceholderTexture2D_l6rjd")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "fdafdsafdsa"
-scroll_active = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_g6qui")
-
-[connection signal="pressed" from="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/notebook" to="." method="_on_notebook_pressed"]
-[connection signal="pressed" from="MarginContainer/MarginContainer2/HBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/close" to="." method="_on_close_pressed"]
