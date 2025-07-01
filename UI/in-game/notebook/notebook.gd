@@ -34,4 +34,5 @@ func _on_close_pressed() -> void:
 func _on_notebook_pressed() -> void:
 	$MarginContainer/MarginContainer2/pages/left.get_child(0).queue_free()
 	$MarginContainer/MarginContainer2/pages/left.add_child(load("res://UI/in-game/notebook/navigation.tscn").instantiate())
-	$MarginContainer/MarginContainer2/pages/right/HBoxContainer/back.hide()
+	$MarginContainer/MarginContainer2/pages/right/info/HBoxContainer/back.hide()
+	$MarginContainer/MarginContainer2/pages/right.update()

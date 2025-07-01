@@ -3,7 +3,7 @@ extends MarginContainer
 @onready var info_name = $info/Label
 @onready var info_content = $info/Label2
 
-func update(data : Dictionary) -> void:
+func update(data : Dictionary = {}) -> void:
 	if !data:
 		info_name.text = ""
 		info_content.text = ""

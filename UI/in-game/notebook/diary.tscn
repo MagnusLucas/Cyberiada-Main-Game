@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://lfhd73cmjmhi"]
+[gd_scene load_steps=2 format=3 uid="uid://lfhd73cmjmhi"]
 
-[node name="VBoxContainer" type="VBoxContainer"]
+[ext_resource type="Script" uid="uid://dvei1rrkenyfy" path="res://UI/in-game/notebook/diary.gd" id="1_e0sey"]
+
+[node name="diary" type="VBoxContainer"]
 offset_right = 279.0
 offset_bottom = 388.0
+script = ExtResource("1_e0sey")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -10,8 +13,202 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Dziennik"
 horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Button1" type="Button" parent="."]
 layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] 12 grudnia 1983, Kraków"
+fit_content = true
 scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] 29 stycznia 1984, Kraków"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] 19 lutego 1984, Gdańsk"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] 26 kwietnia 1984, Gdańsk"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] 6 czerwca 1984, Gdańsk"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] 18 lipca 1984"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button7" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] ???"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button8" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] ???"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button9" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] ???"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Button10" type="Button" parent="."]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[i] ???"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1

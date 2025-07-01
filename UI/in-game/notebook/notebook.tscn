@@ -71,18 +71,13 @@ script = ExtResource("3_ag01t")
 [node name="info" type="VBoxContainer" parent="MarginContainer/MarginContainer2/pages/right"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer2/pages/right/info"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="MarginContainer/MarginContainer2/pages/right/info"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer2/pages/right"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer2/pages/right/info"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="back" type="Button" parent="MarginContainer/MarginContainer2/pages/right/HBoxContainer"]
+[node name="back" type="Button" parent="MarginContainer/MarginContainer2/pages/right/info/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -98,7 +93,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="close" type="Button" parent="MarginContainer/MarginContainer2/pages/right/HBoxContainer"]
+[node name="close" type="Button" parent="MarginContainer/MarginContainer2/pages/right/info/HBoxContainer"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -113,9 +108,23 @@ icon = SubResource("PlaceholderTexture2D_l6rjd")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer/MarginContainer2/pages/right/info"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Label2" type="RichTextLabel" parent="MarginContainer/MarginContainer2/pages/right/info"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_miyd5")
 
-[connection signal="pressed" from="MarginContainer/MarginContainer2/pages/right/HBoxContainer/back" to="." method="_on_notebook_pressed"]
-[connection signal="pressed" from="MarginContainer/MarginContainer2/pages/right/HBoxContainer/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer2/pages/right/info/HBoxContainer/back" to="." method="_on_notebook_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer2/pages/right/info/HBoxContainer/close" to="." method="_on_close_pressed"]

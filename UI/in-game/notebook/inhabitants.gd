@@ -7,4 +7,9 @@ func _ready() -> void:
 		npc.get_child(0).connect("pressed", _on_button_pressed.bind(npc.name))
 
 func _on_button_pressed(npc_name : String):
-	print_debug(Notebook.data["inhabitants"][npc_name])
+	var info_page = get_node_or_null("../../right")
+	if info_page:
+		if Notebook.data["inhabitants"][npc_name].has("info"):
+			info_page.update({"name" : "[b]" + npc_name, "info" : Notebook.data["inhabitants"][npc_name]["info"]})
+		else:
+			info_page.update({"name" : "[b]" + npc_name, "info" : ""})

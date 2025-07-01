@@ -56,7 +56,9 @@ func next(id : String):
 	if convo_data[current_state].has("item") and convo_data[current_state]["item"] != "":
 		receive_item(convo_data[current_state]["item"])
 	if convo_data[current_state].has("notebook"):
-		Notebook.data["inhabitants"][character_name.text]["info"] = convo_data[current_state]["notebook"]
+		if !Notebook.data["inhabitants"][character_name.text].has("info"):
+			Notebook.data["inhabitants"][character_name.text]["info"] = []
+		Notebook.data["inhabitants"][character_name.text]["info"].append(convo_data[current_state]["notebook"])
 	answers = convo_data[current_state]["answers"]
 	
 	for child in answers_node.get_children():
