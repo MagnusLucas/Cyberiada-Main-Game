@@ -6,7 +6,6 @@
 [node name="PauseBase" type="VBoxContainer"]
 theme_override_constants/separation = 10
 script = ExtResource("1_p4jx7")
-theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2

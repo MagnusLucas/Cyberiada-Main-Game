@@ -13,4 +13,5 @@ func _on_back_pressed() -> void:
 func _on_settings_pressed() -> void:
 	var settings_scene = load(settings).instantiate()
 	add_sibling(settings_scene)
+	queue_free()
 	settings_scene.back = "res://UI/in-game/pause_base.tscn"
