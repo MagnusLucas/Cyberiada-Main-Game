@@ -49,6 +49,7 @@ func try_to_interact(interactable : Area3D) -> void:
 		interactable.use(inv)
 
 func _physics_process(delta: float) -> void:
+	print(position)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
