@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://co7hemmfse80y"]
+[gd_scene load_steps=2 format=3 uid="uid://co7hemmfse80y"]
+
+[ext_resource type="Script" uid="uid://d2tql75asrsn7" path="res://UI/in-game/notebook/clues.gd" id="1_s2i0t"]
 
 [node name="clues" type="VBoxContainer"]
 offset_right = 279.0
 offset_bottom = 388.0
+script = ExtResource("1_s2i0t")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
