@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_tln4w"]
 size = Vector3(1.565, 1.5, 0.2)
 
-[node name="Passage" type="Area3D" groups=["pickable"]]
+[node name="Passage" type="Area3D"]
 script = ExtResource("1_tln4w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
