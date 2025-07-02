@@ -118,10 +118,9 @@ scroll_active = false
 
 [node name="Label2" type="RichTextLabel" parent="MarginContainer/MarginContainer2/pages/right/info"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-fit_content = true
-scroll_active = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_miyd5")
