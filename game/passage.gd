@@ -19,7 +19,7 @@ func use(item_tab : Array[String]):
 	# or on load of shop, update it to have correct door
 		# this is better
 	
-	var scene_node = get_parent()
-	scene_node.queue_free()
 	var act = get_node('/root/world').get_child(0)
+	for node in act.get_children():
+		node.queue_free()
 	act.add_child(next.instantiate())

@@ -15913,6 +15913,10 @@ shape = SubResource("ConvexPolygonShape3D_kfnwf")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_s3b6t")
 
+[node name="Passage3" parent="." instance=ExtResource("5_rgqxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6585, 0, 2.28796)
+next_scene = "uid://cu5fs57424kp7"
+
 [editable path="blok1-left"]
 [editable path="blok2-midle"]
 [editable path="blok3-right"]

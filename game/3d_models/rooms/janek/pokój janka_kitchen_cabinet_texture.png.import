@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://beqm688rpj2o7"
+path.s3tc="res://.godot/imported/pokój janka_kitchen_cabinet_texture.png-f9d0181bcb3e91888032093c216c6dbf.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "6d4d4f957560a994a5340755b2eb6bea"
+}
+
+[deps]
+
+source_file="res://game/3d_models/rooms/janek/pokój janka_kitchen_cabinet_texture.png"
+dest_files=["res://.godot/imported/pokój janka_kitchen_cabinet_texture.png-f9d0181bcb3e91888032093c216c6dbf.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
