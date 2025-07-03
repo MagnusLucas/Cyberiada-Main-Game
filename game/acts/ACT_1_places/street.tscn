@@ -26,7 +26,7 @@ plane = Plane(0, 0, -1, -5)
 plane = Plane(0, 0, 1, -28)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rcspp"]
-plane = Plane(1, 0, 0, -39)
+plane = Plane(1, 0, 0, -10)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_jecch"]
 plane = Plane(-1, 0, 0, -85)

@@ -9,7 +9,7 @@ func _ready() -> void:
 		inventory.assign(Globals.game_data["inventory"])
 		get_node(Globals.CHARACTER_NODE_POSITION).inv = inventory
 		get_node(Globals.CHARACTER_NODE_POSITION).dialogues_state = Globals.game_data["dialogues_state"]
-		
+		get_node(Globals.CHARACTER_NODE_POSITION).update_inv()
 		Globals.act = int(Globals.game_data["act"])
 
 func _input(event: InputEvent) -> void:
