@@ -1,8 +1,60 @@
-[gd_scene load_steps=4 format=3 uid="uid://baco3dy7ypfgo"]
+[gd_scene load_steps=11 format=3 uid="uid://baco3dy7ypfgo"]
 
 [ext_resource type="PackedScene" uid="uid://d4uohc6ywne2" path="res://game/acts/ACT_1_places/street.tscn" id="1_0er67"]
 [ext_resource type="PackedScene" uid="uid://bvdqujiy0oilp" path="res://game/NPCs/npc_base.tscn" id="2_7t8no"]
 [ext_resource type="PackedScene" uid="uid://b2nw30xxslme8" path="res://game/items/item.tscn" id="3_4heal"]
+[ext_resource type="Texture2D" uid="uid://cxem6k2vjvrjg" path="res://game/shader/Sunset_2007-1.jpg" id="4_7t8no"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4heal"]
+albedo_texture = ExtResource("4_7t8no")
+
+[sub_resource type="ImageTexture" id="ImageTexture_h3fyo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ob0e2"]
+resource_local_to_scene = true
+resource_name = "Material.031"
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = SubResource("ImageTexture_h3fyo")
+roughness = 0.5
+emission_enabled = true
+emission = Color(0.34919, 0.34919, 0.34919, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ahgc5"]
+_surfaces = [{
+"aabb": AABB(-2.87361, 0, -0.338449, 5.74722, 1e-05, 0.676898),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.031",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ckb71"]
+resource_local_to_scene = true
+resource_name = "ground-back-light_Plane_045"
+_surfaces = [{
+"aabb": AABB(-2.87361, 0, -0.338449, 5.74722, 1e-05, 0.676898),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_ob0e2"),
+"name": "Material.031",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ahgc5")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ksqb0"]
+points = PackedVector3Array(2.8905, -0.0169035, 0.354575, -2.8905, -0.0169035, -0.355234, 2.8905, -0.0169035, -0.355234, -2.8905, -0.0169035, 0.354575)
 
 [node name="act_1_street" type="Node3D"]
 
@@ -22,3 +74,14 @@ folder_path = "res://game/NPCs/NPC-folders/marynarz/"
 [node name="czapka" parent="street" instance=ExtResource("3_4heal")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.795, 0.566, 1.532)
 texture = "uid://bhhybeveup54y"
+
+[node name="Plane_045" type="MeshInstance3D" parent="."]
+transform = Transform3D(-42.4485, -1.02894e-06, 4.99181e-14, 2.53013e-06, 0, -52.6944, -1.85548e-06, 9.95911, 3.14083e-06, 33.583, 10.6978, -27.1827)
+material_override = SubResource("StandardMaterial3D_4heal")
+mesh = SubResource("ArrayMesh_ckb71")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane_045"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane_045/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ksqb0")

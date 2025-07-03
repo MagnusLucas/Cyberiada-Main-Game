@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhnwh8opyot71"]
+[gd_scene load_steps=7 format=3 uid="uid://bhnwh8opyot71"]
 
 [ext_resource type="Script" uid="uid://csom84qsddv0u" path="res://game/game.gd" id="1_e7hdk"]
+[ext_resource type="PackedScene" uid="uid://bapwqctujcrth" path="res://game/acts/act_2_street.tscn" id="3_dxrkv"]
 [ext_resource type="PackedScene" uid="uid://dm5d3um25i4wl" path="res://game/acts/act_1_street.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://yl8edsf2vjry" path="res://game/player.tscn" id="4_4fuuu"]
 [ext_resource type="Material" uid="uid://byxirhydumxe4" path="res://game/shader/material_shader.tres" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://baco3dy7ypfgo" path="res://game/acts/act_3_street.tscn" id="6_dakft"]
 
 [node name="world" type="Control"]
 layout_mode = 3
@@ -16,10 +18,12 @@ script = ExtResource("1_e7hdk")
 
 [node name="act_1" parent="." instance=ExtResource("3_feb5d")]
 
-[node name="czapka" parent="act_1/street" index="27"]
+[node name="czapka" parent="act_1/street" index="28"]
 notebook_category = "inhabitants"
 category_value = "marynarz"
 info = "Znalazłem jego czapkę"
+
+[node name="act_2" parent="." instance=ExtResource("3_dxrkv")]
 
 [node name="Shader" type="ColorRect" parent="."]
 z_index = 1
@@ -32,5 +36,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="character" parent="." instance=ExtResource("4_4fuuu")]
+
+[node name="act_3" parent="." instance=ExtResource("6_dakft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.604164)
 
 [editable path="act_1"]
