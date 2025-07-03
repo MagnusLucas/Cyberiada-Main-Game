@@ -1,4 +1,4 @@
-[gd_scene load_steps=2561 format=3 uid="uid://d4uohc6ywne2"]
+[gd_scene load_steps=2562 format=3 uid="uid://d4uohc6ywne2"]
 
 [ext_resource type="Script" uid="uid://cpr5t8sujgp3t" path="res://game/acts/ACT_1_places/location_init.gd" id="1_op38q"]
 [ext_resource type="PackedScene" uid="uid://rxgavgumbpjf" path="res://game/3d_models/buildings/blok1-left.glb" id="2_8dqh3"]
@@ -7650,6 +7650,9 @@ sky_material = SubResource("PanoramaSkyMaterial_shrs5")
 [sub_resource type="Environment" id="Environment_s3b6t"]
 background_mode = 2
 sky = SubResource("Sky_paw7g")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_puajb"]
+plane = Plane(1, 0, 0, 0)
 
 [node name="street" type="Node3D"]
 script = ExtResource("1_op38q")
@@ -15396,6 +15399,9 @@ shape = SubResource("ConvexPolygonShape3D_wvcev")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground-back-light/Plane_043/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_cqqds")
 
+[node name="Plane_045" parent="ground-back-light" index="3"]
+transform = Transform3D(7.10543e-15, 1.22375, 5.96046e-08, -9.61746e-08, 0, -1, -1.61354, 7.29413e-08, 0, -0.314464, 0.326359, -0.842709)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="ground-back-light/Plane_045" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground-back-light/Plane_045/StaticBody3D"]
@@ -15913,8 +15919,14 @@ shape = SubResource("ConvexPolygonShape3D_kfnwf")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_s3b6t")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6122, 0.20199, 0.12336)
+shape = SubResource("WorldBoundaryShape3D_puajb")
+
 [node name="Passage3" parent="." instance=ExtResource("5_rgqxd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6585, 0, 2.28796)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.9758, 0, -6.3032)
 next_scene = "uid://cu5fs57424kp7"
 
 [editable path="blok1-left"]

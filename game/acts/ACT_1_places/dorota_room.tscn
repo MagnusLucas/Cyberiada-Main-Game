@@ -2747,7 +2747,6 @@ shape = SubResource("ConvexPolygonShape3D_kug7e")
 shape = SubResource("WorldBoundaryShape3D_m7ab1")
 
 [node name="Node3D" type="Node3D" parent="Node3D2"]
-visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2/Node3D"]
 transform = Transform3D(8.07416e-15, 3.00906e-08, 6.74188, 4.22579, -3.00906e-08, -3.61372e-21, 1.84715e-07, 0.688392, -2.94697e-07, -21.7381, 1.47007, 1.63572)

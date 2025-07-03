@@ -5,6 +5,10 @@ extends VBoxContainer
 @export_file var sound = "res://UI/shared/settings/sound.tscn"
 @export_file var back = ""
 
+func _ready() -> void:
+	if get_node_or_null("/root/world"):
+		back = "res://UI/in-game/pause_base.tscn"
+
 func _on_back_pressed() -> void:
 	if back == "":
 		get_tree().change_scene_to_file("res://UI/menu/main_menu.tscn")

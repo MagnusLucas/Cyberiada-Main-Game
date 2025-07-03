@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://cu5fs57424kp7"]
+[gd_scene load_steps=76 format=3 uid="uid://cu5fs57424kp7"]
 
 [ext_resource type="Script" uid="uid://dukrcwy0lkr4a" path="res://game/acts/ACT_1_places/janek_room.gd" id="1_qjsgq"]
 [ext_resource type="PackedScene" uid="uid://wvh5h6rh2dcv" path="res://game/3d_models/rooms/janek/pokój janka.glb" id="1_vvdsm"]
@@ -209,6 +209,9 @@ points = PackedVector3Array(3.25564, 1.04743, -6.55644, 3.25564, 1.04743, -6.687
 points = PackedVector3Array(-0.934541, 1.04743, -2.89003, -1.06545, -1.44049, -6.42549, -0.934541, -1.44049, -6.42549, -1.06545, -1.44049, -2.89003, -1.06545, 1.04743, -6.42549, -0.934541, 1.04743, -6.42549, -0.934541, -1.44049, -2.89003, -1.06545, 1.04743, -2.89003)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_qjsgq"]
+plane = Plane(0, 1, 0, 0.2)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6c4nn"]
 plane = Plane(0, 0, -1, -3.7)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7ab1"]
@@ -505,7 +508,7 @@ shape = SubResource("ConvexPolygonShape3D_e2uek")
 shape = SubResource("WorldBoundaryShape3D_qjsgq")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="pokój janka/StaticBody3D"]
-shape = SubResource("WorldBoundaryShape3D_qjsgq")
+shape = SubResource("WorldBoundaryShape3D_6c4nn")
 
 [node name="Passage" parent="pokój janka" instance=ExtResource("2_l5l2j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0293357, -0.15623, -0.807811)
