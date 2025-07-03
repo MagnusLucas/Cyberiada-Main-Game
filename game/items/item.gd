@@ -22,7 +22,7 @@ func take():
 		if !Notebook.data[notebook_category][category_value].has("info"):
 			Notebook.data[notebook_category][category_value]["info"] = []
 		Notebook.data[notebook_category][category_value]["info"].append(info)
-	if len(character.inv) <=5:
+	if pickable and len(character.inv) <=5:
 		character.inv.append(name)
 		Sound.play_sfx(pickup_sound)
 		character.get_node("HUD").update_inv(character.inv)
