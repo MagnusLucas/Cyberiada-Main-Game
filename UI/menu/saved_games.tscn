@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://5lye3gw740o7"]
+[gd_scene load_steps=7 format=3 uid="uid://5lye3gw740o7"]
 
 [ext_resource type="Texture2D" uid="uid://cfpfan2dqijrf" path="res://UI/menu/background.png" id="1_qsb0c"]
 [ext_resource type="Theme" uid="uid://drkq4gwhuu362" path="res://UI/shared/themes/default_label.tres" id="2_atamn"]
 [ext_resource type="Theme" uid="uid://l4fn7cedqo3m" path="res://UI/shared/themes/default_button.tres" id="3_ikdoe"]
 [ext_resource type="Script" uid="uid://cw3chcpwavqhf" path="res://UI/menu/saved_games.gd" id="4_b0h44"]
+[ext_resource type="Script" uid="uid://d1n4n1ci0il5h" path="res://UI/menu/navigation.gd" id="5_3ywuw"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_b6wpg"]
 
@@ -79,6 +80,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 10
+script = ExtResource("4_b0h44")
 
 [node name="Button" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames"]
 layout_mode = 2
@@ -125,7 +127,7 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 20
-script = ExtResource("4_b0h44")
+script = ExtResource("5_3ywuw")
 
 [node name="Back" type="Button" parent="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation"]
 layout_mode = 2
@@ -141,5 +143,9 @@ text = "Graj"
 layout_mode = 2
 size_flags_horizontal = 3
 
+[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames/Button" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames" method="_on_button_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames/Button2" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames" method="_on_button_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames/Button3" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames" method="_on_button_pressed"]
+[connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames/Button4" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/SavedGames" method="_on_button_pressed"]
 [connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Back" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_back_pressed"]
 [connection signal="pressed" from="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation/Play" to="MainMenu/HBoxContainer/MarginContainer/MarginContainer/VBoxContainer/MarginContainer/navigation" method="_on_play_pressed"]
