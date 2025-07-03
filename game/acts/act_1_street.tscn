@@ -22,3 +22,4 @@ folder_path = "res://game/NPCs/NPC-folders/marynarz/"
 [node name="czapka" parent="street" instance=ExtResource("5_detl5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.795, 0.566, 1.532)
 texture = "uid://bhhybeveup54y"
+message_on_interaction = "Czzapkobranie!"

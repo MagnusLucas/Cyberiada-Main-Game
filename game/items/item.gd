@@ -5,6 +5,7 @@ class_name Item
 @export_file(".png") var texture = "res://game/items/2d/example_item.png"
 @export_file(".wav") var pickup_sound = "res://game/audio/SFX/pstryczek.wav"
 @export var pickable : bool = true
+@export var message_on_interaction : String = ""
 
 @export_group("Notebook info on interaction")
 @export_enum("diary", "inhabitants", "clues") var notebook_category : String = "clues"
@@ -18,6 +19,8 @@ func _ready() -> void:
 	material.albedo_texture = load(texture)
 
 func take():
+	if message_on_interaction:
+		get_node("/root/world").add_child(Message.new_message(message_on_interaction))
 	if info:
 		if !Notebook.data[notebook_category][category_value].has("info"):
 			Notebook.data[notebook_category][category_value]["info"] = []
