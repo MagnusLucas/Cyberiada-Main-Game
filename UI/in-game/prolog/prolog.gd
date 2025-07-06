@@ -12,55 +12,65 @@ const frame_data : Dictionary = {
 	"1" = {
 		"text" = "Kolejna noc, która wygląda jak milion poprzednich. Nic się nie zmienia. Wszystko jest statyczne. Pieprzona stagnacja, w której gniję. Nie, przegniłem już do szpiku kości…",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			#"1.0" = "body_thud.wav"
 		}
 	},
 	"2" = {
 		"text" = "Ta melodia… Wierci dziurę w mojej głowie. Głębiej, jeszcze głębiej… Osiągając punkt zapalny - więcej już nie zdzierżę!",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			"1.0" = "otwieranie_zamka_kluczem_3.wav",
+			"2.5" = "krok_4.wav",
+			"3.0" = "krok_3.wav",
+			"3.5" = "krok_2.wav",
+			"4.0" = "krok_1.wav"
 		}
 	},
 	"3" = {
 		"text" = "Zrywam się więc, ale to, co zobaczyłem… Skazało mnie jedynie na koszmary jeszcze straszniejsze, niż te, które nawiedzały mój sen dotychczas.",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			#"1.0" = "body_thud.wav"
 		}
 	},
 	"4" = {
 		"text" = "Postać ciemna, jak gdyby cień przemknęła prędko. Niewyraźnie, jakby nierealna zjawa. Wystarczyło mrugnięcie, a zniknęła. Czy to sen? Czy halucynacja alkoholowa?",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			"1.0" = "krok_4.wav",
+			"1.5" = "krok_3.wav",
+			"2.0" = "krok_2.wav",
+			"2.5" = "krok_1.wav"
 		}
 	},
 	"5" = {
 		"text" = "Jak ćma do światła schodek po schodku zbliżałem się do prawdy kryjącej się w blasku latarni. Prawdy okrutnej, brutalnej, drastycznej, bezlitosnej… Moja sąsiadka… Słodka Doti martwa leżała w kałuży krwi.",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			"1.0" = "krok_4.wav",
+			"1.3" = "krok_3.wav",
+			"1.6" = "krok_2.wav",
+			"1.9" = "krok_1.wav"
 		}
 	},
 	"6" = {
 		"text" = "Nie, nie, nie… To nie może być prawda! Nie mogę… A może to tylko kolejny koszmar? Może jutro Doti znów przywita mnie serdecznie, odkrywając rząd swoich śnieżnobiałych zębów, a po klatce rozniesie się zapach świeżych truskawek… Może…",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			"1.0" = "otwieranie_zamka_kluczem_1.wav"
 		}
 	},
 	"7" = {
 		"text" = "O Boże… To nie może być prawda. Jutro obudzę się trzeźwy, a ta groteskowa fatamorgana pozostanie w przeszłości. Jezu, serce zaraz wyskoczy mi z piersi…",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			#"1.0" = "body_thud.wav"
 		}
 	},
 	"8" = {
 		"text" = "Usnąć… Uspokoić się… Obudzić się, kiedy wszystko znów będzie normalne… Normalniejsze… Tak…",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			#"1.0" = "body_thud.wav"
 		}
 	},
 	"9" = {
 		"text" = "Nie mogę znowu przez to przechodzić…",
 		"sounds" = {
-			"1.0" = "body_thud.wav"
+			#"1.0" = "body_thud.wav"
 		}
 	},
 }

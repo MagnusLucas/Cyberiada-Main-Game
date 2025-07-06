@@ -22,6 +22,7 @@ plane = Plane(-1, 0, 0, -1.53)
 [node name="shop" type="Node3D"]
 script = ExtResource("1_icsrx")
 camera_z_offset = 10
+music = "res://game/audio/music/scena3sklep.mp3"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 14, 16)

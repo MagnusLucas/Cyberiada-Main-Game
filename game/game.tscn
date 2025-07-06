@@ -16,7 +16,7 @@ script = ExtResource("1_e7hdk")
 
 [node name="act_1" parent="." instance=ExtResource("3_feb5d")]
 
-[node name="czapka" parent="act_1/street" index="28"]
+[node name="czapka" parent="act_1/street" index="29"]
 notebook_category = "inhabitants"
 category_value = "marynarz"
 info = "Znalazłem jego czapkę"
