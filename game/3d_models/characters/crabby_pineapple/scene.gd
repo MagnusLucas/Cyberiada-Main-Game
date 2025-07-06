@@ -6,7 +6,7 @@ func _ready() -> void:
 	
 	add_child(t)
 	t.one_shot = false
-	t.wait_time = 1 #2137
+	t.wait_time = 2137
 	t.timeout.connect(dive)
 	t.autostart = true
 	t.start()
@@ -19,11 +19,11 @@ func dive():
 		for i in range(20):
 			await get_tree().create_timer(0.1).timeout
 			self.position.y = lerp(self.position.y,-0.623,0.5)
-		t.wait_time = 2137
+		t.wait_time = 5
+		#print('^')
 	elif position.y > -0.7: 
 		for i in range(20):
 			await get_tree().create_timer(0.1).timeout
 			self.position.y = lerp(self.position.y,-3.363,0.5)
-		t.wait_time = 3
-	
-	
+		t.wait_time = 2137
+		#print('v')
