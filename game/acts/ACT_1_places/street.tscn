@@ -14949,7 +14949,7 @@ shape = SubResource("ConvexPolygonShape3D_8npsp")
 shape = SubResource("ConvexPolygonShape3D_p1ol8")
 
 [node name="objekts1-boat1" parent="." instance=ExtResource("9_3d4le")]
-transform = Transform3D(0.962715, 0, -0.270516, 0, 1, 0, 0.270516, 0, 0.962715, 84.7186, -0.859192, 2.73303)
+transform = Transform3D(0.962715, 0, -0.270516, 0, 1, 0, 0.270516, 0, 0.962715, 84.7186, -0.859192, -17.8124)
 
 [node name="ground-back-light" parent="." instance=ExtResource("10_uy74x")]
 transform = Transform3D(-2.10287e-06, 0, -48.108, 0, 48.108, 0, 48.108, 0, -2.10287e-06, 55.9842, -10.1921, -13.6378)

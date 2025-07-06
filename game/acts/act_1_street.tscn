@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dm5d3um25i4wl"]
+[gd_scene load_steps=6 format=3 uid="uid://dm5d3um25i4wl"]
 
 [ext_resource type="PackedScene" uid="uid://bvdqujiy0oilp" path="res://game/NPCs/npc_base.tscn" id="1_4bpop"]
 [ext_resource type="PackedScene" uid="uid://d4uohc6ywne2" path="res://game/acts/ACT_1_places/street.tscn" id="4_2fsvs"]
+[ext_resource type="PackedScene" uid="uid://cbpxmdqnqfies" path="res://game/3d_models/characters/crabby_pineapple/scene.gltf" id="4_n0hp5"]
 [ext_resource type="PackedScene" uid="uid://b2nw30xxslme8" path="res://game/items/item.tscn" id="5_detl5"]
+[ext_resource type="Script" uid="uid://yymo0y6cx00b" path="res://game/3d_models/characters/crabby_pineapple/scene.gd" id="5_kiept"]
 
 [node name="act_1_street" type="Node3D"]
 
@@ -23,3 +25,7 @@ folder_path = "res://game/NPCs/NPC-folders/marynarz/"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.795, 0.566, 1.532)
 texture = "uid://bhhybeveup54y"
 message_on_interaction = "Czzapkobranie!"
+
+[node name="Sketchfab_Scene" parent="street" instance=ExtResource("4_n0hp5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.327, -3.36266, -9.40804)
+script = ExtResource("5_kiept")
